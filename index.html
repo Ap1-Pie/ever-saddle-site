@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Ever saddle</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css?v=4">
+</head>
+<body>
+  <div class="app">
+    <header class="head">
+      <div class="logo">Ever saddle</div>
+      <!-- Итерация 4: избранное (CloudStorage в Телеграме, localStorage в браузере) -->
+      <button type="button" class="fav-toggle" id="favToggle" aria-label="Избранное" aria-pressed="false">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        <span class="fav-badge" id="favBadge" hidden>0</span>
+      </button>
+    </header>
+    <div class="toolbar">
+      <!-- Итерация 3: шторка фильтров -->
+      <button type="button" class="pill" id="filterBtn">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"/></svg>
+        Фильтры
+        <span class="pill-badge" id="filterBadge" hidden>0</span>
+      </button>
+      <div class="count" id="count"></div>
+    </div>
+    <main class="grid" id="grid"></main>
+
+    <!-- Шторка фильтров -->
+    <div class="sheet-overlay" id="sheetOverlay"></div>
+    <section class="sheet" id="filterSheet" aria-label="Фильтры каталога">
+      <h2 class="sheet-title">Фильтры</h2>
+      <div id="filterGroups"></div>
+      <div class="sheet-actions">
+        <button type="button" class="show-btn" id="applyBtn">Показать</button>
+        <button type="button" class="reset-btn" id="resetBtn">Сбросить</button>
+      </div>
+    </section>
+  </div>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <script src="app.js?v=5"></script>
+</body>
+</html>

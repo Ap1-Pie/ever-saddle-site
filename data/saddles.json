@@ -1,0 +1,1678 @@
+[
+ {
+  "id": "417",
+  "title": "Конкурное седло Kentaur Appolon",
+  "type": "конкурное",
+  "brand": "Kentaur",
+  "model": "Appolon",
+  "sizeHorse": "2",
+  "sizeRider": 17.5,
+  "sizeRiderValues": [
+   17.5
+  ],
+  "price": 130000,
+  "status": "available",
+  "post": 417,
+  "photos": [
+   "assets/photos/417/1.jpg",
+   "assets/photos/417/2.jpg",
+   "assets/photos/417/3.jpg",
+   "assets/photos/417/4.jpg",
+   "assets/photos/417/5.jpg"
+  ]
+ },
+ {
+  "id": "410",
+  "title": "Конкурное седло Adam Ellis",
+  "type": "конкурное",
+  "brand": "Adam Ellis",
+  "sizeHorse": "MW",
+  "color": "коричневый",
+  "condition": "новое",
+  "sizeRider": 17.5,
+  "sizeRiderValues": [
+   17.5
+  ],
+  "price": 250000,
+  "status": "available",
+  "post": 410,
+  "comment": "тёмно-коричневое",
+  "photos": [
+   "assets/photos/410/1.jpg",
+   "assets/photos/410/2.jpg",
+   "assets/photos/410/3.jpg",
+   "assets/photos/410/4.jpg",
+   "assets/photos/410/5.jpg",
+   "assets/photos/410/6.jpg",
+   "assets/photos/410/7.jpg"
+  ]
+ },
+ {
+  "id": "404",
+  "title": "Выездковое седло Bliss of London",
+  "type": "выездковое",
+  "brand": "Bliss of London",
+  "sizeHorse": "33",
+  "condition": "шикарное",
+  "sizeRider": 17,
+  "sizeRiderValues": [
+   17
+  ],
+  "status": "sold",
+  "post": 404,
+  "photos": [
+   "assets/photos/404/1.jpg",
+   "assets/photos/404/2.jpg",
+   "assets/photos/404/3.jpg",
+   "assets/photos/404/4.jpg",
+   "assets/photos/404/5.jpg",
+   "assets/photos/404/6.jpg"
+  ]
+ },
+ {
+  "id": "400",
+  "title": "Выездковое седло Custom Icon Coda",
+  "type": "выездковое",
+  "brand": "Custom Icon",
+  "model": "Coda",
+  "sizeHorse": "33",
+  "sizeRider": 17,
+  "sizeRiderValues": [
+   17
+  ],
+  "price": 380000,
+  "status": "available",
+  "post": 400,
+  "photos": [
+   "assets/photos/400/1.jpg",
+   "assets/photos/400/2.jpg",
+   "assets/photos/400/3.jpg",
+   "assets/photos/400/4.jpg"
+  ]
+ },
+ {
+  "id": "394",
+  "title": "Выездковое седло CWD SE37",
+  "type": "выездковое",
+  "brand": "CWD",
+  "model": "SE37",
+  "condition": "идеальное",
+  "price": 400000,
+  "status": "available",
+  "post": 394,
+  "comment": "размеры - маркировка на фото; монокрыло",
+  "photos": [
+   "assets/photos/394/1.jpg",
+   "assets/photos/394/2.jpg",
+   "assets/photos/394/3.jpg",
+   "assets/photos/394/4.jpg",
+   "assets/photos/394/5.jpg",
+   "assets/photos/394/6.jpg"
+  ]
+ },
+ {
+  "id": "390",
+  "title": "Конкурное седло Prestige Venezia",
+  "type": "конкурное",
+  "brand": "Prestige",
+  "model": "Venezia",
+  "sizeHorse": "32",
+  "sizeRider": 17,
+  "sizeRiderValues": [
+   17
+  ],
+  "price": 145000,
+  "status": "available",
+  "post": 390,
+  "photos": [
+   "assets/photos/390/1.jpg",
+   "assets/photos/390/2.jpg",
+   "assets/photos/390/3.jpg",
+   "assets/photos/390/4.jpg"
+  ]
+ },
+ {
+  "id": "386",
+  "title": "Выездковое седло Гермида Пиаффе",
+  "type": "выездковое",
+  "brand": "Гермида",
+  "model": "Пиаффе",
+  "sizeHorse": "32-33",
+  "condition": "практически новое",
+  "sizeRider": 17.5,
+  "sizeRiderValues": [
+   17.5
+  ],
+  "status": "sold",
+  "post": 386,
+  "photos": [
+   "assets/photos/386/1.jpg",
+   "assets/photos/386/2.jpg",
+   "assets/photos/386/3.jpg",
+   "assets/photos/386/4.jpg"
+  ]
+ },
+ {
+  "id": "382",
+  "title": "Выездковое седло Albion Ultima",
+  "type": "выездковое",
+  "brand": "Albion",
+  "model": "Ultima",
+  "sizeHorse": "33",
+  "sizeRider": 17.5,
+  "sizeRiderValues": [
+   17.5
+  ],
+  "status": "sold",
+  "post": 382,
+  "photos": [
+   "assets/photos/382/1.jpg",
+   "assets/photos/382/2.jpg",
+   "assets/photos/382/3.jpg",
+   "assets/photos/382/4.jpg"
+  ]
+ },
+ {
+  "id": "379",
+  "title": "Выездковое седло Albion SLK",
+  "type": "выездковое",
+  "brand": "Albion",
+  "model": "SLK",
+  "sizeHorse": "34",
+  "sizeRider": 17.5,
+  "sizeRiderValues": [
+   17.5
+  ],
+  "status": "sold",
+  "post": 379,
+  "photos": [
+   "assets/photos/379/1.jpg",
+   "assets/photos/379/2.jpg",
+   "assets/photos/379/3.jpg"
+  ]
+ },
+ {
+  "id": "375",
+  "title": "Конкурное седло Euroriding Luxor",
+  "type": "конкурное",
+  "brand": "Euroriding",
+  "model": "Luxor",
+  "sizeHorse": "32",
+  "sizeRider": 17,
+  "sizeRiderValues": [
+   17
+  ],
+  "status": "sold",
+  "post": 375,
+  "photos": [
+   "assets/photos/375/1.jpg",
+   "assets/photos/375/2.jpg",
+   "assets/photos/375/3.jpg",
+   "assets/photos/375/4.jpg"
+  ]
+ },
+ {
+  "id": "369",
+  "title": "Конкурное седло Prestige Renaissance",
+  "type": "конкурное",
+  "brand": "Prestige",
+  "model": "Renaissance",
+  "sizeHorse": "32,5-33",
+  "sizeRider": 17,
+  "sizeRiderValues": [
+   17
+  ],
+  "price": 280000,
+  "status": "available",
+  "post": 369,
+  "comment": "есть и 18-й размер; открытые лопатки; последнее фото - пример из интернета",
+  "photos": [
+   "assets/photos/369/1.jpg",
+   "assets/photos/369/2.jpg",
+   "assets/photos/369/3.jpg",
+   "assets/photos/369/4.jpg",
+   "assets/photos/369/5.jpg",
+   "assets/photos/369/6.jpg"
+  ]
+ },
+ {
+  "id": "365",
+  "title": "Конкурное седло Meyer Act 1",
+  "type": "конкурное",
+  "brand": "Meyer",
+  "model": "Act 1",
+  "sizeHorse": "34",
+  "sizeRider": 17.5,
+  "sizeRiderValues": [
+   17.5
+  ],
+  "price": 260000,
+  "status": "available",
+  "post": 365,
+  "photos": [
+   "assets/photos/365/1.jpg",
+   "assets/photos/365/2.jpg",
+   "assets/photos/365/3.jpg",
+   "assets/photos/365/4.jpg"
+  ]
+ },
+ {
+  "id": "361",
+  "title": "Выездковое седло Voltaire Adelaide",
+  "type": "выездковое",
+  "brand": "Voltaire",
+  "model": "Adelaide",
+  "sizeHorse": "34+",
+  "sizeRider": 17.5,
+  "sizeRiderValues": [
+   17.5
+  ],
+  "status": "sold",
+  "post": 361,
+  "photos": [
+   "assets/photos/361/1.jpg",
+   "assets/photos/361/2.jpg",
+   "assets/photos/361/3.jpg",
+   "assets/photos/361/4.jpg"
+  ]
+ },
+ {
+  "id": "357",
+  "title": "Выездковое седло Prestige K-Dence",
+  "type": "выездковое",
+  "brand": "Prestige",
+  "model": "K-Dence",
+  "sizeHorse": "33",
+  "sizeRider": 17,
+  "sizeRiderValues": [
+   17
+  ],
+  "price": 190000,
+  "status": "available",
+  "post": 357,
+  "photos": [
+   "assets/photos/357/1.jpg",
+   "assets/photos/357/2.jpg",
+   "assets/photos/357/3.jpg",
+   "assets/photos/357/4.jpg"
+  ]
+ },
+ {
+  "id": "353",
+  "title": "Выездковое седло Kentaur Medea",
+  "type": "выездковое",
+  "brand": "Kentaur",
+  "model": "Medea",
+  "sizeHorse": "2",
+  "sizeRider": 17.5,
+  "sizeRiderValues": [
+   17.5
+  ],
+  "status": "sold",
+  "post": 353,
+  "photos": [
+   "assets/photos/353/1.jpg",
+   "assets/photos/353/2.jpg",
+   "assets/photos/353/3.jpg",
+   "assets/photos/353/4.jpg"
+  ]
+ },
+ {
+  "id": "349",
+  "title": "Выездковое седло Kentaur Penelope",
+  "type": "выездковое",
+  "brand": "Kentaur",
+  "model": "Penelope",
+  "sizeHorse": "3",
+  "sizeRider": 17.5,
+  "sizeRiderValues": [
+   17.5
+  ],
+  "status": "sold",
+  "post": 349,
+  "comment": "очень широкий канал",
+  "photos": [
+   "assets/photos/349/1.jpg",
+   "assets/photos/349/2.jpg",
+   "assets/photos/349/3.jpg",
+   "assets/photos/349/4.jpg"
+  ]
+ },
+ {
+  "id": "345",
+  "title": "Выездковое седло Prestige X-Doge",
+  "type": "выездковое",
+  "brand": "Prestige",
+  "model": "X-Doge",
+  "sizeHorse": "32",
+  "sizeRider": 17,
+  "sizeRiderValues": [
+   17
+  ],
+  "status": "sold",
+  "post": 345,
+  "photos": [
+   "assets/photos/345/1.jpg",
+   "assets/photos/345/2.jpg",
+   "assets/photos/345/3.jpg",
+   "assets/photos/345/4.jpg"
+  ]
+ },
+ {
+  "id": "342",
+  "title": "Конкурное седло Prestige Versailles",
+  "type": "конкурное",
+  "brand": "Prestige",
+  "model": "Versailles",
+  "sizeHorse": "33-34 (маркировка 34)",
+  "sizeRider": 17,
+  "sizeRiderValues": [
+   17
+  ],
+  "price": 220000,
+  "status": "available",
+  "post": 342,
+  "comment": "маркировка 34, скорее обжато уже; проверить актуальность (пост июля)",
+  "photos": [
+   "assets/photos/342/1.jpg",
+   "assets/photos/342/2.jpg",
+   "assets/photos/342/3.jpg"
+  ]
+ },
+ {
+  "id": "338",
+  "title": "Конкурное седло Kieffer Norbert Koof",
+  "type": "конкурное",
+  "brand": "Kieffer",
+  "model": "Norbert Koof",
+  "sizeHorse": "32-33",
+  "sizeRider": 17.5,
+  "sizeRiderValues": [
+   17.5
+  ],
+  "status": "sold",
+  "post": 338,
+  "comment": "на высоченную холку-гребень",
+  "photos": [
+   "assets/photos/338/1.jpg",
+   "assets/photos/338/2.jpg",
+   "assets/photos/338/3.jpg",
+   "assets/photos/338/4.jpg"
+  ]
+ },
+ {
+  "id": "334",
+  "title": "Конкурное седло Antares",
+  "type": "конкурное",
+  "brand": "Antares",
+  "sizeHorse": "33-34",
+  "sizeRider": 17.5,
+  "sizeRiderValues": [
+   17.5
+  ],
+  "status": "sold",
+  "post": 334,
+  "photos": [
+   "assets/photos/334/1.jpg",
+   "assets/photos/334/2.jpg",
+   "assets/photos/334/3.jpg",
+   "assets/photos/334/4.jpg"
+  ]
+ },
+ {
+  "id": "329",
+  "title": "Конкурное седло Luc Childeric",
+  "type": "конкурное",
+  "brand": "Luc Childeric",
+  "sizeHorse": "на средне-широкую спину",
+  "color": "коричневый",
+  "sizeRider": 17.5,
+  "sizeRiderValues": [
+   17.5
+  ],
+  "status": "sold",
+  "post": 329,
+  "comment": "шоколадный цвет",
+  "photos": [
+   "assets/photos/329/1.jpg",
+   "assets/photos/329/2.jpg",
+   "assets/photos/329/3.jpg",
+   "assets/photos/329/4.jpg",
+   "assets/photos/329/5.jpg"
+  ]
+ },
+ {
+  "id": "325",
+  "title": "Конкурное седло GBS",
+  "type": "конкурное",
+  "brand": "GBS (Meyer)",
+  "sizeHorse": "34",
+  "sizeRider": "17-17,5",
+  "sizeRiderValues": [
+   17,
+   17.5
+  ],
+  "status": "sold",
+  "post": 325,
+  "comment": "дочерняя компания Meyer",
+  "photos": [
+   "assets/photos/325/1.jpg",
+   "assets/photos/325/2.jpg",
+   "assets/photos/325/3.jpg",
+   "assets/photos/325/4.jpg"
+  ]
+ },
+ {
+  "id": "315",
+  "title": "Выездковое седло Custom Icon Flight",
+  "type": "выездковое",
+  "brand": "Custom Icon",
+  "model": "Flight",
+  "sizeHorse": "33-33,5",
+  "sizeRider": 17,
+  "sizeRiderValues": [
+   17
+  ],
+  "price": 370000,
+  "status": "available",
+  "post": 315,
+  "comment": "небольшие косметические дефекты; проверить актуальность (пост июля)",
+  "photos": [
+   "assets/photos/315/1.jpg",
+   "assets/photos/315/2.jpg",
+   "assets/photos/315/3.jpg",
+   "assets/photos/315/4.jpg",
+   "assets/photos/315/5.jpg"
+  ]
+ },
+ {
+  "id": "311",
+  "title": "Конкурное седло Prestige Black Star",
+  "type": "конкурное",
+  "brand": "Prestige",
+  "model": "Black Star",
+  "sizeHorse": "33",
+  "sizeRider": 17,
+  "sizeRiderValues": [
+   17
+  ],
+  "price": 145000,
+  "post": 311,
+  "comment": "удобный внешний упор; статус не указан - проверить (пост июня)",
+  "photos": [
+   "assets/photos/311/1.jpg",
+   "assets/photos/311/2.jpg",
+   "assets/photos/311/3.jpg",
+   "assets/photos/311/4.jpg"
+  ]
+ },
+ {
+  "id": "307",
+  "title": "Конкурное седло Euroriding Luxor",
+  "type": "конкурное",
+  "brand": "Euroriding",
+  "model": "Luxor",
+  "sizeHorse": "33",
+  "sizeRider": 17,
+  "sizeRiderValues": [
+   17
+  ],
+  "status": "sold",
+  "post": 307,
+  "photos": [
+   "assets/photos/307/1.jpg",
+   "assets/photos/307/2.jpg",
+   "assets/photos/307/3.jpg",
+   "assets/photos/307/4.jpg"
+  ]
+ },
+ {
+  "id": "303",
+  "title": "Детское конкурное седло Prestige Joy Jumper",
+  "type": "конкурное",
+  "brand": "Prestige",
+  "model": "Joy Jumper",
+  "sizeHorse": "33",
+  "sizeRider": 16,
+  "sizeRiderValues": [
+   16
+  ],
+  "status": "sold",
+  "post": 303,
+  "comment": "детское",
+  "photos": [
+   "assets/photos/303/1.jpg",
+   "assets/photos/303/2.jpg",
+   "assets/photos/303/3.jpg",
+   "assets/photos/303/4.jpg"
+  ]
+ },
+ {
+  "id": "299",
+  "title": "Детское выездковое седло Prestige Lucky Idol",
+  "type": "выездковое",
+  "brand": "Prestige",
+  "model": "Lucky Idol",
+  "sizeHorse": "32",
+  "sizeRider": 16,
+  "sizeRiderValues": [
+   16
+  ],
+  "status": "sold",
+  "post": 299,
+  "comment": "детское",
+  "photos": [
+   "assets/photos/299/1.jpg",
+   "assets/photos/299/2.jpg",
+   "assets/photos/299/3.jpg",
+   "assets/photos/299/4.jpg"
+  ]
+ },
+ {
+  "id": "292",
+  "title": "Выездковое седло County",
+  "type": "выездковое",
+  "brand": "County",
+  "sizeHorse": "MW",
+  "sizeRider": 16.5,
+  "sizeRiderValues": [
+   16.5
+  ],
+  "price": 120000,
+  "post": 292,
+  "comment": "на высокую холку; статус не указан - проверить (пост июня)",
+  "photos": [
+   "assets/photos/292/1.jpg",
+   "assets/photos/292/2.jpg",
+   "assets/photos/292/3.jpg",
+   "assets/photos/292/4.jpg"
+  ]
+ },
+ {
+  "id": "282",
+  "title": "Выездковое седло Butet",
+  "type": "выездковое",
+  "brand": "Butet",
+  "sizeHorse": "на среднюю спину, средне-высокую холку",
+  "sizeRider": 16.5,
+  "sizeRiderValues": [
+   16.5
+  ],
+  "status": "sold",
+  "post": 282,
+  "photos": [
+   "assets/photos/282/1.jpg",
+   "assets/photos/282/2.jpg",
+   "assets/photos/282/3.jpg",
+   "assets/photos/282/4.jpg"
+  ]
+ },
+ {
+  "id": "278",
+  "title": "Выездковое седло Maxflex",
+  "type": "выездковое",
+  "brand": "Maxflex",
+  "sizeHorse": "MW",
+  "sizeRider": 17,
+  "sizeRiderValues": [
+   17
+  ],
+  "status": "sold",
+  "post": 278,
+  "comment": "17 - сидит маленьким",
+  "photos": [
+   "assets/photos/278/1.jpg",
+   "assets/photos/278/2.jpg",
+   "assets/photos/278/3.jpg",
+   "assets/photos/278/4.jpg"
+  ]
+ },
+ {
+  "id": "272",
+  "title": "Конкурное седло Prestige Roma Jump",
+  "type": "конкурное",
+  "brand": "Prestige",
+  "model": "Roma Jump",
+  "sizeHorse": "32",
+  "sizeRider": 17,
+  "sizeRiderValues": [
+   17
+  ],
+  "status": "sold",
+  "post": 272,
+  "photos": [
+   "assets/photos/272/1.jpg",
+   "assets/photos/272/2.jpg",
+   "assets/photos/272/3.jpg",
+   "assets/photos/272/4.jpg"
+  ]
+ },
+ {
+  "id": "267",
+  "title": "Конкурное седло Prestige Silver Star",
+  "type": "конкурное",
+  "brand": "Prestige",
+  "model": "Silver Star",
+  "sizeHorse": "33",
+  "sizeRider": 18,
+  "sizeRiderValues": [
+   18
+  ],
+  "status": "sold",
+  "post": 267,
+  "photos": [
+   "assets/photos/267/1.jpg",
+   "assets/photos/267/2.jpg",
+   "assets/photos/267/3.jpg",
+   "assets/photos/267/4.jpg",
+   "assets/photos/267/5.jpg"
+  ]
+ },
+ {
+  "id": "263",
+  "title": "Конкурное седло Albion Revelation",
+  "type": "конкурное",
+  "brand": "Albion",
+  "model": "Revelation",
+  "sizeHorse": "33",
+  "sizeRider": 17.5,
+  "sizeRiderValues": [
+   17.5
+  ],
+  "status": "sold",
+  "post": 263,
+  "comment": "монокрыло; на высокую холку",
+  "photos": [
+   "assets/photos/263/1.jpg",
+   "assets/photos/263/2.jpg",
+   "assets/photos/263/3.jpg",
+   "assets/photos/263/4.jpg"
+  ]
+ },
+ {
+  "id": "257",
+  "title": "Выездковое седло Jeremy Rudge",
+  "type": "выездковое",
+  "brand": "Jeremy Rudge",
+  "sizeHorse": "33,5",
+  "sizeRider": 17,
+  "sizeRiderValues": [
+   17
+  ],
+  "price": 170000,
+  "post": 257,
+  "comment": "укороченные панели, очень короткая ОП; статус не указан - проверить (пост мая)",
+  "photos": [
+   "assets/photos/257/1.jpg",
+   "assets/photos/257/2.jpg",
+   "assets/photos/257/3.jpg",
+   "assets/photos/257/4.jpg",
+   "assets/photos/257/5.jpg",
+   "assets/photos/257/6.jpg"
+  ]
+ },
+ {
+  "id": "253",
+  "title": "Конкурное седло Prestige Venezia",
+  "type": "конкурное",
+  "brand": "Prestige",
+  "model": "Venezia",
+  "sizeHorse": "34 (по факту скорее 33)",
+  "sizeRider": 17.5,
+  "sizeRiderValues": [
+   17.5
+  ],
+  "status": "sold",
+  "post": 253,
+  "comment": "было на примерке",
+  "photos": [
+   "assets/photos/253/1.jpg",
+   "assets/photos/253/2.jpg",
+   "assets/photos/253/3.jpg",
+   "assets/photos/253/4.jpg"
+  ]
+ },
+ {
+  "id": "249",
+  "title": "Выездковое седло Kieffer",
+  "type": "выездковое",
+  "brand": "Kieffer",
+  "sizeHorse": "32",
+  "sizeRider": 16.5,
+  "sizeRiderValues": [
+   16.5
+  ],
+  "status": "sold",
+  "post": 249,
+  "comment": "подойдет на пони",
+  "photos": [
+   "assets/photos/249/1.jpg",
+   "assets/photos/249/2.jpg",
+   "assets/photos/249/3.jpg",
+   "assets/photos/249/4.jpg"
+  ]
+ },
+ {
+  "id": "245",
+  "title": "Конкурное седло, новое, сменные ленчики",
+  "type": "конкурное",
+  "sizeHorse": "любой",
+  "condition": "новое",
+  "sizeRider": 17.5,
+  "sizeRiderValues": [
+   17.5
+  ],
+  "status": "sold",
+  "post": 245,
+  "comment": "комплект сменных ленчиков; бренд не указан",
+  "photos": [
+   "assets/photos/245/1.jpg",
+   "assets/photos/245/2.jpg",
+   "assets/photos/245/3.jpg",
+   "assets/photos/245/4.jpg"
+  ]
+ },
+ {
+  "id": "241",
+  "title": "Конкурное седло, бренд не указан",
+  "type": "конкурное",
+  "sizeHorse": "33",
+  "sizeRider": "16,5-17",
+  "sizeRiderValues": [
+   16.5,
+   17
+  ],
+  "price": 55000,
+  "post": 241,
+  "comment": "под ребенка - маленькое, легкое; статус не указан - проверить (пост апреля)",
+  "photos": [
+   "assets/photos/241/1.jpg",
+   "assets/photos/241/2.jpg",
+   "assets/photos/241/3.jpg",
+   "assets/photos/241/4.jpg"
+  ]
+ },
+ {
+  "id": "238",
+  "title": "Конкурное седло, новое",
+  "type": "конкурное",
+  "sizeHorse": "32, открытые лопатки",
+  "condition": "новое",
+  "sizeRider": "16,5-17",
+  "sizeRiderValues": [
+   16.5,
+   17
+  ],
+  "status": "sold",
+  "post": 238,
+  "comment": "под ребенка; бренд не указан",
+  "photos": [
+   "assets/photos/238/1.jpg",
+   "assets/photos/238/2.jpg",
+   "assets/photos/238/3.jpg"
+  ]
+ },
+ {
+  "id": "232",
+  "title": "Выездковое седло Prestige X-Helen",
+  "type": "выездковое",
+  "brand": "Prestige",
+  "model": "X-Helen",
+  "sizeHorse": "33",
+  "sizeRider": 18,
+  "sizeRiderValues": [
+   18
+  ],
+  "status": "sold",
+  "post": 232,
+  "comment": "18 - скорее 17,5",
+  "photos": [
+   "assets/photos/232/1.jpg",
+   "assets/photos/232/2.jpg",
+   "assets/photos/232/3.jpg",
+   "assets/photos/232/4.jpg",
+   "assets/photos/232/5.jpg",
+   "assets/photos/232/6.jpg"
+  ]
+ },
+ {
+  "id": "227",
+  "title": "Конкурное седло Kentaur",
+  "type": "конкурное",
+  "brand": "Kentaur",
+  "sizeHorse": "33-34",
+  "sizeRider": 17.5,
+  "sizeRiderValues": [
+   17.5
+  ],
+  "price": 115000,
+  "post": 227,
+  "comment": "статус не указан - проверить (пост апреля)",
+  "photos": [
+   "assets/photos/227/1.jpg",
+   "assets/photos/227/2.jpg",
+   "assets/photos/227/3.jpg",
+   "assets/photos/227/4.jpg",
+   "assets/photos/227/5.jpg"
+  ]
+ },
+ {
+  "id": "221",
+  "title": "Выездковое седло Equiline",
+  "type": "выездковое",
+  "brand": "Equiline",
+  "sizeHorse": "33",
+  "sizeRider": 17,
+  "sizeRiderValues": [
+   17
+  ],
+  "status": "sold",
+  "post": 221,
+  "photos": [
+   "assets/photos/221/1.jpg",
+   "assets/photos/221/2.jpg",
+   "assets/photos/221/3.jpg",
+   "assets/photos/221/4.jpg",
+   "assets/photos/221/5.jpg",
+   "assets/photos/221/6.jpg"
+  ]
+ },
+ {
+  "id": "216",
+  "title": "Выездковое седло Luc Childeric",
+  "type": "выездковое",
+  "brand": "Luc Childeric",
+  "sizeHorse": "33,5",
+  "sizeRider": 17.5,
+  "sizeRiderValues": [
+   17.5
+  ],
+  "status": "sold",
+  "post": 216,
+  "photos": [
+   "assets/photos/216/1.jpg",
+   "assets/photos/216/2.jpg",
+   "assets/photos/216/3.jpg",
+   "assets/photos/216/4.jpg",
+   "assets/photos/216/5.jpg"
+  ]
+ },
+ {
+  "id": "211",
+  "title": "Выездковое седло Sommer Spezial",
+  "type": "выездковое",
+  "brand": "Sommer",
+  "model": "Spezial",
+  "sizeHorse": "32",
+  "sizeRider": 16.5,
+  "sizeRiderValues": [
+   16.5
+  ],
+  "status": "sold",
+  "post": 211,
+  "comment": "выделка под крокодиловую кожу, лакированный задник",
+  "photos": [
+   "assets/photos/211/1.jpg",
+   "assets/photos/211/2.jpg",
+   "assets/photos/211/3.jpg",
+   "assets/photos/211/4.jpg",
+   "assets/photos/211/5.jpg"
+  ]
+ },
+ {
+  "id": "207",
+  "title": "Конкурное седло Acavallo Modigliani",
+  "type": "конкурное",
+  "brand": "Acavallo",
+  "model": "Modigliani",
+  "sizeHorse": "широкое",
+  "sizeRider": 17,
+  "sizeRiderValues": [
+   17
+  ],
+  "price": 220000,
+  "post": 207,
+  "comment": "без примерки 210 000; статус не указан - проверить (пост апреля)",
+  "photos": [
+   "assets/photos/207/1.jpg",
+   "assets/photos/207/2.jpg",
+   "assets/photos/207/3.jpg",
+   "assets/photos/207/4.jpg"
+  ]
+ },
+ {
+  "id": "202",
+  "title": "Конкурное седло Bruno Delgrande",
+  "type": "конкурное",
+  "brand": "Bruno Delgrande",
+  "sizeHorse": "34",
+  "sizeRider": 17,
+  "sizeRiderValues": [
+   17
+  ],
+  "price": 160000,
+  "post": 202,
+  "comment": "статус не указан - проверить (пост апреля)",
+  "photos": [
+   "assets/photos/202/1.jpg",
+   "assets/photos/202/2.jpg",
+   "assets/photos/202/3.jpg",
+   "assets/photos/202/4.jpg",
+   "assets/photos/202/5.jpg"
+  ]
+ },
+ {
+  "id": "198",
+  "title": "Выездковое седло Custom Icon Flight",
+  "type": "выездковое",
+  "brand": "Custom Icon",
+  "model": "Flight",
+  "sizeHorse": "33",
+  "condition": "новое",
+  "sizeRider": 17,
+  "sizeRiderValues": [
+   17
+  ],
+  "status": "sold",
+  "post": 198,
+  "comment": "седло 2024 года; широкий канал",
+  "photos": [
+   "assets/photos/198/1.jpg",
+   "assets/photos/198/2.jpg",
+   "assets/photos/198/3.jpg",
+   "assets/photos/198/4.jpg"
+  ]
+ },
+ {
+  "id": "194",
+  "title": "Выездковое седло Kentaur Afrodite Soft",
+  "type": "выездковое",
+  "brand": "Kentaur",
+  "model": "Afrodite Soft",
+  "sizeHorse": "3 (переобжато с 2)",
+  "condition": "новое",
+  "sizeRider": 16.5,
+  "sizeRiderValues": [
+   16.5
+  ],
+  "status": "sold",
+  "post": 194,
+  "comment": "для всадника ростом до 165 см",
+  "photos": [
+   "assets/photos/194/1.jpg",
+   "assets/photos/194/2.jpg",
+   "assets/photos/194/3.jpg",
+   "assets/photos/194/4.jpg"
+  ]
+ },
+ {
+  "id": "190",
+  "title": "Конкурное седло Гермида Пегас Моно Про",
+  "type": "конкурное",
+  "brand": "Гермида",
+  "model": "Пегас Моно Про",
+  "sizeHorse": "33,5",
+  "condition": "практически новое",
+  "sizeRider": 17,
+  "sizeRiderValues": [
+   17
+  ],
+  "status": "sold",
+  "post": 190,
+  "photos": [
+   "assets/photos/190/1.jpg",
+   "assets/photos/190/2.jpg",
+   "assets/photos/190/3.jpg",
+   "assets/photos/190/4.jpg"
+  ]
+ },
+ {
+  "id": "182",
+  "title": "Конкурное седло Maxflex Valentin",
+  "type": "конкурное",
+  "brand": "Maxflex",
+  "model": "Valentin",
+  "sizeHorse": "33",
+  "sizeRider": 17,
+  "sizeRiderValues": [
+   17
+  ],
+  "status": "sold",
+  "post": 182,
+  "comment": "гибкий ленчик, размер регулируется",
+  "photos": [
+   "assets/photos/182/1.jpg",
+   "assets/photos/182/2.jpg",
+   "assets/photos/182/3.jpg",
+   "assets/photos/182/4.jpg"
+  ]
+ },
+ {
+  "id": "178",
+  "title": "Выездковое седло County Connection",
+  "type": "выездковое",
+  "brand": "County",
+  "model": "Connection",
+  "sizeHorse": "MW (маркировка W)",
+  "sizeRider": 17.5,
+  "sizeRiderValues": [
+   17.5
+  ],
+  "status": "sold",
+  "post": 178,
+  "comment": "маркировка 18/W; county шьются на заказ - маркировке не верить",
+  "photos": [
+   "assets/photos/178/1.jpg",
+   "assets/photos/178/2.jpg",
+   "assets/photos/178/3.jpg",
+   "assets/photos/178/4.jpg"
+  ]
+ },
+ {
+  "id": "173",
+  "title": "Выездковое седло Erreplus Adelinde",
+  "type": "выездковое",
+  "brand": "Erreplus",
+  "model": "Adelinde",
+  "sizeHorse": "33,5",
+  "condition": "близко к идеалу",
+  "sizeRider": 17,
+  "sizeRiderValues": [
+   17
+  ],
+  "status": "sold",
+  "post": 173,
+  "comment": "сменные короткие панели за доплату",
+  "photos": [
+   "assets/photos/173/1.jpg",
+   "assets/photos/173/2.jpg",
+   "assets/photos/173/3.jpg",
+   "assets/photos/173/4.jpg",
+   "assets/photos/173/5.jpg"
+  ]
+ },
+ {
+  "id": "166",
+  "title": "Выездковое седло CWD SE 02",
+  "type": "выездковое",
+  "brand": "CWD",
+  "model": "SE 02",
+  "sizeHorse": "~32,5",
+  "sizeRider": 17.5,
+  "sizeRiderValues": [
+   17.5
+  ],
+  "status": "sold",
+  "post": 166,
+  "photos": [
+   "assets/photos/166/1.jpg",
+   "assets/photos/166/2.jpg",
+   "assets/photos/166/3.jpg",
+   "assets/photos/166/4.jpg",
+   "assets/photos/166/5.jpg",
+   "assets/photos/166/6.jpg"
+  ]
+ },
+ {
+  "id": "160",
+  "title": "Конкурное седло Equiline",
+  "type": "конкурное",
+  "brand": "Equiline",
+  "sizeHorse": "33",
+  "condition": "идеальное",
+  "sizeRider": 17,
+  "sizeRiderValues": [
+   17
+  ],
+  "status": "sold",
+  "post": 160,
+  "photos": [
+   "assets/photos/160/1.jpg",
+   "assets/photos/160/2.jpg"
+  ]
+ },
+ {
+  "id": "157",
+  "title": "Выездковое седло Erreplus Vittoria",
+  "type": "выездковое",
+  "brand": "Erreplus",
+  "model": "Vittoria",
+  "sizeHorse": "33",
+  "sizeRider": 17,
+  "sizeRiderValues": [
+   17
+  ],
+  "status": "sold",
+  "post": 157,
+  "photos": [
+   "assets/photos/157/1.jpg",
+   "assets/photos/157/2.jpg"
+  ]
+ },
+ {
+  "id": "148",
+  "title": "Конкурное седло Prestige Roma Jump",
+  "type": "конкурное",
+  "brand": "Prestige",
+  "model": "Roma Jump",
+  "sizeHorse": "33",
+  "sizeRider": 17,
+  "sizeRiderValues": [
+   17
+  ],
+  "status": "sold",
+  "post": 148,
+  "photos": [
+   "assets/photos/148/1.jpg",
+   "assets/photos/148/2.jpg",
+   "assets/photos/148/3.jpg",
+   "assets/photos/148/4.jpg",
+   "assets/photos/148/5.jpg",
+   "assets/photos/148/6.jpg",
+   "assets/photos/148/7.jpg",
+   "assets/photos/148/8.jpg",
+   "assets/photos/148/9.jpg"
+  ]
+ },
+ {
+  "id": "141",
+  "title": "Конкурное седло Stübben",
+  "type": "конкурное",
+  "brand": "Stübben",
+  "sizeHorse": "32 по штюббену (широкая спина)",
+  "sizeRider": 17.5,
+  "sizeRiderValues": [
+   17.5
+  ],
+  "status": "sold",
+  "post": 141,
+  "photos": [
+   "assets/photos/141/1.jpg",
+   "assets/photos/141/2.jpg",
+   "assets/photos/141/3.jpg",
+   "assets/photos/141/4.jpg",
+   "assets/photos/141/5.jpg",
+   "assets/photos/141/6.jpg",
+   "assets/photos/141/7.jpg"
+  ]
+ },
+ {
+  "id": "132",
+  "title": "Конкурное седло Sommer Opus",
+  "type": "конкурное",
+  "brand": "Sommer",
+  "model": "Opus",
+  "sizeHorse": "33",
+  "sizeRider": 17,
+  "sizeRiderValues": [
+   17
+  ],
+  "status": "sold",
+  "post": 132,
+  "photos": [
+   "assets/photos/132/1.jpg",
+   "assets/photos/132/2.jpg",
+   "assets/photos/132/3.jpg",
+   "assets/photos/132/4.jpg"
+  ]
+ },
+ {
+  "id": "127",
+  "title": "Выездковое седло County Epiphany",
+  "type": "выездковое",
+  "brand": "County",
+  "model": "Epiphany",
+  "sizeHorse": "M",
+  "condition": "новое",
+  "sizeRider": 17,
+  "sizeRiderValues": [
+   17
+  ],
+  "status": "sold",
+  "post": 127,
+  "photos": [
+   "assets/photos/127/1.jpg",
+   "assets/photos/127/2.jpg",
+   "assets/photos/127/3.jpg",
+   "assets/photos/127/4.jpg",
+   "assets/photos/127/5.jpg"
+  ]
+ },
+ {
+  "id": "113",
+  "title": "Выездковое седло Erreplus Adelinde",
+  "type": "выездковое",
+  "brand": "Erreplus",
+  "model": "Adelinde",
+  "sizeHorse": "33 (33,5)",
+  "sizeRider": 17,
+  "sizeRiderValues": [
+   17
+  ],
+  "status": "sold",
+  "post": 113,
+  "photos": [
+   "assets/photos/113/1.jpg",
+   "assets/photos/113/2.jpg",
+   "assets/photos/113/3.jpg",
+   "assets/photos/113/4.jpg",
+   "assets/photos/113/5.jpg",
+   "assets/photos/113/6.jpg",
+   "assets/photos/113/7.jpg",
+   "assets/photos/113/8.jpg",
+   "assets/photos/113/9.jpg",
+   "assets/photos/113/10.jpg"
+  ]
+ },
+ {
+  "id": "107",
+  "title": "Выездковое седло Prestige Hippos",
+  "type": "выездковое",
+  "brand": "Prestige",
+  "model": "Hippos",
+  "sizeHorse": "31",
+  "sizeRider": 16,
+  "sizeRiderValues": [
+   16
+  ],
+  "price": 115000,
+  "post": 107,
+  "comment": "на некрупную лошадку и всадника; статус не указан - проверить (пост февраля)",
+  "photos": [
+   "assets/photos/107/1.jpg"
+  ]
+ },
+ {
+  "id": "102",
+  "title": "Конкурное седло Amerigo Vega",
+  "type": "конкурное",
+  "brand": "Amerigo",
+  "model": "Vega",
+  "sizeHorse": "ближе к 34",
+  "sizeRider": 18,
+  "sizeRiderValues": [
+   18
+  ],
+  "price": 200000,
+  "post": 102,
+  "comment": "статус не указан - проверить (пост февраля)",
+  "photos": [
+   "assets/photos/102/1.jpg",
+   "assets/photos/102/2.jpg",
+   "assets/photos/102/3.jpg",
+   "assets/photos/102/4.jpg",
+   "assets/photos/102/5.jpg"
+  ]
+ },
+ {
+  "id": "100",
+  "title": "Конкурное седло Henri de Rivel",
+  "type": "конкурное",
+  "brand": "Henri de Rivel",
+  "sizeHorse": "34",
+  "sizeRider": 17.5,
+  "sizeRiderValues": [
+   17.5
+  ],
+  "price": 140000,
+  "post": 100,
+  "comment": "статус не указан - проверить (пост февраля)",
+  "photos": [
+   "assets/photos/100/1.jpg",
+   "assets/photos/100/2.jpg"
+  ]
+ },
+ {
+  "id": "87",
+  "title": "Конкурное седло Sommer",
+  "type": "конкурное",
+  "brand": "Sommer",
+  "sizeHorse": "31,5 по соммеру (33-34 по престижу)",
+  "condition": "новое",
+  "sizeRider": 17.5,
+  "sizeRiderValues": [
+   17.5
+  ],
+  "status": "sold",
+  "post": 87,
+  "photos": [
+   "assets/photos/87/1.jpg",
+   "assets/photos/87/2.jpg",
+   "assets/photos/87/3.jpg",
+   "assets/photos/87/4.jpg",
+   "assets/photos/87/5.jpg"
+  ]
+ },
+ {
+  "id": "81",
+  "title": "Выездковое седло CWD SE08",
+  "type": "выездковое",
+  "brand": "CWD",
+  "model": "SE08",
+  "sizeHorse": "34",
+  "sizeRider": 17.5,
+  "sizeRiderValues": [
+   17.5
+  ],
+  "status": "sold",
+  "post": 81,
+  "photos": [
+   "assets/photos/81/1.jpg",
+   "assets/photos/81/2.jpg",
+   "assets/photos/81/3.jpg",
+   "assets/photos/81/4.jpg",
+   "assets/photos/81/5.jpg",
+   "assets/photos/81/6.jpg"
+  ]
+ },
+ {
+  "id": "77",
+  "title": "Конкурное седло Prestige Arezzo",
+  "type": "конкурное",
+  "brand": "Prestige",
+  "model": "Arezzo",
+  "sizeHorse": "33 (маркировка 34)",
+  "sizeRider": 18,
+  "sizeRiderValues": [
+   18
+  ],
+  "status": "sold",
+  "post": 77,
+  "photos": [
+   "assets/photos/77/1.jpg",
+   "assets/photos/77/2.jpg",
+   "assets/photos/77/3.jpg",
+   "assets/photos/77/4.jpg"
+  ]
+ },
+ {
+  "id": "72",
+  "title": "Конкурное седло Devoucoux",
+  "type": "конкурное",
+  "brand": "Devoucoux",
+  "sizeHorse": "33-34",
+  "sizeRider": 17.5,
+  "sizeRiderValues": [
+   17.5
+  ],
+  "status": "sold",
+  "post": 72,
+  "comment": "маркировка 18 - французская маломерка",
+  "photos": [
+   "assets/photos/72/1.jpg",
+   "assets/photos/72/2.jpg",
+   "assets/photos/72/3.jpg",
+   "assets/photos/72/4.jpg"
+  ]
+ },
+ {
+  "id": "65",
+  "title": "Выездковое седло Kieffer Lech Profi",
+  "type": "выездковое",
+  "brand": "Kieffer",
+  "model": "Lech Profi",
+  "sizeHorse": "~32",
+  "sizeRider": 17,
+  "sizeRiderValues": [
+   17
+  ],
+  "status": "sold",
+  "post": 65,
+  "photos": [
+   "assets/photos/65/1.jpg",
+   "assets/photos/65/2.jpg",
+   "assets/photos/65/3.jpg",
+   "assets/photos/65/4.jpg",
+   "assets/photos/65/5.jpg",
+   "assets/photos/65/6.jpg",
+   "assets/photos/65/7.jpg"
+  ]
+ },
+ {
+  "id": "61",
+  "title": "Выездковое седло Kentaur Kalipso",
+  "type": "выездковое",
+  "brand": "Kentaur",
+  "model": "Kalipso",
+  "sizeHorse": "2 по кентавру (~32,5 по престижу)",
+  "sizeRider": "17-17,5",
+  "sizeRiderValues": [
+   17,
+   17.5
+  ],
+  "status": "sold",
+  "post": 61,
+  "photos": [
+   "assets/photos/61/1.jpg",
+   "assets/photos/61/2.jpg",
+   "assets/photos/61/3.jpg",
+   "assets/photos/61/4.jpg"
+  ]
+ },
+ {
+  "id": "57",
+  "title": "Конкурное седло Kieffer Europe",
+  "type": "конкурное",
+  "brand": "Kieffer",
+  "model": "Europe",
+  "sizeHorse": "33",
+  "sizeRider": 17.5,
+  "sizeRiderValues": [
+   17.5
+  ],
+  "price": 70000,
+  "post": 57,
+  "comment": "статус не указан - проверить (пост февраля)",
+  "photos": [
+   "assets/photos/57/1.jpg",
+   "assets/photos/57/2.jpg",
+   "assets/photos/57/3.jpg",
+   "assets/photos/57/4.jpg"
+  ]
+ },
+ {
+  "id": "46",
+  "title": "Конкурное седло Prestige Como",
+  "type": "конкурное",
+  "brand": "Prestige",
+  "model": "Como",
+  "sizeHorse": "32 (маркировка 33)",
+  "sizeRider": 17,
+  "sizeRiderValues": [
+   17
+  ],
+  "status": "sold",
+  "post": 46,
+  "photos": [
+   "assets/photos/46/1.jpg",
+   "assets/photos/46/2.jpg",
+   "assets/photos/46/3.jpg",
+   "assets/photos/46/4.jpg"
+  ]
+ },
+ {
+  "id": "41",
+  "title": "Выездковое седло Euroriding Diamant",
+  "type": "выездковое",
+  "brand": "Euroriding",
+  "model": "Diamant",
+  "sizeHorse": "34",
+  "sizeRider": 17,
+  "sizeRiderValues": [
+   17
+  ],
+  "status": "sold",
+  "post": 41,
+  "photos": [
+   "assets/photos/41/1.jpg",
+   "assets/photos/41/2.jpg",
+   "assets/photos/41/3.jpg",
+   "assets/photos/41/4.jpg",
+   "assets/photos/41/5.jpg"
+  ]
+ },
+ {
+  "id": "34",
+  "title": "Выездковое седло Kieffer Brugge",
+  "type": "выездковое",
+  "brand": "Kieffer",
+  "model": "Brugge",
+  "sizeRider": 17.5,
+  "sizeRiderValues": [
+   17.5
+  ],
+  "price": 210000,
+  "post": 34,
+  "comment": "для крупных лошадей (фризы, шайры); размер по лошади не указан; статус не указан - проверить (пост января)",
+  "photos": [
+   "assets/photos/34/1.jpg",
+   "assets/photos/34/2.jpg",
+   "assets/photos/34/3.jpg"
+  ]
+ },
+ {
+  "id": "29",
+  "title": "Выездковое седло Devoucoux",
+  "type": "выездковое",
+  "brand": "Devoucoux",
+  "sizeHorse": "32-33",
+  "sizeRider": 17,
+  "sizeRiderValues": [
+   17
+  ],
+  "status": "sold",
+  "post": 29,
+  "comment": "короткая ОП",
+  "photos": [
+   "assets/photos/29/1.jpg",
+   "assets/photos/29/2.jpg",
+   "assets/photos/29/3.jpg",
+   "assets/photos/29/4.jpg",
+   "assets/photos/29/5.jpg"
+  ]
+ },
+ {
+  "id": "24",
+  "title": "Конкурное седло Prestige Como",
+  "type": "конкурное",
+  "brand": "Prestige",
+  "model": "Como",
+  "sizeHorse": "32 (маркировка 33)",
+  "sizeRider": 17,
+  "sizeRiderValues": [
+   17
+  ],
+  "status": "sold",
+  "post": 24,
+  "photos": [
+   "assets/photos/24/1.jpg",
+   "assets/photos/24/2.jpg",
+   "assets/photos/24/3.jpg",
+   "assets/photos/24/4.jpg",
+   "assets/photos/24/5.jpg"
+  ]
+ },
+ {
+  "id": "22",
+  "title": "Выездковое седло Harry Dabbs Jaguar",
+  "type": "выездковое",
+  "brand": "Harry Dabbs",
+  "model": "Jaguar",
+  "sizeHorse": "32-33",
+  "sizeRider": 17,
+  "sizeRiderValues": [
+   17
+  ],
+  "price": 150000,
+  "post": 22,
+  "comment": "статус не указан - проверить (пост января)",
+  "photos": [
+   "assets/photos/22/1.jpg",
+   "assets/photos/22/2.jpg"
+  ]
+ },
+ {
+  "id": "20",
+  "title": "Универсальное седло Kieffer Aachen AT",
+  "type": "универсальное",
+  "brand": "Kieffer",
+  "model": "Aachen AT",
+  "sizeHorse": "32-33",
+  "sizeRider": "17-17,5",
+  "sizeRiderValues": [
+   17,
+   17.5
+  ],
+  "price": 50000,
+  "post": 20,
+  "comment": "статус не указан - проверить (пост января)",
+  "photos": [
+   "assets/photos/20/1.jpg",
+   "assets/photos/20/2.jpg"
+  ]
+ },
+ {
+  "id": "9",
+  "title": "Конкурное седло Kieffer Arezzo",
+  "type": "конкурное",
+  "brand": "Kieffer",
+  "model": "Arezzo",
+  "sizeHorse": "33-34",
+  "sizeRider": "17-17,5",
+  "sizeRiderValues": [
+   17,
+   17.5
+  ],
+  "status": "sold",
+  "post": 9,
+  "photos": [
+   "assets/photos/9/1.jpg",
+   "assets/photos/9/2.jpg",
+   "assets/photos/9/3.jpg",
+   "assets/photos/9/4.jpg",
+   "assets/photos/9/5.jpg",
+   "assets/photos/9/6.jpg",
+   "assets/photos/9/7.jpg",
+   "assets/photos/9/8.jpg",
+   "assets/photos/9/9.jpg",
+   "assets/photos/9/10.jpg"
+  ]
+ },
+ {
+  "id": "7",
+  "title": "Выездковое седло Equiline",
+  "type": "выездковое",
+  "brand": "Equiline",
+  "sizeHorse": "32",
+  "sizeRider": 17,
+  "sizeRiderValues": [
+   17
+  ],
+  "price": 200000,
+  "post": 7,
+  "comment": "на молодую необмускуленную лошадь, прямая спина; статус не указан - проверить (пост января)",
+  "photos": [
+   "assets/photos/7/1.jpg",
+   "assets/photos/7/2.jpg"
+  ]
+ },
+ {
+  "id": "4",
+  "title": "Выездковое седло Trainers",
+  "type": "выездковое",
+  "brand": "Trainers",
+  "sizeHorse": "32-33",
+  "sizeRider": 17,
+  "sizeRiderValues": [
+   17
+  ],
+  "price": 40000,
+  "post": 4,
+  "comment": "статус не указан - проверить (пост января)",
+  "photos": [
+   "assets/photos/4/1.jpg",
+   "assets/photos/4/2.jpg",
+   "assets/photos/4/3.jpg"
+  ]
+ }
+]
