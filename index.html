@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Ever saddle</title>
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="styles.css?v=10">
+  <link rel="stylesheet" href="styles.css?v=11">
 </head>
 <body>
   <div class="app">
@@ -25,6 +25,11 @@
         <span class="pill-badge" id="filterBadge" hidden>0</span>
       </button>
       <div class="count" id="count"></div>
+      <!-- Итерация 10: сортировка каталога, проданные всегда внизу -->
+      <button type="button" class="pill" id="sortBtn" aria-label="Сортировка каталога">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 16 4 4 4-4"/><path d="M7 20V4"/><path d="m21 8-4-4-4 4"/><path d="M17 4v16"/></svg>
+        <span id="sortLabel">Новые</span>
+      </button>
     </div>
     <main class="grid" id="grid"></main>
 
@@ -38,9 +43,16 @@
         <button type="button" class="reset-btn" id="resetBtn">Сбросить</button>
       </div>
     </section>
+    <!-- Мини-шторка сортировки -->
+    <section class="sheet" id="sortSheet" aria-label="Сортировка каталога">
+      <h2 class="sheet-title">Сортировка</h2>
+      <div id="sortOptions"></div>
+    </section>
+    <!-- Полноэкранный просмотр фото -->
+    <div class="photo-viewer" id="photoViewer" aria-label="Просмотр фото"></div>
   </div>
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
-  <script>window.ASSETS_V = '?v=10';</script>
-  <script src="app.js?v=10"></script>
+  <script>window.ASSETS_V = '?v=11';</script>
+  <script src="app.js?v=11"></script>
 </body>
 </html>

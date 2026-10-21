@@ -212,7 +212,7 @@ function buildSheet() {
     filters.inStock = e.target.checked;
     refreshAfterFilterChange();
   });
-  document.getElementById('applyBtn').addEventListener('click', closeSheet);
+  document.getElementById('applyBtn').addEventListener('click', closeSheets);
   document.getElementById('resetBtn').addEventListener('click', () => {
     GROUPS.forEach(g => filters[g.key].clear());
     filters.priceFrom = filters.priceTo = null;
@@ -223,7 +223,7 @@ function buildSheet() {
     refreshAfterFilterChange();
   });
   document.getElementById('filterBtn').addEventListener('click', openSheet);
-  document.getElementById('sheetOverlay').addEventListener('click', closeSheet);
+  document.getElementById('sheetOverlay').addEventListener('click', closeSheets);
 }
 
 function updateSheet() {
@@ -242,11 +242,6 @@ function openSheet() {
   document.getElementById('filterSheet').classList.add('open');
 }
 
-function closeSheet() {
-  document.getElementById('sheetOverlay').classList.remove('open');
-  document.getElementById('filterSheet').classList.remove('open');
-}
-
 function refreshApplyBtn() {
   const n = favoritesMode ? favoritesList().length : visibleSaddles().length;
   document.getElementById('applyBtn').textContent = 'Показать ' + n + ' ' + plural(n);
@@ -256,6 +251,253 @@ function refreshAfterFilterChange() {
   updateSheet();
   refreshApplyBtn();
   renderCatalog();
+}
+
+/* ---------- Сортировка каталога (идеи Ани №3 и №5) ---------- */
+
+const CHECK_SVG = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="check" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>';
+
+const SORTS = [
+  { key: 'new', label: 'Новые' },   // по умолчанию: свежие посты сверху, как раньше
+  { key: 'old', label: 'Старые' },
+  { key: 'priceAsc', label: 'Дешевле' },
+  { key: 'priceDesc', label: 'Дороже' }
+];
+let sortMode = 'new';
+
+function soldLast(a, b) {
+  return (a.status === 'sold') - (b.status === 'sold'); // проданные - в конец при любом порядке
+}
+
+const SORT_COMPARE = {
+  new: (a, b) => soldLast(a, b) || b.post - a.post,
+  old: (a, b) => soldLast(a, b) || a.post - b.post,
+  // седла без цены (сегодня это все проданные) уходят в конец ценового порядка;
+  // пост - запасной критерий, если цены равны или их нет у обоих
+  priceAsc: (a, b) => soldLast(a, b) || (a.price ?? Infinity) - (b.price ?? Infinity) || b.post - a.post,
+  priceDesc: (a, b) => soldLast(a, b) || (b.price ?? -Infinity) - (a.price ?? -Infinity) || b.post - a.post
+};
+
+function sortList(list) {
+  return [...list].sort(SORT_COMPARE[sortMode]);
+}
+
+function buildSortSheet() {
+  document.getElementById('sortOptions').innerHTML = SORTS.map(o =>
+    '<button type="button" class="sort-row" data-sort="' + o.key + '">' + esc(o.label) + CHECK_SVG + '</button>'
+  ).join('');
+  document.getElementById('sortOptions').addEventListener('click', (e) => {
+    const row = e.target.closest('.sort-row');
+    if (!row) return;
+    sortMode = row.dataset.sort;
+    haptic();
+    closeSheets();
+    updateSortBtn();
+    renderCatalog();
+  });
+  document.getElementById('sortBtn').addEventListener('click', openSortSheet);
+}
+
+function updateSortBtn() {
+  document.getElementById('sortLabel').textContent = SORTS.find(o => o.key === sortMode).label;
+  document.getElementById('sortBtn').classList.toggle('is-on', sortMode !== 'new');
+}
+
+function openSortSheet() {
+  document.querySelectorAll('#sortOptions .sort-row').forEach(row =>
+    row.classList.toggle('on', row.dataset.sort === sortMode));
+  document.getElementById('sheetOverlay').classList.add('open');
+  document.getElementById('sortSheet').classList.add('open');
+}
+
+function closeSheets() {
+  document.getElementById('sheetOverlay').classList.remove('open');
+  document.getElementById('filterSheet').classList.remove('open');
+  document.getElementById('sortSheet').classList.remove('open');
+}
+
+/* ---------- Полноэкранный просмотр фото (идея Ани №6) ---------- */
+
+const CLOSE_SVG = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>';
+
+let viewerState = null; // { photos, index, scale, tx, ty, pinch, pan, lastTap }
+
+function isViewerOpen() {
+  return document.getElementById('photoViewer').classList.contains('open');
+}
+
+function transformSlide(img, scale, tx, ty) {
+  img.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + scale + ')';
+}
+
+// Зум вокруг точки экрана (px, py): точка фото под пальцами/курсором остается на месте.
+// from* - состояние «до» (у pinch это база жеста, чтобы не дрейфовать от дрожания midpoint)
+function zoomAround(img, fromScale, fromTx, fromTy, toScale, px, py) {
+  const st = viewerState;
+  const cx = window.innerWidth / 2, cy = window.innerHeight / 2;
+  const wx = (px - cx - fromTx) / fromScale;
+  const wy = (py - cy - fromTy) / fromScale;
+  toScale = Math.min(4, Math.max(1, toScale));
+  const maxX = (toScale - 1) * window.innerWidth / 2;
+  const maxY = (toScale - 1) * window.innerHeight / 2;
+  st.scale = toScale;
+  st.tx = Math.min(maxX, Math.max(-maxX, px - cx - wx * toScale));
+  st.ty = Math.min(maxY, Math.max(-maxY, py - cy - wy * toScale));
+  transformSlide(img, st.scale, st.tx, st.ty);
+}
+
+function viewerImg() {
+  return document.querySelectorAll('#pTrack .p-slide img')[viewerState.index];
+}
+
+function resetViewerZoom() {
+  const st = viewerState;
+  st.scale = 1; st.tx = 0; st.ty = 0;
+  const img = viewerImg();
+  if (img) transformSlide(img, 1, 0, 0);
+}
+
+function updateViewerCounter() {
+  const st = viewerState;
+  document.getElementById('pCounter').textContent = (st.index + 1) + ' / ' + st.photos.length;
+}
+
+function openPhotoViewer(s, startIdx) {
+  const root = document.getElementById('photoViewer');
+  const slides = s.photos.map((p, i) =>
+    '<div class="p-slide"><img src="' + esc(p) + '" alt="' + esc(s.title) + ' - фото ' + (i + 1) + '" draggable="false"></div>'
+  ).join('');
+  root.innerHTML =
+    '<div class="p-top">' +
+      '<span class="p-counter" id="pCounter"></span>' +
+      '<button type="button" class="p-close" id="pClose" aria-label="Закрыть просмотр">' + CLOSE_SVG + '</button>' +
+    '</div>' +
+    '<div class="p-track" id="pTrack">' + slides + '</div>';
+  viewerState = { photos: s.photos, index: startIdx, scale: 1, tx: 0, ty: 0 };
+  root.classList.add('open'); // до scrollLeft: при display:none ширина трека 0
+  document.body.classList.add('no-scroll');
+  const track = document.getElementById('pTrack');
+  track.scrollLeft = startIdx * track.clientWidth; // прыжок к фото без прокрутки
+  updateViewerCounter();
+  document.getElementById('pClose').addEventListener('click', closeViewer);
+  wireViewerTrack(track);
+  releaseTelegramButtons(); // нативная MainButton не должна висеть поверх фото
+  haptic();
+}
+
+function wireViewerTrack(track) {
+  const slides = [...track.querySelectorAll('.p-slide')];
+
+  const pinchDist = (t) => Math.hypot(t[0].clientX - t[1].clientX, t[0].clientY - t[1].clientY);
+  const pinchMid = (t) => ({ x: (t[0].clientX + t[1].clientX) / 2, y: (t[0].clientY + t[1].clientY) / 2 });
+
+  track.addEventListener('touchstart', (e) => {
+    const st = viewerState;
+    if (e.touches.length === 2) {
+      st.pinch = { dist: pinchDist(e.touches), scale: st.scale, tx: st.tx, ty: st.ty };
+    } else if (e.touches.length === 1 && st.scale > 1) {
+      st.pan = { x: e.touches[0].clientX, y: e.touches[0].clientY, tx: st.tx, ty: st.ty };
+    }
+  }, { passive: true });
+
+  track.addEventListener('touchmove', (e) => {
+    const st = viewerState;
+    if (!st) return;
+    if (e.touches.length === 2 && st.pinch) {
+      e.preventDefault(); // зум важнее прокрутки между фото
+      const m = pinchMid(e.touches);
+      const k = pinchDist(e.touches) / st.pinch.dist;
+      zoomAround(viewerImg(), st.pinch.scale, st.pinch.tx, st.pinch.ty, st.pinch.scale * k, m.x, m.y);
+    } else if (e.touches.length === 1 && st.pan) {
+      e.preventDefault(); // при scale > 1 один палец - панорамирование, не свайп
+      const p = st.pan;
+      st.tx = p.tx + (e.touches[0].clientX - p.x);
+      st.ty = p.ty + (e.touches[0].clientY - p.y);
+      const maxX = (st.scale - 1) * window.innerWidth / 2;
+      const maxY = (st.scale - 1) * window.innerHeight / 2;
+      st.tx = Math.min(maxX, Math.max(-maxX, st.tx));
+      st.ty = Math.min(maxY, Math.max(-maxY, st.ty));
+      transformSlide(viewerImg(), st.scale, st.tx, st.ty);
+    }
+  }, { passive: false });
+
+  track.addEventListener('touchend', (e) => {
+    const st = viewerState;
+    if (!st) return;
+    if (e.touches.length === 0) {
+      st.pinch = null; st.pan = null;
+      if (st.scale < 1.05) resetViewerZoom(); // слабый щипок - просто вернуться
+    } else if (e.touches.length === 1) {
+      st.pinch = null;
+      st.pan = st.scale > 1
+        ? { x: e.touches[0].clientX, y: e.touches[0].clientY, tx: st.tx, ty: st.ty }
+        : null;
+    }
+  });
+
+  // Переключение фото скроллом трека: сброс зума, обновление счетчика
+  const syncIndex = () => {
+    const st = viewerState;
+    if (!st) return;
+    const idx = Math.round(track.scrollLeft / track.clientWidth);
+    if (idx === st.index) return;
+    st.index = idx;
+    st.scale = 1; st.tx = 0; st.ty = 0;
+    slides.forEach((sl, i) => {
+      if (i !== idx) transformSlide(sl.querySelector('img'), 1, 0, 0);
+    });
+    updateViewerCounter();
+  };
+  track.addEventListener('scroll', syncIndex, { passive: true });
+  // Поллинг позиции: в части WebView (iOS Телеграма) scroll-события не доходят
+  viewerState.pollTimer = setInterval(syncIndex, 150);
+
+  // Колесо мыши (браузер на ПК): зум к позиции курсора
+  track.addEventListener('wheel', (e) => {
+    e.preventDefault();
+    const st = viewerState;
+    if (!st) return;
+    const factor = e.deltaY < 0 ? 1.25 : 0.8;
+    zoomAround(viewerImg(), st.scale, st.tx, st.ty, st.scale * factor, e.clientX, e.clientY);
+  }, { passive: false });
+
+  // Двойной тап/клик: приближение в точке и возврат
+  track.addEventListener('click', (e) => {
+    const st = viewerState;
+    if (!st) return;
+    const now = Date.now();
+    const t = st.lastTap;
+    st.lastTap = { t: now, x: e.clientX, y: e.clientY };
+    if (!t || now - t.t > 500 || Math.hypot(e.clientX - t.x, e.clientY - t.y) > 40) return;
+    st.lastTap = null;
+    if (st.scale > 1) resetViewerZoom();
+    else zoomAround(viewerImg(), 1, 0, 0, 2.5, e.clientX, e.clientY);
+  });
+}
+
+function wireViewerStatics() {
+  const root = document.getElementById('photoViewer');
+  // Тап по пустому месту (не по фото) - закрыть
+  root.addEventListener('click', (e) => {
+    if (e.target.closest('.p-close') || e.target.tagName === 'IMG') return;
+    closeViewer();
+  });
+  // Штатный pinch Safari не должен зумить страницу
+  root.addEventListener('gesturestart', (e) => e.preventDefault());
+  root.addEventListener('gesturechange', (e) => e.preventDefault());
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && isViewerOpen()) closeViewer();
+  });
+}
+
+function closeViewer() {
+  if (viewerState && viewerState.pollTimer) clearInterval(viewerState.pollTimer);
+  viewerState = null;
+  const root = document.getElementById('photoViewer');
+  root.classList.remove('open');
+  root.innerHTML = '';
+  document.body.classList.remove('no-scroll');
+  if (document.querySelector('.saddle-view')) setupTelegramButtons(); // карточка под вьювером
 }
 
 /* ---------- Каталог ---------- */
@@ -299,10 +541,10 @@ function renderCatalog() {
   document.querySelector('.toolbar').style.display = '';
   let list, empty = null;
   if (favoritesMode) {
-    list = favoritesList();
+    list = sortList(favoritesList());
     if (list.length === 0) empty = EMPTY_FAV_SVG + '<h3>Пока пусто</h3><p>Нажмите на сердце у седла в каталоге - оно появится здесь</p>';
   } else {
-    list = visibleSaddles();
+    list = sortList(visibleSaddles());
     if (list.length === 0) empty = EMPTY_SEARCH_SVG + '<h3>Ничего не нашлось</h3><p>Попробуйте сбросить фильтры или выбрать другие значения</p>';
   }
   grid.innerHTML = empty
@@ -410,10 +652,17 @@ function wireCopyArticle() {
   });
 }
 
-function wireGallery() {
+function wireGallery(s) {
   stopGalleryTracking();
   const track = document.getElementById('gTrack');
   const dots = [...document.querySelectorAll('#gDots .dot')];
+  if (!track) return;
+  // Тап по фото - полноэкранный просмотр с текущего снимка
+  track.addEventListener('click', (e) => {
+    const slide = e.target.closest('.g-slide');
+    if (!slide) return;
+    openPhotoViewer(s, [...track.querySelectorAll('.g-slide')].indexOf(slide));
+  });
   if (!track || dots.length < 2) return;
   let current = 0;
   const update = (idx) => {
@@ -469,7 +718,7 @@ function openDm() {
 function openSaddle(id) {
   const s = saddles.find(x => x.id === id);
   if (!s) return;
-  closeSheet();
+  closeSheets();
   document.querySelector('.toolbar').style.display = 'none';
   const grid = document.getElementById('grid');
   grid.classList.add('saddle-open');
@@ -480,18 +729,20 @@ function openSaddle(id) {
     toggleFavorite(e.currentTarget.dataset.id);
   });
   wireCopyArticle();
-  wireGallery();
+  wireGallery(s);
   setupTelegramButtons();
   window.scrollTo(0, 0);
   history.pushState({ view: 'saddle', id }, '', '#' + id);
 }
 
 function backToCatalog() {
+  if (isViewerOpen()) { closeViewer(); return; } // первый «назад» закрывает только фото
   renderCatalog();
   history.pushState({ view: 'catalog' }, '', location.pathname);
 }
 
 window.addEventListener('popstate', () => {
+  if (isViewerOpen()) closeViewer();
   const saddleOpen = !!document.querySelector('.saddle-view');
   if (saddleOpen) renderCatalog();
 });
@@ -530,6 +781,8 @@ async function init() {
     });
 
     buildSheet();
+    buildSortSheet();
+    wireViewerStatics();
     renderHeaderFav();
     const hash = decodeURIComponent(location.hash.slice(1));
     const fromHash = saddles.find(x => x.id === hash);
