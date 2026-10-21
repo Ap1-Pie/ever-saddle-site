@@ -12,6 +12,8 @@
   ],
   "price": 130000,
   "status": "available",
+  "article": "EVER0080",
+  "publishedAt": "08.10.2026",
   "post": 417,
   "photos": [
    "assets/photos/417/1.jpg",
@@ -35,8 +37,10 @@
   ],
   "price": 250000,
   "status": "available",
-  "post": 410,
+  "article": "EVER0079",
+  "publishedAt": "08.10.2026",
   "comment": "тёмно-коричневое",
+  "post": 410,
   "photos": [
    "assets/photos/410/1.jpg",
    "assets/photos/410/2.jpg",
@@ -59,6 +63,8 @@
    17
   ],
   "status": "sold",
+  "article": "EVER0078",
+  "publishedAt": "18.09.2026",
   "post": 404,
   "photos": [
    "assets/photos/404/1.jpg",
@@ -82,6 +88,8 @@
   ],
   "price": 380000,
   "status": "available",
+  "article": "EVER0077",
+  "publishedAt": "18.09.2026",
   "post": 400,
   "photos": [
    "assets/photos/400/1.jpg",
@@ -99,8 +107,10 @@
   "condition": "идеальное",
   "price": 400000,
   "status": "available",
-  "post": 394,
+  "article": "EVER0076",
+  "publishedAt": "20.08.2026",
   "comment": "размеры - маркировка на фото; монокрыло",
+  "post": 394,
   "photos": [
    "assets/photos/394/1.jpg",
    "assets/photos/394/2.jpg",
@@ -123,6 +133,8 @@
   ],
   "price": 145000,
   "status": "available",
+  "article": "EVER0075",
+  "publishedAt": "20.08.2026",
   "post": 390,
   "photos": [
    "assets/photos/390/1.jpg",
@@ -144,6 +156,8 @@
    17.5
   ],
   "status": "sold",
+  "article": "EVER0074",
+  "publishedAt": "20.08.2026",
   "post": 386,
   "photos": [
    "assets/photos/386/1.jpg",
@@ -164,6 +178,8 @@
    17.5
   ],
   "status": "sold",
+  "article": "EVER0073",
+  "publishedAt": "20.08.2026",
   "post": 382,
   "photos": [
    "assets/photos/382/1.jpg",
@@ -184,6 +200,8 @@
    17.5
   ],
   "status": "sold",
+  "article": "EVER0072",
+  "publishedAt": "20.08.2026",
   "post": 379,
   "photos": [
    "assets/photos/379/1.jpg",
@@ -203,6 +221,8 @@
    17
   ],
   "status": "sold",
+  "article": "EVER0071",
+  "publishedAt": "20.08.2026",
   "post": 375,
   "photos": [
    "assets/photos/375/1.jpg",
@@ -224,8 +244,10 @@
   ],
   "price": 280000,
   "status": "available",
-  "post": 369,
+  "article": "EVER0070",
+  "publishedAt": "09.08.2026",
   "comment": "есть и 18-й размер; открытые лопатки; последнее фото - пример из интернета",
+  "post": 369,
   "photos": [
    "assets/photos/369/1.jpg",
    "assets/photos/369/2.jpg",
@@ -248,6 +270,8 @@
   ],
   "price": 260000,
   "status": "available",
+  "article": "EVER0069",
+  "publishedAt": "02.08.2026",
   "post": 365,
   "photos": [
    "assets/photos/365/1.jpg",
@@ -268,6 +292,8 @@
    17.5
   ],
   "status": "sold",
+  "article": "EVER0068",
+  "publishedAt": "02.08.2026",
   "post": 361,
   "photos": [
    "assets/photos/361/1.jpg",
@@ -289,6 +315,8 @@
   ],
   "price": 190000,
   "status": "available",
+  "article": "EVER0067",
+  "publishedAt": "02.08.2026",
   "post": 357,
   "photos": [
    "assets/photos/357/1.jpg",
@@ -309,6 +337,8 @@
    17.5
   ],
   "status": "sold",
+  "article": "EVER0066",
+  "publishedAt": "23.07.2026",
   "post": 353,
   "photos": [
    "assets/photos/353/1.jpg",
@@ -329,8 +359,10 @@
    17.5
   ],
   "status": "sold",
-  "post": 349,
+  "article": "EVER0065",
+  "publishedAt": "19.07.2026",
   "comment": "очень широкий канал",
+  "post": 349,
   "photos": [
    "assets/photos/349/1.jpg",
    "assets/photos/349/2.jpg",
@@ -350,6 +382,8 @@
    17
   ],
   "status": "sold",
+  "article": "EVER0064",
+  "publishedAt": "19.07.2026",
   "post": 345,
   "photos": [
    "assets/photos/345/1.jpg",
@@ -371,8 +405,10 @@
   ],
   "price": 220000,
   "status": "available",
-  "post": 342,
+  "article": "EVER0063",
+  "publishedAt": "19.07.2026",
   "comment": "маркировка 34, скорее обжато уже; проверить актуальность (пост июля)",
+  "post": 342,
   "photos": [
    "assets/photos/342/1.jpg",
    "assets/photos/342/2.jpg",
@@ -391,8 +427,10 @@
    17.5
   ],
   "status": "sold",
-  "post": 338,
+  "article": "EVER0062",
+  "publishedAt": "19.07.2026",
   "comment": "на высоченную холку-гребень",
+  "post": 338,
   "photos": [
    "assets/photos/338/1.jpg",
    "assets/photos/338/2.jpg",
@@ -411,6 +449,8 @@
    17.5
   ],
   "status": "sold",
+  "article": "EVER0061",
+  "publishedAt": "19.07.2026",
   "post": 334,
   "photos": [
    "assets/photos/334/1.jpg",
@@ -431,8 +471,10 @@
    17.5
   ],
   "status": "sold",
-  "post": 329,
+  "article": "EVER0060",
+  "publishedAt": "15.07.2026",
   "comment": "шоколадный цвет",
+  "post": 329,
   "photos": [
    "assets/photos/329/1.jpg",
    "assets/photos/329/2.jpg",
@@ -453,8 +495,10 @@
    17.5
   ],
   "status": "sold",
-  "post": 325,
+  "article": "EVER0059",
+  "publishedAt": "13.07.2026",
   "comment": "дочерняя компания Meyer",
+  "post": 325,
   "photos": [
    "assets/photos/325/1.jpg",
    "assets/photos/325/2.jpg",
@@ -475,8 +519,10 @@
   ],
   "price": 370000,
   "status": "available",
-  "post": 315,
+  "article": "EVER0058",
+  "publishedAt": "03.07.2026",
   "comment": "небольшие косметические дефекты; проверить актуальность (пост июля)",
+  "post": 315,
   "photos": [
    "assets/photos/315/1.jpg",
    "assets/photos/315/2.jpg",
@@ -497,8 +543,10 @@
    17
   ],
   "price": 145000,
-  "post": 311,
+  "article": "EVER0057",
+  "publishedAt": "26.06.2026",
   "comment": "удобный внешний упор; статус не указан - проверить (пост июня)",
+  "post": 311,
   "photos": [
    "assets/photos/311/1.jpg",
    "assets/photos/311/2.jpg",
@@ -518,6 +566,8 @@
    17
   ],
   "status": "sold",
+  "article": "EVER0056",
+  "publishedAt": "26.06.2026",
   "post": 307,
   "photos": [
    "assets/photos/307/1.jpg",
@@ -538,8 +588,10 @@
    16
   ],
   "status": "sold",
-  "post": 303,
+  "article": "EVER0055",
+  "publishedAt": "26.06.2026",
   "comment": "детское",
+  "post": 303,
   "photos": [
    "assets/photos/303/1.jpg",
    "assets/photos/303/2.jpg",
@@ -559,8 +611,10 @@
    16
   ],
   "status": "sold",
-  "post": 299,
+  "article": "EVER0054",
+  "publishedAt": "26.06.2026",
   "comment": "детское",
+  "post": 299,
   "photos": [
    "assets/photos/299/1.jpg",
    "assets/photos/299/2.jpg",
@@ -579,8 +633,10 @@
    16.5
   ],
   "price": 120000,
-  "post": 292,
+  "article": "EVER0053",
+  "publishedAt": "19.06.2026",
   "comment": "на высокую холку; статус не указан - проверить (пост июня)",
+  "post": 292,
   "photos": [
    "assets/photos/292/1.jpg",
    "assets/photos/292/2.jpg",
@@ -599,6 +655,8 @@
    16.5
   ],
   "status": "sold",
+  "article": "EVER0052",
+  "publishedAt": "03.06.2026",
   "post": 282,
   "photos": [
    "assets/photos/282/1.jpg",
@@ -618,8 +676,10 @@
    17
   ],
   "status": "sold",
-  "post": 278,
+  "article": "EVER0051",
+  "publishedAt": "03.06.2026",
   "comment": "17 - сидит маленьким",
+  "post": 278,
   "photos": [
    "assets/photos/278/1.jpg",
    "assets/photos/278/2.jpg",
@@ -639,6 +699,8 @@
    17
   ],
   "status": "sold",
+  "article": "EVER0050",
+  "publishedAt": "17.05.2026",
   "post": 272,
   "photos": [
    "assets/photos/272/1.jpg",
@@ -659,6 +721,8 @@
    18
   ],
   "status": "sold",
+  "article": "EVER0049",
+  "publishedAt": "17.05.2026",
   "post": 267,
   "photos": [
    "assets/photos/267/1.jpg",
@@ -680,8 +744,10 @@
    17.5
   ],
   "status": "sold",
-  "post": 263,
+  "article": "EVER0048",
+  "publishedAt": "17.05.2026",
   "comment": "монокрыло; на высокую холку",
+  "post": 263,
   "photos": [
    "assets/photos/263/1.jpg",
    "assets/photos/263/2.jpg",
@@ -700,8 +766,10 @@
    17
   ],
   "price": 170000,
-  "post": 257,
+  "article": "EVER0047",
+  "publishedAt": "17.05.2026",
   "comment": "укороченные панели, очень короткая ОП; статус не указан - проверить (пост мая)",
+  "post": 257,
   "photos": [
    "assets/photos/257/1.jpg",
    "assets/photos/257/2.jpg",
@@ -723,8 +791,10 @@
    17.5
   ],
   "status": "sold",
-  "post": 253,
+  "article": "EVER0046",
+  "publishedAt": "17.05.2026",
   "comment": "было на примерке",
+  "post": 253,
   "photos": [
    "assets/photos/253/1.jpg",
    "assets/photos/253/2.jpg",
@@ -743,8 +813,10 @@
    16.5
   ],
   "status": "sold",
-  "post": 249,
+  "article": "EVER0045",
+  "publishedAt": "17.04.2026",
   "comment": "подойдет на пони",
+  "post": 249,
   "photos": [
    "assets/photos/249/1.jpg",
    "assets/photos/249/2.jpg",
@@ -763,8 +835,10 @@
    17.5
   ],
   "status": "sold",
-  "post": 245,
+  "article": "EVER0044",
+  "publishedAt": "17.04.2026",
   "comment": "комплект сменных ленчиков; бренд не указан",
+  "post": 245,
   "photos": [
    "assets/photos/245/1.jpg",
    "assets/photos/245/2.jpg",
@@ -783,8 +857,10 @@
    17
   ],
   "price": 55000,
-  "post": 241,
+  "article": "EVER0043",
+  "publishedAt": "17.04.2026",
   "comment": "под ребенка - маленькое, легкое; статус не указан - проверить (пост апреля)",
+  "post": 241,
   "photos": [
    "assets/photos/241/1.jpg",
    "assets/photos/241/2.jpg",
@@ -804,8 +880,10 @@
    17
   ],
   "status": "sold",
-  "post": 238,
+  "article": "EVER0042",
+  "publishedAt": "17.04.2026",
   "comment": "под ребенка; бренд не указан",
+  "post": 238,
   "photos": [
    "assets/photos/238/1.jpg",
    "assets/photos/238/2.jpg",
@@ -824,8 +902,10 @@
    18
   ],
   "status": "sold",
-  "post": 232,
+  "article": "EVER0041",
+  "publishedAt": "17.04.2026",
   "comment": "18 - скорее 17,5",
+  "post": 232,
   "photos": [
    "assets/photos/232/1.jpg",
    "assets/photos/232/2.jpg",
@@ -846,8 +926,10 @@
    17.5
   ],
   "price": 115000,
-  "post": 227,
+  "article": "EVER0040",
+  "publishedAt": "17.04.2026",
   "comment": "статус не указан - проверить (пост апреля)",
+  "post": 227,
   "photos": [
    "assets/photos/227/1.jpg",
    "assets/photos/227/2.jpg",
@@ -867,6 +949,8 @@
    17
   ],
   "status": "sold",
+  "article": "EVER0039",
+  "publishedAt": "16.04.2026",
   "post": 221,
   "photos": [
    "assets/photos/221/1.jpg",
@@ -888,6 +972,8 @@
    17.5
   ],
   "status": "sold",
+  "article": "EVER0038",
+  "publishedAt": "16.04.2026",
   "post": 216,
   "photos": [
    "assets/photos/216/1.jpg",
@@ -909,8 +995,10 @@
    16.5
   ],
   "status": "sold",
-  "post": 211,
+  "article": "EVER0037",
+  "publishedAt": "16.04.2026",
   "comment": "выделка под крокодиловую кожу, лакированный задник",
+  "post": 211,
   "photos": [
    "assets/photos/211/1.jpg",
    "assets/photos/211/2.jpg",
@@ -931,8 +1019,10 @@
    17
   ],
   "price": 220000,
-  "post": 207,
+  "article": "EVER0036",
+  "publishedAt": "13.04.2026",
   "comment": "без примерки 210 000; статус не указан - проверить (пост апреля)",
+  "post": 207,
   "photos": [
    "assets/photos/207/1.jpg",
    "assets/photos/207/2.jpg",
@@ -951,8 +1041,10 @@
    17
   ],
   "price": 160000,
-  "post": 202,
+  "article": "EVER0035",
+  "publishedAt": "13.04.2026",
   "comment": "статус не указан - проверить (пост апреля)",
+  "post": 202,
   "photos": [
    "assets/photos/202/1.jpg",
    "assets/photos/202/2.jpg",
@@ -974,8 +1066,10 @@
    17
   ],
   "status": "sold",
-  "post": 198,
+  "article": "EVER0034",
+  "publishedAt": "13.04.2026",
   "comment": "седло 2024 года; широкий канал",
+  "post": 198,
   "photos": [
    "assets/photos/198/1.jpg",
    "assets/photos/198/2.jpg",
@@ -996,8 +1090,10 @@
    16.5
   ],
   "status": "sold",
-  "post": 194,
+  "article": "EVER0033",
+  "publishedAt": "07.04.2026",
   "comment": "для всадника ростом до 165 см",
+  "post": 194,
   "photos": [
    "assets/photos/194/1.jpg",
    "assets/photos/194/2.jpg",
@@ -1018,6 +1114,8 @@
    17
   ],
   "status": "sold",
+  "article": "EVER0032",
+  "publishedAt": "07.04.2026",
   "post": 190,
   "photos": [
    "assets/photos/190/1.jpg",
@@ -1038,8 +1136,10 @@
    17
   ],
   "status": "sold",
-  "post": 182,
+  "article": "EVER0031",
+  "publishedAt": "07.04.2026",
   "comment": "гибкий ленчик, размер регулируется",
+  "post": 182,
   "photos": [
    "assets/photos/182/1.jpg",
    "assets/photos/182/2.jpg",
@@ -1059,8 +1159,10 @@
    17.5
   ],
   "status": "sold",
-  "post": 178,
+  "article": "EVER0030",
+  "publishedAt": "07.04.2026",
   "comment": "маркировка 18/W; county шьются на заказ - маркировке не верить",
+  "post": 178,
   "photos": [
    "assets/photos/178/1.jpg",
    "assets/photos/178/2.jpg",
@@ -1081,8 +1183,10 @@
    17
   ],
   "status": "sold",
-  "post": 173,
+  "article": "EVER0029",
+  "publishedAt": "07.04.2026",
   "comment": "сменные короткие панели за доплату",
+  "post": 173,
   "photos": [
    "assets/photos/173/1.jpg",
    "assets/photos/173/2.jpg",
@@ -1103,6 +1207,8 @@
    17.5
   ],
   "status": "sold",
+  "article": "EVER0028",
+  "publishedAt": "07.04.2026",
   "post": 166,
   "photos": [
    "assets/photos/166/1.jpg",
@@ -1125,6 +1231,8 @@
    17
   ],
   "status": "sold",
+  "article": "EVER0027",
+  "publishedAt": "11.03.2026",
   "post": 160,
   "photos": [
    "assets/photos/160/1.jpg",
@@ -1143,6 +1251,8 @@
    17
   ],
   "status": "sold",
+  "article": "EVER0026",
+  "publishedAt": "22.02.2026",
   "post": 157,
   "photos": [
    "assets/photos/157/1.jpg",
@@ -1161,6 +1271,8 @@
    17
   ],
   "status": "sold",
+  "article": "EVER0025",
+  "publishedAt": "22.02.2026",
   "post": 148,
   "photos": [
    "assets/photos/148/1.jpg",
@@ -1185,6 +1297,8 @@
    17.5
   ],
   "status": "sold",
+  "article": "EVER0024",
+  "publishedAt": "18.02.2026",
   "post": 141,
   "photos": [
    "assets/photos/141/1.jpg",
@@ -1208,6 +1322,8 @@
    17
   ],
   "status": "sold",
+  "article": "EVER0023",
+  "publishedAt": "14.02.2026",
   "post": 132,
   "photos": [
    "assets/photos/132/1.jpg",
@@ -1229,6 +1345,8 @@
    17
   ],
   "status": "sold",
+  "article": "EVER0022",
+  "publishedAt": "14.02.2026",
   "post": 127,
   "photos": [
    "assets/photos/127/1.jpg",
@@ -1250,6 +1368,8 @@
    17
   ],
   "status": "sold",
+  "article": "EVER0021",
+  "publishedAt": "06.02.2026",
   "post": 113,
   "photos": [
    "assets/photos/113/1.jpg",
@@ -1276,8 +1396,10 @@
    16
   ],
   "price": 115000,
-  "post": 107,
+  "article": "EVER0020",
+  "publishedAt": "03.02.2026",
   "comment": "на некрупную лошадку и всадника; статус не указан - проверить (пост февраля)",
+  "post": 107,
   "photos": [
    "assets/photos/107/1.jpg"
   ]
@@ -1294,8 +1416,10 @@
    18
   ],
   "price": 200000,
-  "post": 102,
+  "article": "EVER0019",
+  "publishedAt": "03.02.2026",
   "comment": "статус не указан - проверить (пост февраля)",
+  "post": 102,
   "photos": [
    "assets/photos/102/1.jpg",
    "assets/photos/102/2.jpg",
@@ -1315,8 +1439,10 @@
    17.5
   ],
   "price": 140000,
-  "post": 100,
+  "article": "EVER0018",
+  "publishedAt": "03.02.2026",
   "comment": "статус не указан - проверить (пост февраля)",
+  "post": 100,
   "photos": [
    "assets/photos/100/1.jpg",
    "assets/photos/100/2.jpg"
@@ -1334,6 +1460,8 @@
    17.5
   ],
   "status": "sold",
+  "article": "EVER0017",
+  "publishedAt": "03.02.2026",
   "post": 87,
   "photos": [
    "assets/photos/87/1.jpg",
@@ -1355,6 +1483,8 @@
    17.5
   ],
   "status": "sold",
+  "article": "EVER0016",
+  "publishedAt": "03.02.2026",
   "post": 81,
   "photos": [
    "assets/photos/81/1.jpg",
@@ -1377,6 +1507,8 @@
    18
   ],
   "status": "sold",
+  "article": "EVER0015",
+  "publishedAt": "03.02.2026",
   "post": 77,
   "photos": [
    "assets/photos/77/1.jpg",
@@ -1396,8 +1528,10 @@
    17.5
   ],
   "status": "sold",
-  "post": 72,
+  "article": "EVER0014",
+  "publishedAt": "03.02.2026",
   "comment": "маркировка 18 - французская маломерка",
+  "post": 72,
   "photos": [
    "assets/photos/72/1.jpg",
    "assets/photos/72/2.jpg",
@@ -1417,6 +1551,8 @@
    17
   ],
   "status": "sold",
+  "article": "EVER0013",
+  "publishedAt": "03.02.2026",
   "post": 65,
   "photos": [
    "assets/photos/65/1.jpg",
@@ -1441,6 +1577,8 @@
    17.5
   ],
   "status": "sold",
+  "article": "EVER0012",
+  "publishedAt": "03.02.2026",
   "post": 61,
   "photos": [
    "assets/photos/61/1.jpg",
@@ -1461,8 +1599,10 @@
    17.5
   ],
   "price": 70000,
-  "post": 57,
+  "article": "EVER0011",
+  "publishedAt": "03.02.2026",
   "comment": "статус не указан - проверить (пост февраля)",
+  "post": 57,
   "photos": [
    "assets/photos/57/1.jpg",
    "assets/photos/57/2.jpg",
@@ -1482,6 +1622,8 @@
    17
   ],
   "status": "sold",
+  "article": "EVER0010",
+  "publishedAt": "02.02.2026",
   "post": 46,
   "photos": [
    "assets/photos/46/1.jpg",
@@ -1502,6 +1644,8 @@
    17
   ],
   "status": "sold",
+  "article": "EVER0009",
+  "publishedAt": "02.02.2026",
   "post": 41,
   "photos": [
    "assets/photos/41/1.jpg",
@@ -1522,8 +1666,10 @@
    17.5
   ],
   "price": 210000,
-  "post": 34,
+  "article": "EVER0008",
+  "publishedAt": "28.01.2026",
   "comment": "для крупных лошадей (фризы, шайры); размер по лошади не указан; статус не указан - проверить (пост января)",
+  "post": 34,
   "photos": [
    "assets/photos/34/1.jpg",
    "assets/photos/34/2.jpg",
@@ -1541,8 +1687,10 @@
    17
   ],
   "status": "sold",
-  "post": 29,
+  "article": "EVER0007",
+  "publishedAt": "28.01.2026",
   "comment": "короткая ОП",
+  "post": 29,
   "photos": [
    "assets/photos/29/1.jpg",
    "assets/photos/29/2.jpg",
@@ -1563,6 +1711,8 @@
    17
   ],
   "status": "sold",
+  "article": "EVER0006",
+  "publishedAt": "28.01.2026",
   "post": 24,
   "photos": [
    "assets/photos/24/1.jpg",
@@ -1584,8 +1734,10 @@
    17
   ],
   "price": 150000,
-  "post": 22,
+  "article": "EVER0005",
+  "publishedAt": "28.01.2026",
   "comment": "статус не указан - проверить (пост января)",
+  "post": 22,
   "photos": [
    "assets/photos/22/1.jpg",
    "assets/photos/22/2.jpg"
@@ -1604,8 +1756,10 @@
    17.5
   ],
   "price": 50000,
-  "post": 20,
+  "article": "EVER0004",
+  "publishedAt": "28.01.2026",
   "comment": "статус не указан - проверить (пост января)",
+  "post": 20,
   "photos": [
    "assets/photos/20/1.jpg",
    "assets/photos/20/2.jpg"
@@ -1624,6 +1778,8 @@
    17.5
   ],
   "status": "sold",
+  "article": "EVER0003",
+  "publishedAt": "28.01.2026",
   "post": 9,
   "photos": [
    "assets/photos/9/1.jpg",
@@ -1649,8 +1805,10 @@
    17
   ],
   "price": 200000,
-  "post": 7,
+  "article": "EVER0002",
+  "publishedAt": "28.01.2026",
   "comment": "на молодую необмускуленную лошадь, прямая спина; статус не указан - проверить (пост января)",
+  "post": 7,
   "photos": [
    "assets/photos/7/1.jpg",
    "assets/photos/7/2.jpg"
@@ -1667,8 +1825,10 @@
    17
   ],
   "price": 40000,
-  "post": 4,
+  "article": "EVER0001",
+  "publishedAt": "28.01.2026",
   "comment": "статус не указан - проверить (пост января)",
+  "post": 4,
   "photos": [
    "assets/photos/4/1.jpg",
    "assets/photos/4/2.jpg",

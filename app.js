@@ -343,6 +343,10 @@ function saddleHtml(s) {
       '</div>' +
       '<div class="dots" id="gDots">' + dots + '</div>' +
       '<h1 class="s-title">' + esc(s.title) + '</h1>' +
+      '<div class="s-meta">' +
+        '<button type="button" class="copy-article" id="copyArticle" aria-label="Скопировать артикул ' + esc(s.article || '') + '">' + esc(s.article || '') + '</button>' +
+        (s.publishedAt ? '<span class="s-date">' + esc(s.publishedAt) + '</span>' : '') +
+      '</div>' +
       priceHtml(s, 's-price') +
       '<dl class="s-rows">' +
         fieldRow('Тип', s.type) +
@@ -366,6 +370,34 @@ let galleryObserver = null;
 function stopGalleryTracking() {
   if (galleryTimer) { clearInterval(galleryTimer); galleryTimer = null; }
   if (galleryObserver) { galleryObserver.disconnect(); galleryObserver = null; }
+}
+
+function wireCopyArticle() {
+  const btn = document.getElementById('copyArticle');
+  if (!btn || !btn.textContent) return;
+  btn.addEventListener('click', async () => {
+    const article = btn.textContent;
+    let ok = false;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      try { await navigator.clipboard.writeText(article); ok = true; } catch (e) { /* WebView без разрешения */ }
+    }
+    if (!ok) {
+      // запасной путь для старых WebView Телеграма
+      const ta = document.createElement('textarea');
+      ta.value = article;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      try { ok = document.execCommand('copy'); } catch (e) { /* ignore */ }
+      ta.remove();
+    }
+    haptic();
+    if (ok) {
+      btn.textContent = 'Скопировано';
+      setTimeout(() => { if (btn.isConnected) btn.textContent = article; }, 1200);
+    }
+  });
 }
 
 function wireGallery() {
@@ -437,6 +469,7 @@ function openSaddle(id) {
   document.getElementById('saddleFavBtn').addEventListener('click', (e) => {
     toggleFavorite(e.currentTarget.dataset.id);
   });
+  wireCopyArticle();
   wireGallery();
   setupTelegramButtons();
   window.scrollTo(0, 0);
@@ -460,7 +493,7 @@ async function init() {
   const grid = document.getElementById('grid');
   try {
     favorites = new Set(await storage.load());
-    const res = await fetch('data/saddles.json');
+    const res = await fetch('data/saddles.json' + (window.ASSETS_V || ''));
     if (!res.ok) throw new Error('HTTP ' + res.status);
     saddles = await res.json();
     saddles.sort((a, b) => b.post - a.post); // новые сверху
