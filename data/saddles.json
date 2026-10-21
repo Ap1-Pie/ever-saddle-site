@@ -1820,6 +1820,8 @@
   "type": "выездковое",
   "brand": "Trainers",
   "sizeHorse": "32-33",
+  "material": "кожа",
+  "color": "черный",
   "sizeRider": 17,
   "sizeRiderValues": [
    17
