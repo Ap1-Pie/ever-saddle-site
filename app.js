@@ -120,7 +120,7 @@ function matchesExcept(s, skipKey) {
       if (!vals.some(v => filters[g.key].has(v))) return false;
     }
   }
-  if (filters.inStock && s.status !== 'available') return false;
+  if (filters.inStock && s.status === 'sold') return false; // прочерк статуса = не продано = в наличии
   if (filters.priceFrom !== null || filters.priceTo !== null) {
     if (s.price === undefined) return false;
     if (filters.priceFrom !== null && s.price < filters.priceFrom) return false;
@@ -195,14 +195,15 @@ function buildSheet() {
     if (set.has(v)) set.delete(v); else set.add(v);
     refreshAfterFilterChange();
   });
-  document.getElementById('priceFrom').addEventListener('input', (e) => {
-    filters.priceFrom = e.target.value === '' ? null : Number(e.target.value);
+  // Общий обработчик полей цены: обрезаем ввод длиннее 7 цифр (maxlength на type=number не работает)
+  const onPriceInput = (e) => {
+    if (e.target.value.length > 7) e.target.value = e.target.value.slice(0, 7);
+    filters[e.target.id === 'priceFrom' ? 'priceFrom' : 'priceTo'] =
+      e.target.value === '' ? null : Number(e.target.value);
     refreshAfterFilterChange();
-  });
-  document.getElementById('priceTo').addEventListener('input', (e) => {
-    filters.priceTo = e.target.value === '' ? null : Number(e.target.value);
-    refreshAfterFilterChange();
-  });
+  };
+  document.getElementById('priceFrom').addEventListener('input', onPriceInput);
+  document.getElementById('priceTo').addEventListener('input', onPriceInput);
   document.getElementById('inStock').addEventListener('change', (e) => {
     filters.inStock = e.target.checked;
     refreshAfterFilterChange();

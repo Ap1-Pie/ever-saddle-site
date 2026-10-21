@@ -181,7 +181,7 @@ body {
 
 .price-row { display: flex; gap: 10px; align-items: center; }
 .price-row input {
-  width: 100%; padding: 9px 10px; border-radius: 8px;
+  flex: 1 1 0; min-width: 0; width: auto; padding: 9px 10px; border-radius: 8px;
   border: 1px solid var(--line); background: var(--bg); color: var(--text);
   font-family: inherit; font-size: 14px;
 }
