@@ -608,8 +608,10 @@ function saddleHtml(s) {
         fieldRow('Материал', s.material) +
         fieldRow('Цвет', s.color) +
         fieldRow('Состояние', s.condition) +
-        fieldRow('Особенности', s.comment) +
       '</dl>' +
+      (s.description
+        ? '<div class="s-desc"><h3>Описание</h3><p>' + esc(s.description).replace(/\n/g, '<br>') + '</p></div>'
+        : '') +
       '<a class="dm-btn" href="' + DM_URL + '" ' +
         (isTelegram ? ' onclick="return false;"' : 'target="_blank" rel="noopener"') + '>Написать в ЛС</a>' +
     '</div>'
