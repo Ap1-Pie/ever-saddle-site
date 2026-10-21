@@ -104,6 +104,10 @@ function chipValues(s, field) {
   if (field === 'sizeRider') {
     return (s.sizeRiderValues || (s.sizeRider !== undefined ? [s.sizeRider] : [])).map(String);
   }
+  if (field === 'color') {
+    // двухцветное (черно-коричневое) матчится и с «черное», и с «коричневое»
+    return (s.colorValues || (s.color !== undefined ? [s.color] : [])).map(String);
+  }
   const v = s[field];
   return (v === undefined || v === null || v === '') ? [] : [String(v)];
 }

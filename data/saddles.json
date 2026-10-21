@@ -7,8 +7,11 @@
   "model": "Appolon",
   "sizeHorse": "2",
   "material": "кожа",
-  "color": "черный",
-  "condition": "очень хорошее",
+  "condition": "хорошее",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 17.5,
   "sizeRiderValues": [
    17.5
@@ -33,8 +36,11 @@
   "brand": "Adam Ellis",
   "sizeHorse": "MW",
   "material": "кожа",
-  "color": "коричневый",
   "condition": "новое",
+  "color": "коричневое",
+  "colorValues": [
+   "коричневое"
+  ],
   "sizeRider": 17.5,
   "sizeRiderValues": [
    17.5
@@ -62,8 +68,11 @@
   "brand": "Bliss of London",
   "sizeHorse": "33",
   "material": "мягкая кожа",
-  "color": "черный",
   "condition": "идеальное",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 17,
   "sizeRiderValues": [
    17
@@ -89,8 +98,11 @@
   "model": "Coda",
   "sizeHorse": "33",
   "material": "кожа",
-  "color": "черный",
-  "condition": "очень хорошее",
+  "condition": "хорошее",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 17,
   "sizeRiderValues": [
    17
@@ -115,8 +127,11 @@
   "model": "SE37",
   "sizeHorse": "33-34",
   "material": "кожа",
-  "color": "черный",
   "condition": "идеальное",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 17,
   "sizeRiderValues": [
    17
@@ -144,8 +159,11 @@
   "model": "Venezia",
   "sizeHorse": "32",
   "material": "кожа",
-  "color": "черный",
   "condition": "хорошее",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 17,
   "sizeRiderValues": [
    17
@@ -170,8 +188,11 @@
   "model": "Пиаффе",
   "sizeHorse": "32-33",
   "material": "кожа",
-  "color": "черный",
-  "condition": "практически новое",
+  "condition": "состояние нового",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 17.5,
   "sizeRiderValues": [
    17.5
@@ -195,8 +216,11 @@
   "model": "Ultima",
   "sizeHorse": "33",
   "material": "кожа",
-  "color": "черный",
   "condition": "есть косметические дефекты",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 17.5,
   "sizeRiderValues": [
    17.5
@@ -220,8 +244,11 @@
   "model": "SLK",
   "sizeHorse": "34",
   "material": "кожа",
-  "color": "черный",
-  "condition": "очень хорошее",
+  "condition": "хорошее",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 17.5,
   "sizeRiderValues": [
    17.5
@@ -244,7 +271,11 @@
   "model": "Luxor",
   "sizeHorse": "32",
   "material": "кожа",
-  "color": "черный",
+  "condition": "рабочее",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 17,
   "sizeRiderValues": [
    17
@@ -267,6 +298,12 @@
   "brand": "Prestige",
   "model": "Renaissance",
   "sizeHorse": "32,5-33",
+  "material": "кожа",
+  "condition": "хорошее",
+  "color": "коричневое",
+  "colorValues": [
+   "коричневое"
+  ],
   "sizeRider": 17,
   "sizeRiderValues": [
    17
@@ -293,6 +330,12 @@
   "brand": "Meyer",
   "model": "Act 1",
   "sizeHorse": "34",
+  "material": "мягкая кожа",
+  "condition": "рабочее",
+  "color": "коричневое",
+  "colorValues": [
+   "коричневое"
+  ],
   "sizeRider": 17.5,
   "sizeRiderValues": [
    17.5
@@ -316,6 +359,12 @@
   "brand": "Voltaire",
   "model": "Adelaide",
   "sizeHorse": "34+",
+  "material": "кожа",
+  "condition": "отличное",
+  "color": "коричневое",
+  "colorValues": [
+   "коричневое"
+  ],
   "sizeRider": 17.5,
   "sizeRiderValues": [
    17.5
@@ -338,6 +387,12 @@
   "brand": "Prestige",
   "model": "K-Dence",
   "sizeHorse": "33",
+  "material": "кожа",
+  "condition": "идеальное",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 17,
   "sizeRiderValues": [
    17
@@ -361,6 +416,12 @@
   "brand": "Kentaur",
   "model": "Medea",
   "sizeHorse": "2",
+  "material": "кожа",
+  "condition": "хорошее",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 17.5,
   "sizeRiderValues": [
    17.5
@@ -383,6 +444,12 @@
   "brand": "Kentaur",
   "model": "Penelope",
   "sizeHorse": "3",
+  "material": "кожа",
+  "condition": "хорошее",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 17.5,
   "sizeRiderValues": [
    17.5
@@ -406,6 +473,12 @@
   "brand": "Prestige",
   "model": "X-Doge",
   "sizeHorse": "32",
+  "material": "кожа",
+  "condition": "отличное",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 17,
   "sizeRiderValues": [
    17
@@ -428,6 +501,12 @@
   "brand": "Prestige",
   "model": "Versailles",
   "sizeHorse": "33-34 (маркировка 34)",
+  "material": "кожа",
+  "condition": "хорошее",
+  "color": "коричневое",
+  "colorValues": [
+   "коричневое"
+  ],
   "sizeRider": 17,
   "sizeRiderValues": [
    17
@@ -451,6 +530,12 @@
   "brand": "Kieffer",
   "model": "Norbert Koof",
   "sizeHorse": "32-33",
+  "material": "кожа",
+  "condition": "рабочее",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 17.5,
   "sizeRiderValues": [
    17.5
@@ -473,6 +558,12 @@
   "type": "конкурное",
   "brand": "Antares",
   "sizeHorse": "33-34",
+  "material": "кожа",
+  "condition": "отличное",
+  "color": "коричневое",
+  "colorValues": [
+   "коричневое"
+  ],
   "sizeRider": 17.5,
   "sizeRiderValues": [
    17.5
@@ -494,7 +585,12 @@
   "type": "конкурное",
   "brand": "Luc Childeric",
   "sizeHorse": "на средне-широкую спину",
-  "color": "коричневый",
+  "material": "кожа",
+  "condition": "отличное",
+  "color": "коричневое",
+  "colorValues": [
+   "коричневое"
+  ],
   "sizeRider": 17.5,
   "sizeRiderValues": [
    17.5
@@ -518,6 +614,12 @@
   "type": "конкурное",
   "brand": "GBS (Meyer)",
   "sizeHorse": "34",
+  "material": "кожа",
+  "condition": "отличное",
+  "color": "коричневое",
+  "colorValues": [
+   "коричневое"
+  ],
   "sizeRider": "17-17,5",
   "sizeRiderValues": [
    17,
@@ -542,6 +644,12 @@
   "brand": "Custom Icon",
   "model": "Flight",
   "sizeHorse": "33-33,5",
+  "material": "кожа",
+  "condition": "рабочее",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 17,
   "sizeRiderValues": [
    17
@@ -567,11 +675,18 @@
   "brand": "Prestige",
   "model": "Black Star",
   "sizeHorse": "33",
+  "material": "кожа",
+  "condition": "хорошее",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 17,
   "sizeRiderValues": [
    17
   ],
   "price": 145000,
+  "status": "available",
   "article": "EVER0057",
   "publishedAt": "26.06.2026",
   "comment": "удобный внешний упор; статус не указан - проверить (пост июня)",
@@ -590,6 +705,12 @@
   "brand": "Euroriding",
   "model": "Luxor",
   "sizeHorse": "33",
+  "material": "кожа",
+  "condition": "рабочее",
+  "color": "коричневое",
+  "colorValues": [
+   "коричневое"
+  ],
   "sizeRider": 17,
   "sizeRiderValues": [
    17
@@ -612,6 +733,12 @@
   "brand": "Prestige",
   "model": "Joy Jumper",
   "sizeHorse": "33",
+  "material": "кожа",
+  "condition": "хорошее",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 16,
   "sizeRiderValues": [
    16
@@ -635,6 +762,12 @@
   "brand": "Prestige",
   "model": "Lucky Idol",
   "sizeHorse": "32",
+  "material": "кожа",
+  "condition": "новое",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 16,
   "sizeRiderValues": [
    16
@@ -657,11 +790,18 @@
   "type": "выездковое",
   "brand": "County",
   "sizeHorse": "MW",
+  "material": "кожа",
+  "condition": "рабочее",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 16.5,
   "sizeRiderValues": [
    16.5
   ],
   "price": 120000,
+  "status": "reserved",
   "article": "EVER0053",
   "publishedAt": "19.06.2026",
   "comment": "на высокую холку; статус не указан - проверить (пост июня)",
@@ -679,6 +819,12 @@
   "type": "выездковое",
   "brand": "Butet",
   "sizeHorse": "на среднюю спину, средне-высокую холку",
+  "material": "мягкая кожа",
+  "condition": "хорошее",
+  "color": "коричневое",
+  "colorValues": [
+   "коричневое"
+  ],
   "sizeRider": 16.5,
   "sizeRiderValues": [
    16.5
@@ -700,6 +846,12 @@
   "type": "выездковое",
   "brand": "Maxflex",
   "sizeHorse": "MW",
+  "material": "кожа",
+  "condition": "рабочее",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 17,
   "sizeRiderValues": [
    17
@@ -723,6 +875,12 @@
   "brand": "Prestige",
   "model": "Roma Jump",
   "sizeHorse": "32",
+  "material": "кожа",
+  "condition": "рабочее",
+  "color": "коричневое",
+  "colorValues": [
+   "коричневое"
+  ],
   "sizeRider": 17,
   "sizeRiderValues": [
    17
@@ -745,6 +903,12 @@
   "brand": "Prestige",
   "model": "Silver Star",
   "sizeHorse": "33",
+  "material": "кожа",
+  "condition": "рабочее",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 18,
   "sizeRiderValues": [
    18
@@ -768,6 +932,12 @@
   "brand": "Albion",
   "model": "Revelation",
   "sizeHorse": "33",
+  "material": "кожа",
+  "condition": "хорошее",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 17.5,
   "sizeRiderValues": [
    17.5
@@ -790,11 +960,18 @@
   "type": "выездковое",
   "brand": "Jeremy Rudge",
   "sizeHorse": "33,5",
+  "material": "кожа",
+  "condition": "отличное",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 17,
   "sizeRiderValues": [
    17
   ],
   "price": 170000,
+  "status": "available",
   "article": "EVER0047",
   "publishedAt": "17.05.2026",
   "comment": "укороченные панели, очень короткая ОП; статус не указан - проверить (пост мая)",
@@ -815,6 +992,12 @@
   "brand": "Prestige",
   "model": "Venezia",
   "sizeHorse": "34 (по факту скорее 33)",
+  "material": "кожа",
+  "condition": "рабочее",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 17.5,
   "sizeRiderValues": [
    17.5
@@ -837,6 +1020,12 @@
   "type": "выездковое",
   "brand": "Kieffer",
   "sizeHorse": "32",
+  "material": "кожа",
+  "condition": "отличное",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 16.5,
   "sizeRiderValues": [
    16.5
@@ -858,7 +1047,12 @@
   "title": "Конкурное седло, новое, сменные ленчики",
   "type": "конкурное",
   "sizeHorse": "любой",
+  "material": "кожа",
   "condition": "новое",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 17.5,
   "sizeRiderValues": [
    17.5
@@ -880,12 +1074,19 @@
   "title": "Конкурное седло, бренд не указан",
   "type": "конкурное",
   "sizeHorse": "33",
+  "material": "кожзам",
+  "condition": "новое",
+  "color": "коричневое",
+  "colorValues": [
+   "коричневое"
+  ],
   "sizeRider": "16,5-17",
   "sizeRiderValues": [
    16.5,
    17
   ],
   "price": 55000,
+  "status": "available",
   "article": "EVER0043",
   "publishedAt": "17.04.2026",
   "comment": "под ребенка - маленькое, легкое; статус не указан - проверить (пост апреля)",
@@ -902,7 +1103,12 @@
   "title": "Конкурное седло, новое",
   "type": "конкурное",
   "sizeHorse": "32, открытые лопатки",
+  "material": "кожа",
   "condition": "новое",
+  "color": "коричневое",
+  "colorValues": [
+   "коричневое"
+  ],
   "sizeRider": "16,5-17",
   "sizeRiderValues": [
    16.5,
@@ -926,6 +1132,12 @@
   "brand": "Prestige",
   "model": "X-Helen",
   "sizeHorse": "33",
+  "material": "кожа",
+  "condition": "хорошее",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 18,
   "sizeRiderValues": [
    18
@@ -950,11 +1162,18 @@
   "type": "конкурное",
   "brand": "Kentaur",
   "sizeHorse": "33-34",
+  "material": "кожа",
+  "condition": "рабочее",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 17.5,
   "sizeRiderValues": [
    17.5
   ],
   "price": 115000,
+  "status": "available",
   "article": "EVER0040",
   "publishedAt": "17.04.2026",
   "comment": "статус не указан - проверить (пост апреля)",
@@ -973,6 +1192,12 @@
   "type": "выездковое",
   "brand": "Equiline",
   "sizeHorse": "33",
+  "material": "кожа",
+  "condition": "хорошее",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 17,
   "sizeRiderValues": [
    17
@@ -996,6 +1221,12 @@
   "type": "выездковое",
   "brand": "Luc Childeric",
   "sizeHorse": "33,5",
+  "material": "мягкая кожа",
+  "condition": "хорошее",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 17.5,
   "sizeRiderValues": [
    17.5
@@ -1019,6 +1250,12 @@
   "brand": "Sommer",
   "model": "Spezial",
   "sizeHorse": "32",
+  "material": "кожа",
+  "condition": "хорошее",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 16.5,
   "sizeRiderValues": [
    16.5
@@ -1043,11 +1280,18 @@
   "brand": "Acavallo",
   "model": "Modigliani",
   "sizeHorse": "широкое",
+  "material": "кожа",
+  "condition": "хорошее",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 17,
   "sizeRiderValues": [
    17
   ],
   "price": 220000,
+  "status": "available",
   "article": "EVER0036",
   "publishedAt": "13.04.2026",
   "comment": "без примерки 210 000; статус не указан - проверить (пост апреля)",
@@ -1065,11 +1309,18 @@
   "type": "конкурное",
   "brand": "Bruno Delgrande",
   "sizeHorse": "34",
+  "material": "кожа",
+  "condition": "хорошее",
+  "color": "коричневое",
+  "colorValues": [
+   "коричневое"
+  ],
   "sizeRider": 17,
   "sizeRiderValues": [
    17
   ],
   "price": 160000,
+  "status": "available",
   "article": "EVER0035",
   "publishedAt": "13.04.2026",
   "comment": "статус не указан - проверить (пост апреля)",
@@ -1089,7 +1340,12 @@
   "brand": "Custom Icon",
   "model": "Flight",
   "sizeHorse": "33",
-  "condition": "новое",
+  "material": "кожа",
+  "condition": "состояние нового",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 17,
   "sizeRiderValues": [
    17
@@ -1113,7 +1369,12 @@
   "brand": "Kentaur",
   "model": "Afrodite Soft",
   "sizeHorse": "3 (переобжато с 2)",
-  "condition": "новое",
+  "material": "кожа",
+  "condition": "состояние нового",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 16.5,
   "sizeRiderValues": [
    16.5
@@ -1137,7 +1398,12 @@
   "brand": "Гермида",
   "model": "Пегас Моно Про",
   "sizeHorse": "33,5",
-  "condition": "практически новое",
+  "material": "кожа",
+  "condition": "состояние нового",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 17,
   "sizeRiderValues": [
    17
@@ -1160,6 +1426,12 @@
   "brand": "Maxflex",
   "model": "Valentin",
   "sizeHorse": "33",
+  "material": "кожа",
+  "condition": "хорошее",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 17,
   "sizeRiderValues": [
    17
@@ -1183,6 +1455,12 @@
   "brand": "County",
   "model": "Connection",
   "sizeHorse": "MW (маркировка W)",
+  "material": "кожа",
+  "condition": "хорошее",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 17.5,
   "sizeRiderValues": [
    17.5
@@ -1206,7 +1484,12 @@
   "brand": "Erreplus",
   "model": "Adelinde",
   "sizeHorse": "33,5",
-  "condition": "близко к идеалу",
+  "material": "кожа",
+  "condition": "идеальное",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 17,
   "sizeRiderValues": [
    17
@@ -1231,6 +1514,12 @@
   "brand": "CWD",
   "model": "SE 02",
   "sizeHorse": "~32,5",
+  "material": "кожа",
+  "condition": "хорошее",
+  "color": "коричневое",
+  "colorValues": [
+   "коричневое"
+  ],
   "sizeRider": 17.5,
   "sizeRiderValues": [
    17.5
@@ -1254,7 +1543,12 @@
   "type": "конкурное",
   "brand": "Equiline",
   "sizeHorse": "33",
+  "material": "кожа",
   "condition": "идеальное",
+  "color": "коричневое",
+  "colorValues": [
+   "коричневое"
+  ],
   "sizeRider": 17,
   "sizeRiderValues": [
    17
@@ -1275,6 +1569,12 @@
   "brand": "Erreplus",
   "model": "Vittoria",
   "sizeHorse": "33",
+  "material": "кожа",
+  "condition": "хорошее",
+  "color": "коричневое",
+  "colorValues": [
+   "коричневое"
+  ],
   "sizeRider": 17,
   "sizeRiderValues": [
    17
@@ -1295,6 +1595,12 @@
   "brand": "Prestige",
   "model": "Roma Jump",
   "sizeHorse": "33",
+  "material": "кожа",
+  "condition": "отличное",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 17,
   "sizeRiderValues": [
    17
@@ -1321,6 +1627,12 @@
   "type": "конкурное",
   "brand": "Stübben",
   "sizeHorse": "32 по штюббену (широкая спина)",
+  "material": "кожа",
+  "condition": "рабочее",
+  "color": "коричневое",
+  "colorValues": [
+   "коричневое"
+  ],
   "sizeRider": 17.5,
   "sizeRiderValues": [
    17.5
@@ -1346,6 +1658,12 @@
   "brand": "Sommer",
   "model": "Opus",
   "sizeHorse": "33",
+  "material": "кожа",
+  "condition": "идеальное",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 17,
   "sizeRiderValues": [
    17
@@ -1368,7 +1686,12 @@
   "brand": "County",
   "model": "Epiphany",
   "sizeHorse": "M",
-  "condition": "новое",
+  "material": "кожа",
+  "condition": "идеальное",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 17,
   "sizeRiderValues": [
    17
@@ -1392,6 +1715,12 @@
   "brand": "Erreplus",
   "model": "Adelinde",
   "sizeHorse": "33 (33,5)",
+  "material": "кожа",
+  "condition": "идеальное",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 17,
   "sizeRiderValues": [
    17
@@ -1420,11 +1749,18 @@
   "brand": "Prestige",
   "model": "Hippos",
   "sizeHorse": "31",
+  "material": "кожа",
+  "condition": "хорошее",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 16,
   "sizeRiderValues": [
    16
   ],
   "price": 115000,
+  "status": "available",
   "article": "EVER0020",
   "publishedAt": "03.02.2026",
   "comment": "на некрупную лошадку и всадника; статус не указан - проверить (пост февраля)",
@@ -1440,11 +1776,18 @@
   "brand": "Amerigo",
   "model": "Vega",
   "sizeHorse": "ближе к 34",
+  "material": "мягкая кожа",
+  "condition": "отличное",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 18,
   "sizeRiderValues": [
    18
   ],
   "price": 200000,
+  "status": "sold",
   "article": "EVER0019",
   "publishedAt": "03.02.2026",
   "comment": "статус не указан - проверить (пост февраля)",
@@ -1463,11 +1806,18 @@
   "type": "конкурное",
   "brand": "Henri de Rivel",
   "sizeHorse": "34",
+  "material": "кожа",
+  "condition": "хорошее",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 17.5,
   "sizeRiderValues": [
    17.5
   ],
   "price": 140000,
+  "status": "available",
   "article": "EVER0018",
   "publishedAt": "03.02.2026",
   "comment": "статус не указан - проверить (пост февраля)",
@@ -1483,7 +1833,12 @@
   "type": "конкурное",
   "brand": "Sommer",
   "sizeHorse": "31,5 по соммеру (33-34 по престижу)",
-  "condition": "новое",
+  "material": "кожа",
+  "condition": "состояние нового",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 17.5,
   "sizeRiderValues": [
    17.5
@@ -1507,6 +1862,12 @@
   "brand": "CWD",
   "model": "SE08",
   "sizeHorse": "34",
+  "material": "кожа",
+  "condition": "состояние нового",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 17.5,
   "sizeRiderValues": [
    17.5
@@ -1531,6 +1892,12 @@
   "brand": "Prestige",
   "model": "Arezzo",
   "sizeHorse": "33 (маркировка 34)",
+  "material": "кожа",
+  "condition": "хорошее",
+  "color": "коричневое",
+  "colorValues": [
+   "коричневое"
+  ],
   "sizeRider": 18,
   "sizeRiderValues": [
    18
@@ -1552,6 +1919,12 @@
   "type": "конкурное",
   "brand": "Devoucoux",
   "sizeHorse": "33-34",
+  "material": "кожа",
+  "condition": "отличное",
+  "color": "коричневое",
+  "colorValues": [
+   "коричневое"
+  ],
   "sizeRider": 17.5,
   "sizeRiderValues": [
    17.5
@@ -1575,6 +1948,12 @@
   "brand": "Kieffer",
   "model": "Lech Profi",
   "sizeHorse": "~32",
+  "material": "кожа",
+  "condition": "хорошее",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 17,
   "sizeRiderValues": [
    17
@@ -1600,6 +1979,12 @@
   "brand": "Kentaur",
   "model": "Kalipso",
   "sizeHorse": "2 по кентавру (~32,5 по престижу)",
+  "material": "кожа",
+  "condition": "хорошее",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": "17-17,5",
   "sizeRiderValues": [
    17,
@@ -1623,11 +2008,18 @@
   "brand": "Kieffer",
   "model": "Europe",
   "sizeHorse": "33",
+  "material": "кожа",
+  "condition": "хорошее",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 17.5,
   "sizeRiderValues": [
    17.5
   ],
   "price": 70000,
+  "status": "available",
   "article": "EVER0011",
   "publishedAt": "03.02.2026",
   "comment": "статус не указан - проверить (пост февраля)",
@@ -1646,6 +2038,12 @@
   "brand": "Prestige",
   "model": "Como",
   "sizeHorse": "32 (маркировка 33)",
+  "material": "кожа",
+  "condition": "рабочее",
+  "color": "коричневое",
+  "colorValues": [
+   "коричневое"
+  ],
   "sizeRider": 17,
   "sizeRiderValues": [
    17
@@ -1668,6 +2066,12 @@
   "brand": "Euroriding",
   "model": "Diamant",
   "sizeHorse": "34",
+  "material": "кожа",
+  "condition": "рабочее",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 17,
   "sizeRiderValues": [
    17
@@ -1690,11 +2094,19 @@
   "type": "выездковое",
   "brand": "Kieffer",
   "model": "Brugge",
+  "sizeHorse": "34",
+  "material": "кожа",
+  "condition": "отличное",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 17.5,
   "sizeRiderValues": [
    17.5
   ],
   "price": 210000,
+  "status": "available",
   "article": "EVER0008",
   "publishedAt": "28.01.2026",
   "comment": "для крупных лошадей (фризы, шайры); размер по лошади не указан; статус не указан - проверить (пост января)",
@@ -1711,6 +2123,12 @@
   "type": "выездковое",
   "brand": "Devoucoux",
   "sizeHorse": "32-33",
+  "material": "кожа",
+  "condition": "отличное",
+  "color": "коричневое",
+  "colorValues": [
+   "коричневое"
+  ],
   "sizeRider": 17,
   "sizeRiderValues": [
    17
@@ -1735,6 +2153,12 @@
   "brand": "Prestige",
   "model": "Como",
   "sizeHorse": "32 (маркировка 33)",
+  "material": "кожа",
+  "condition": "хорошее",
+  "color": "коричневое",
+  "colorValues": [
+   "коричневое"
+  ],
   "sizeRider": 17,
   "sizeRiderValues": [
    17
@@ -1758,11 +2182,18 @@
   "brand": "Harry Dabbs",
   "model": "Jaguar",
   "sizeHorse": "32-33",
+  "material": "кожа",
+  "condition": "отличное",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 17,
   "sizeRiderValues": [
    17
   ],
   "price": 150000,
+  "status": "available",
   "article": "EVER0005",
   "publishedAt": "28.01.2026",
   "comment": "статус не указан - проверить (пост января)",
@@ -1779,12 +2210,19 @@
   "brand": "Kieffer",
   "model": "Aachen AT",
   "sizeHorse": "32-33",
+  "material": "кожа",
+  "condition": "рабочее",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": "17-17,5",
   "sizeRiderValues": [
    17,
    17.5
   ],
   "price": 50000,
+  "status": "available",
   "article": "EVER0004",
   "publishedAt": "28.01.2026",
   "comment": "статус не указан - проверить (пост января)",
@@ -1800,13 +2238,20 @@
   "type": "конкурное",
   "brand": "Kieffer",
   "model": "Arezzo",
-  "sizeHorse": "33-34",
-  "sizeRider": "17-17,5",
-  "sizeRiderValues": [
-   17,
-   17.5
+  "sizeHorse": "34",
+  "material": "кожа",
+  "condition": "хорошее",
+  "color": "черное",
+  "colorValues": [
+   "черное"
   ],
-  "status": "sold",
+  "sizeRider": "17,5-18",
+  "sizeRiderValues": [
+   17.5,
+   18
+  ],
+  "price": 180000,
+  "status": "available",
   "article": "EVER0003",
   "publishedAt": "28.01.2026",
   "post": 9,
@@ -1829,11 +2274,18 @@
   "type": "выездковое",
   "brand": "Equiline",
   "sizeHorse": "32",
+  "material": "кожа",
+  "condition": "хорошее",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 17,
   "sizeRiderValues": [
    17
   ],
   "price": 200000,
+  "status": "available",
   "article": "EVER0002",
   "publishedAt": "28.01.2026",
   "comment": "на молодую необмускуленную лошадь, прямая спина; статус не указан - проверить (пост января)",
@@ -1850,12 +2302,17 @@
   "brand": "Trainers",
   "sizeHorse": "32-33",
   "material": "кожа",
-  "color": "черный",
+  "condition": "рабочее",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
   "sizeRider": 17,
   "sizeRiderValues": [
    17
   ],
   "price": 40000,
+  "status": "available",
   "article": "EVER0001",
   "publishedAt": "28.01.2026",
   "comment": "статус не указан - проверить (пост января)",
