@@ -120,7 +120,7 @@ function matchesExcept(s, skipKey) {
       if (!vals.some(v => filters[g.key].has(v))) return false;
     }
   }
-  if (filters.inStock && s.status === 'sold') return false; // прочерк статуса = не продано = в наличии
+  if (filters.inStock && (s.status === 'sold' || s.status === 'reserved')) return false; // прочерк статуса = не продано = в наличии; забронированное тоже недоступно
   if (filters.priceFrom !== null || filters.priceTo !== null) {
     if (s.price === undefined) return false;
     if (filters.priceFrom !== null && s.price < filters.priceFrom) return false;
@@ -270,11 +270,14 @@ function priceHtml(s, cls) {
 
 function cardHtml(s) {
   const sold = s.status === 'sold';
+  const reserved = s.status === 'reserved';
   const fav = favorites.has(s.id);
+  const statusTag = sold ? '<span class="sold-tag">Продано</span>'
+    : reserved ? '<span class="sold-tag reserved-tag">Забронировано</span>' : '';
   return (
-    '<article class="card' + (sold ? ' sold' : '') + '" data-id="' + esc(s.id) + '">' +
+    '<article class="card' + (sold ? ' sold' : '') + (reserved ? ' reserved' : '') + '" data-id="' + esc(s.id) + '">' +
       '<div class="photo"><img src="' + esc(s.photos[0]) + '" alt="' + esc(s.title) + '" loading="lazy"></div>' +
-      (sold ? '<span class="sold-tag">Продано</span>' : '') +
+      statusTag +
       '<button type="button" class="fav-btn" data-fav="' + esc(s.id) + '" aria-label="' +
         (fav ? 'Убрать из избранного' : 'Добавить в избранное') + '" aria-pressed="' + (fav ? 'true' : 'false') + '">' +
         HEART_SVG + '</button>' +
@@ -318,6 +321,7 @@ function fieldRow(label, value) {
 
 function saddleHtml(s) {
   const sold = s.status === 'sold';
+  const reserved = s.status === 'reserved';
   const brandModel = [s.brand, s.model].filter(Boolean).join(', ');
   const slides = s.photos.map(p =>
     '<div class="g-slide"><img src="' + esc(p) + '" alt="' + esc(s.title) + '"></div>'
@@ -325,8 +329,10 @@ function saddleHtml(s) {
   const dots = s.photos.map((_, i) =>
     '<span class="dot' + (i === 0 ? ' on' : '') + '"></span>'
   ).join('');
+  const statusTag = sold ? '<span class="sold-tag sold-tag-big">Продано</span>'
+    : reserved ? '<span class="sold-tag sold-tag-big reserved-tag">Забронировано</span>' : '';
   return (
-    '<div class="saddle-view' + (sold ? ' sold' : '') + '">' +
+    '<div class="saddle-view' + (sold ? ' sold' : '') + (reserved ? ' reserved' : '') + '">' +
       '<div class="s-head">' +
         (isTelegram ? '<span></span>' :
           '<button type="button" class="back-btn" id="backBtn">' +
@@ -339,7 +345,7 @@ function saddleHtml(s) {
       '</div>' +
       '<div class="gallery">' +
         '<div class="g-track" id="gTrack">' + slides + '</div>' +
-        (sold ? '<span class="sold-tag sold-tag-big">Продано</span>' : '') +
+        statusTag +
       '</div>' +
       '<div class="dots" id="gDots">' + dots + '</div>' +
       '<h1 class="s-title">' + esc(s.title) + '</h1>' +
