@@ -58,9 +58,9 @@ function toggleFavorite(id) {
   storage.save();
   haptic();
   renderHeaderFav();
-  renderCatalog();
   const saddleHeart = document.getElementById('saddleFavBtn');
   if (saddleHeart) syncSaddleHeart(saddleHeart, saddleHeart.dataset.id);
+  else renderCatalog();
 }
 
 function haptic() {
@@ -79,6 +79,9 @@ function renderHeaderFav() {
 function syncSaddleHeart(btn, id) {
   const on = favorites.has(id);
   btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+  btn.setAttribute('aria-label', on ? 'Убрать из избранного' : 'Добавить в избранное');
+  const label = btn.querySelector('.fav-btn-text');
+  if (label) label.textContent = on ? 'В избранном' : 'В избранное';
 }
 
 /* ---------- Фильтры ---------- */
@@ -382,6 +385,10 @@ function openPhotoViewer(s, startIdx) {
   document.getElementById('pClose').addEventListener('click', closeViewer);
   wireViewerTrack(track);
   releaseTelegramButtons(); // нативная MainButton не должна висеть поверх фото
+  if (isTelegram) {
+    TG.BackButton.onClick(backToCatalog);
+    TG.BackButton.show();
+  }
   haptic();
 }
 
@@ -629,8 +636,8 @@ function stopGalleryTracking() {
 function wireCopyArticle() {
   const btn = document.getElementById('copyArticle');
   if (!btn || !btn.textContent) return;
+  const article = btn.textContent;
   btn.addEventListener('click', async () => {
-    const article = btn.textContent;
     let ok = false;
     if (navigator.clipboard && navigator.clipboard.writeText) {
       try { await navigator.clipboard.writeText(article); ok = true; } catch (e) { /* WebView без разрешения */ }
