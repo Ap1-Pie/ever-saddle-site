@@ -1,5 +1,494 @@
 [
  {
+  "id": "505",
+  "title": "Выездковое седло Prestige Top Dressage",
+  "type": "выездковое",
+  "brand": "Prestige",
+  "model": "Top Dressage",
+  "sizeHorse": "33-34",
+  "condition": "хорошее",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
+  "sizeRider": 18,
+  "sizeRiderValues": [
+   18
+  ],
+  "price": 95000,
+  "article": "EVER0097",
+  "publishedAt": "22.10.2026",
+  "description": "Выезковое седло prestige top dressage\n\nСостояние: хорошее\nЦвет: черный\nВсаднику: 18\nПо лошади: 33-34",
+  "post": 505,
+  "photos": [
+   "assets/photos/505/1.jpg",
+   "assets/photos/505/2.jpg"
+  ]
+ },
+ {
+  "id": "494",
+  "title": "Выездковое седло Custom Icon Eclipse",
+  "type": "выездковое",
+  "brand": "Custom Icon",
+  "model": "Eclipse",
+  "sizeHorse": "34-35",
+  "condition": "хорошее",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
+  "sizeRider": 17.5,
+  "sizeRiderValues": [
+   17.5
+  ],
+  "price": 380000,
+  "article": "EVER0096",
+  "publishedAt": "21.10.2026",
+  "description": "Выезковое седло Custom IconEclipse\n\nСостояние: хорошее\nЦвет: черный\nВсаднику: 17,5\nПо лошади: 34-35",
+  "post": 494,
+  "photos": [
+   "assets/photos/494/1.jpg",
+   "assets/photos/494/2.jpg",
+   "assets/photos/494/3.jpg",
+   "assets/photos/494/4.jpg",
+   "assets/photos/494/5.jpg",
+   "assets/photos/494/6.jpg",
+   "assets/photos/494/7.jpg",
+   "assets/photos/494/8.jpg",
+   "assets/photos/494/9.jpg",
+   "assets/photos/494/10.jpg"
+  ]
+ },
+ {
+  "id": "489",
+  "title": "Конкурное седло Wintec 500",
+  "type": "конкурное",
+  "brand": "Wintec",
+  "model": "500",
+  "sizeHorse": "32-35",
+  "condition": "состояние нового",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
+  "sizeRider": 17,
+  "sizeRiderValues": [
+   17
+  ],
+  "price": 85000,
+  "article": "EVER0095",
+  "publishedAt": "21.10.2026",
+  "comment": "Система сменных ленчиков. Комплекта нет",
+  "description": "Конкурное седло Wintec 500\n\nСостояние: состояние нового\nЦвет: черный\nВсаднику: 17\nПо лошади: 32-35\n\nСистема сменных ленчиков. Комплекта нет.",
+  "post": 489,
+  "photos": [
+   "assets/photos/489/1.jpg",
+   "assets/photos/489/2.jpg",
+   "assets/photos/489/3.jpg",
+   "assets/photos/489/4.jpg"
+  ]
+ },
+ {
+  "id": "484",
+  "title": "Конкурное седло Prestige Golden Star",
+  "type": "конкурное",
+  "brand": "Prestige",
+  "model": "Golden Star",
+  "sizeHorse": "33-34",
+  "condition": "хорошее",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
+  "sizeRider": 17,
+  "sizeRiderValues": [
+   17
+  ],
+  "price": 145000,
+  "article": "EVER0094",
+  "publishedAt": "21.10.2026",
+  "description": "Конкурное седло Prestige GoldenStar\n\nСостояние: хорошее\nЦвет: черный\nВсаднику: 17\nПо лошади: 33-34",
+  "post": 484,
+  "photos": [
+   "assets/photos/484/1.jpg",
+   "assets/photos/484/2.jpg",
+   "assets/photos/484/3.jpg",
+   "assets/photos/484/4.jpg",
+   "assets/photos/484/5.jpg"
+  ]
+ },
+ {
+  "id": "478",
+  "title": "Выездковое седло Antares Cadence",
+  "type": "выездковое",
+  "brand": "Antares",
+  "model": "Cadence",
+  "sizeHorse": "33-34",
+  "condition": "хорошее",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
+  "sizeRider": 17.5,
+  "sizeRiderValues": [
+   17.5
+  ],
+  "price": 260000,
+  "article": "EVER0093",
+  "publishedAt": "21.10.2026",
+  "description": "Выезковое седло Antares Cadence\n\nСостояние: хорошее\nЦвет: черный\nВсаднику: 17,5\nПо лошади: 33-34",
+  "post": 478,
+  "photos": [
+   "assets/photos/478/1.jpg",
+   "assets/photos/478/2.jpg",
+   "assets/photos/478/3.jpg",
+   "assets/photos/478/4.jpg",
+   "assets/photos/478/5.jpg",
+   "assets/photos/478/6.jpg"
+  ]
+ },
+ {
+  "id": "471",
+  "title": "Конкурное седло Equipe Synergy",
+  "type": "конкурное",
+  "brand": "Equipe",
+  "model": "Synergy",
+  "sizeHorse": "M M",
+  "condition": "хорошее",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
+  "sizeRider": 17,
+  "sizeRiderValues": [
+   17
+  ],
+  "price": 220000,
+  "article": "EVER0092",
+  "publishedAt": "21.10.2026",
+  "description": "Конкурное седло Equipe Synergy\n\nСостояние: хорошее\nЦвет: черный\nВсаднику: 17\nПо лошади: M M",
+  "post": 471,
+  "photos": [
+   "assets/photos/471/1.jpg",
+   "assets/photos/471/2.jpg",
+   "assets/photos/471/3.jpg",
+   "assets/photos/471/4.jpg",
+   "assets/photos/471/5.jpg",
+   "assets/photos/471/6.jpg",
+   "assets/photos/471/7.jpg"
+  ]
+ },
+ {
+  "id": "469",
+  "title": "Конкурное седло Prestige Versailles",
+  "type": "конкурное",
+  "brand": "Prestige",
+  "model": "Versailles",
+  "sizeHorse": "33",
+  "condition": "хорошее",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
+  "sizeRider": 16,
+  "sizeRiderValues": [
+   16
+  ],
+  "price": 180000,
+  "article": "EVER0091",
+  "publishedAt": "21.10.2026",
+  "description": "Конкурное седло Prestige Versalliies\n\nСостояние: хорошее\nЦвет: черный\nВсаднику: 16\nПо лошади: 33",
+  "post": 469,
+  "photos": [
+   "assets/photos/469/1.jpg",
+   "assets/photos/469/2.jpg"
+  ]
+ },
+ {
+  "id": "465",
+  "title": "Выездковое седло Erreplus AJ",
+  "type": "выездковое",
+  "brand": "Erreplus",
+  "model": "AJ",
+  "sizeHorse": "33-34",
+  "condition": "хорошее",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
+  "sizeRider": "17-17,5",
+  "sizeRiderValues": [
+   17,
+   17.5
+  ],
+  "price": 260000,
+  "article": "EVER0090",
+  "publishedAt": "21.10.2026",
+  "description": "Выезковое седло Erreplus AJ\n\nСостояние: хорошее\nЦвет: черный\nВсаднику: 17-17,5\nПо лошади: 33-34",
+  "post": 465,
+  "photos": [
+   "assets/photos/465/1.jpg",
+   "assets/photos/465/2.jpg",
+   "assets/photos/465/3.jpg",
+   "assets/photos/465/4.jpg"
+  ]
+ },
+ {
+  "id": "462",
+  "title": "Конкурное седло Prestige Sydney",
+  "type": "конкурное",
+  "brand": "Prestige",
+  "model": "Sydney",
+  "sizeHorse": "32",
+  "condition": "хорошее",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
+  "sizeRider": 17,
+  "sizeRiderValues": [
+   17
+  ],
+  "price": 135000,
+  "article": "EVER0089",
+  "publishedAt": "21.10.2026",
+  "description": "Конкурное седло Prestige Sydney\n\nСостояние: хорошее\nЦвет: черный\nВсаднику: 17\nПо лошади: 32",
+  "post": 462,
+  "photos": [
+   "assets/photos/462/1.jpg",
+   "assets/photos/462/2.jpg",
+   "assets/photos/462/3.jpg"
+  ]
+ },
+ {
+  "id": "457",
+  "title": "Конкурное седло Erreplus JD",
+  "type": "конкурное",
+  "brand": "Erreplus",
+  "model": "JD",
+  "sizeHorse": "32-33",
+  "condition": "хорошее",
+  "color": "коричневое",
+  "colorValues": [
+   "коричневое"
+  ],
+  "sizeRider": 17,
+  "sizeRiderValues": [
+   17
+  ],
+  "price": 260000,
+  "article": "EVER0088",
+  "publishedAt": "21.10.2026",
+  "description": "Конкурное седло Erreplus JD\n\nСостояние: хорошее\nЦвет: коричневый\nВсаднику: 17\nПо лошади: 32-33",
+  "post": 457,
+  "photos": [
+   "assets/photos/457/1.jpg",
+   "assets/photos/457/2.jpg",
+   "assets/photos/457/3.jpg",
+   "assets/photos/457/4.jpg",
+   "assets/photos/457/5.jpg"
+  ]
+ },
+ {
+  "id": "453",
+  "title": "Конкурное седло Antares Classique",
+  "type": "конкурное",
+  "brand": "Antares",
+  "model": "Classique",
+  "sizeHorse": "33",
+  "condition": "хорошее",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
+  "sizeRider": 17.5,
+  "sizeRiderValues": [
+   17.5
+  ],
+  "price": 230000,
+  "article": "EVER0087",
+  "publishedAt": "21.10.2026",
+  "description": "Конкурное седло Antares Classique\n\nСостояние: хорошее\nЦвет: черный\nВсаднику: 17,5\nПо лошади: 33",
+  "post": 453,
+  "photos": [
+   "assets/photos/453/1.jpg",
+   "assets/photos/453/2.jpg",
+   "assets/photos/453/3.jpg",
+   "assets/photos/453/4.jpg"
+  ]
+ },
+ {
+  "id": "445",
+  "title": "Выездковое седло Prestige X-Brith",
+  "type": "выездковое",
+  "brand": "Prestige",
+  "model": "X-Brith",
+  "sizeHorse": "33-34",
+  "condition": "хорошее",
+  "color": "коричневое",
+  "colorValues": [
+   "коричневое"
+  ],
+  "sizeRider": 17,
+  "sizeRiderValues": [
+   17
+  ],
+  "price": 280000,
+  "article": "EVER0086",
+  "publishedAt": "21.10.2026",
+  "description": "Выезковое седло Prestige X-Brith\n\nСостояние: хорошее\nЦвет: коричневый\nВсаднику: 17\nПо лошади: 33-34",
+  "post": 445,
+  "photos": [
+   "assets/photos/445/1.jpg",
+   "assets/photos/445/2.jpg",
+   "assets/photos/445/3.jpg",
+   "assets/photos/445/4.jpg",
+   "assets/photos/445/5.jpg",
+   "assets/photos/445/6.jpg",
+   "assets/photos/445/7.jpg",
+   "assets/photos/445/8.jpg"
+  ]
+ },
+ {
+  "id": "441",
+  "title": "Выездковое седло Prestige Doge",
+  "type": "выездковое",
+  "brand": "Prestige",
+  "model": "Doge",
+  "sizeHorse": "32",
+  "condition": "хорошее",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
+  "sizeRider": 17,
+  "sizeRiderValues": [
+   17
+  ],
+  "price": 180000,
+  "article": "EVER0085",
+  "publishedAt": "21.10.2026",
+  "description": "Выезковое седло Prestige Doge\n\nСостояние: хорошее\nЦвет: черный\nВсаднику: 17\nПо лошади: 32",
+  "post": 441,
+  "photos": [
+   "assets/photos/441/1.jpg",
+   "assets/photos/441/2.jpg",
+   "assets/photos/441/3.jpg",
+   "assets/photos/441/4.jpg"
+  ]
+ },
+ {
+  "id": "437",
+  "title": "Выездковое седло Софт-Ле",
+  "type": "выездковое",
+  "brand": "Софт-Ле",
+  "sizeHorse": "1,5",
+  "condition": "хорошее",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
+  "sizeRider": "16,5-17",
+  "sizeRiderValues": [
+   16.5,
+   17
+  ],
+  "price": 100000,
+  "article": "EVER0084",
+  "publishedAt": "21.10.2026",
+  "comment": "2 по маркировке, было перенабито - набивка плотная",
+  "description": "Выезковое седло Софт-Ле\n\nСостояние: хорошее\nЦвет: черный\nВсаднику: 16,5-17\nПо лошади: 1,5\n\n2 по маркировке, было перенабито - набивка плотная",
+  "post": 437,
+  "photos": [
+   "assets/photos/437/1.jpg",
+   "assets/photos/437/2.jpg",
+   "assets/photos/437/3.jpg",
+   "assets/photos/437/4.jpg"
+  ]
+ },
+ {
+  "id": "433",
+  "title": "Выездковое седло Софт-Ле",
+  "type": "выездковое",
+  "brand": "Софт-Ле",
+  "sizeHorse": "2",
+  "condition": "идеальное",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
+  "sizeRider": 17.5,
+  "sizeRiderValues": [
+   17.5
+  ],
+  "price": 100000,
+  "article": "EVER0083",
+  "publishedAt": "21.10.2026",
+  "description": "Выезковое седло Софт-Ле\n\nСостояние: идеальное\nЦвет: черный\nВсаднику: 17,5\nПо лошади: 2",
+  "post": 433,
+  "photos": [
+   "assets/photos/433/1.jpg",
+   "assets/photos/433/2.jpg",
+   "assets/photos/433/3.jpg",
+   "assets/photos/433/4.jpg"
+  ]
+ },
+ {
+  "id": "429",
+  "title": "Выездковое седло Prestige Venus",
+  "type": "выездковое",
+  "brand": "Prestige",
+  "model": "Venus",
+  "sizeHorse": "32",
+  "condition": "хорошее",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
+  "sizeRider": 17,
+  "sizeRiderValues": [
+   17
+  ],
+  "price": 185000,
+  "article": "EVER0082",
+  "publishedAt": "21.10.2026",
+  "description": "Выезковое седло prestige Venus\n\nСостояние: хорошее\nЦвет: черный\nВсаднику: 17\nПо лошади: 32",
+  "post": 429,
+  "photos": [
+   "assets/photos/429/1.jpg",
+   "assets/photos/429/2.jpg",
+   "assets/photos/429/3.jpg",
+   "assets/photos/429/4.jpg"
+  ]
+ },
+ {
+  "id": "426",
+  "title": "Выездковое седло Kentaur Vien",
+  "type": "выездковое",
+  "brand": "Kentaur",
+  "model": "Vien",
+  "sizeHorse": "32-33",
+  "condition": "хорошее",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
+  "sizeRider": 17,
+  "sizeRiderValues": [
+   17
+  ],
+  "price": 85000,
+  "article": "EVER0081",
+  "publishedAt": "21.10.2026",
+  "description": "Выезковое седло kentaur vien\n\nСостояние: хорошее\nЦвет: черный\nВсаднику: 17\nПо лошади: 32-33",
+  "post": 426,
+  "photos": [
+   "assets/photos/426/1.jpg",
+   "assets/photos/426/2.jpg",
+   "assets/photos/426/3.jpg"
+  ]
+ },
+ {
   "id": "417",
   "title": "Конкурное седло Kentaur Appolon",
   "type": "конкурное",
