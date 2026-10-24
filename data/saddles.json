@@ -1,5 +1,34 @@
 [
  {
+  "id": "507",
+  "title": "Конкурное седло GrandPrizo (Аргентина), кожа, 17,5/31-35, черное, новое",
+  "type": "конкурное",
+  "brand": "GrandPrizo",
+  "model": "GrandPrizo",
+  "sizeHorse": "31-35",
+  "material": "кожа",
+  "condition": "новое",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
+  "sizeRider": 17.5,
+  "sizeRiderValues": [
+   17.5
+  ],
+  "price": 100000,
+  "status": "available",
+  "article": "EVER0098",
+  "publishedAt": "24.10.2026",
+  "post": 507,
+  "photos": [
+   "assets/photos/507/1.jpg",
+   "assets/photos/507/2.jpg",
+   "assets/photos/507/3.jpg",
+   "assets/photos/507/4.jpg"
+  ]
+ },
+ {
   "id": "505",
   "title": "Выездковое седло Prestige Top Dressage",
   "type": "выездковое",
@@ -378,7 +407,7 @@
    17
   ],
   "price": 180000,
-  "status": "available",
+  "status": "sold",
   "article": "EVER0085",
   "publishedAt": "21.10.2026",
   "description": "Выезковое седло Prestige Doge\n\nСостояние: хорошее\nЦвет: черный\nВсаднику: 17\nПо лошади: 32",
