@@ -776,7 +776,8 @@ async function init() {
     TG.ready();
     TG.expand();
     // Полноэкранный режим (Bot API 8.0): прячет шапку Телеграма с крестиком и точками,
-    // как в топовых мини-аппах. Отступ под статус-бар - из contentSafeAreaInset.
+    // как в топовых мини-аппах. Отступ под статус-бар и плавающие кнопки - из contentSafeAreaInset;
+    // значение приходит по событию contentSafeAreaChanged, при старте оно еще нулевое.
     if (TG.requestFullscreen && TG.contentSafeAreaInset) {
       try {
         const applySafeTop = () => document.documentElement.style
@@ -784,7 +785,7 @@ async function init() {
         TG.requestFullscreen();
         applySafeTop();
         TG.onEvent('fullscreenChanged', applySafeTop);
-        TG.onEvent('viewportChanged', applySafeTop);
+        TG.onEvent('contentSafeAreaChanged', applySafeTop);
       } catch (e) { console.warn('Полноэкранный режим недоступен', e); }
     }
   }
