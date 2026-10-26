@@ -2,7 +2,7 @@
 
 /* Ever saddle - итерация 5: реальные данные канала.
    Прочерк (поля нет в JSON) - строка скрыта в карточке и не матчится фильтрами.
-   В Телеграме - нативные MainButton/BackButton и CloudStorage,
+   В Телеграме - нативная BackButton и CloudStorage,
    в обычном браузере - свои элементы управления и localStorage. */
 
 const TG = (window.Telegram && window.Telegram.WebApp) || null;
@@ -35,10 +35,13 @@ let favoritesMode = false;
 const storage = {
   load() {
     if (isTelegram) {
+      if (!TG.CloudStorage || !TG.CloudStorage.getItem) return Promise.resolve([]);
       return new Promise(resolve => {
-        TG.CloudStorage.getItem('favorites', (err, value) => {
-          resolve(err || !value ? [] : value.split(',').filter(Boolean));
-        });
+        try {
+          TG.CloudStorage.getItem('favorites', (err, value) => {
+            resolve(err || !value ? [] : value.split(',').filter(Boolean));
+          });
+        } catch (e) { resolve([]); }
       });
     }
     const v = localStorage.getItem('favorites');
@@ -46,8 +49,10 @@ const storage = {
   },
   save() {
     const data = [...favorites].join(',');
-    if (isTelegram) TG.CloudStorage.setItem('favorites', data, () => {});
-    else localStorage.setItem('favorites', data);
+    try {
+      if (isTelegram) TG.CloudStorage?.setItem('favorites', data, () => {});
+      else localStorage.setItem('favorites', data);
+    } catch (e) { console.warn('Избранное не сохранено', e); }
   }
 };
 
@@ -619,8 +624,8 @@ function saddleHtml(s) {
       (s.description
         ? '<div class="s-desc"><h3>Описание</h3><p>' + esc(s.description).replace(/\n/g, '<br>') + '</p></div>'
         : '') +
-      '<a class="dm-btn" href="' + DM_URL + '" ' +
-        (isTelegram ? ' onclick="return false;"' : 'target="_blank" rel="noopener"') + '>Написать в ЛС</a>' +
+      '<a class="dm-btn" href="' + DM_URL + '"' +
+        (isTelegram ? '' : ' target="_blank" rel="noopener"') + '>Написать</a>' +
     '</div>'
   );
 }
@@ -704,27 +709,19 @@ function setupTelegramButtons() {
   if (!isTelegram) return;
   TG.BackButton.onClick(backToCatalog);
   TG.BackButton.show();
-  TG.MainButton.setText('Написать в ЛС');
-  TG.MainButton.offClick(openDm);
-  TG.MainButton.onClick(openDm);
-  TG.MainButton.show();
+  TG.MainButton.hide();
 }
 
 function releaseTelegramButtons() {
   if (!isTelegram) return;
-  TG.MainButton.offClick(openDm);
   TG.MainButton.hide();
   TG.BackButton.offClick(backToCatalog);
   TG.BackButton.hide();
 }
 
-function openDm() {
-  if (isTelegram) TG.openTelegramLink(DM_URL);
-}
-
 /* ---------- Переходы ---------- */
 
-function openSaddle(id) {
+function openSaddle(id, pushHistory = true) {
   const s = saddles.find(x => x.id === id);
   if (!s) return;
   closeSheets();
@@ -732,6 +729,12 @@ function openSaddle(id) {
   const grid = document.getElementById('grid');
   grid.classList.add('saddle-open');
   grid.innerHTML = saddleHtml(s);
+  if (isTelegram) {
+    grid.querySelector('.dm-btn').addEventListener('click', (e) => {
+      e.preventDefault();
+      TG.openTelegramLink(DM_URL);
+    });
+  }
   const back = document.getElementById('backBtn');
   if (back) back.addEventListener('click', backToCatalog);
   document.getElementById('saddleFavBtn').addEventListener('click', (e) => {
@@ -741,7 +744,7 @@ function openSaddle(id) {
   wireGallery(s);
   setupTelegramButtons();
   window.scrollTo(0, 0);
-  history.pushState({ view: 'saddle', id }, '', '#' + id);
+  if (pushHistory) history.pushState({ view: 'saddle', id }, '', '#' + encodeURIComponent(id));
 }
 
 function backToCatalog() {
@@ -752,8 +755,9 @@ function backToCatalog() {
 
 window.addEventListener('popstate', () => {
   if (isViewerOpen()) closeViewer();
-  const saddleOpen = !!document.querySelector('.saddle-view');
-  if (saddleOpen) renderCatalog();
+  const id = decodeURIComponent(location.hash.slice(1));
+  if (saddles.some(s => s.id === id)) openSaddle(id, false);
+  else renderCatalog();
 });
 
 /* ---------- Старт ---------- */
@@ -762,7 +766,8 @@ async function init() {
   if (TG) TG.ready();
   const grid = document.getElementById('grid');
   try {
-    favorites = new Set(await storage.load());
+    try { favorites = new Set(await storage.load()); }
+    catch (e) { console.warn('Избранное не загружено', e); }
     const res = await fetch('data/saddles.json' + (window.ASSETS_V || ''));
     if (!res.ok) throw new Error('HTTP ' + res.status);
     saddles = await res.json();
@@ -795,7 +800,7 @@ async function init() {
     renderHeaderFav();
     const hash = decodeURIComponent(location.hash.slice(1));
     const fromHash = saddles.find(x => x.id === hash);
-    if (fromHash) openSaddle(fromHash.id);
+    if (fromHash) openSaddle(fromHash.id, false);
     else renderCatalog();
   } catch (e) {
     grid.innerHTML = '<div class="state">Не удалось загрузить каталог.<br>Обновите страницу.</div>';
