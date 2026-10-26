@@ -62,8 +62,8 @@ function toggleFavorite(id) {
   storage.save();
   haptic();
   renderHeaderFav();
-  const saddleHeart = document.getElementById('saddleFavBtn');
-  if (saddleHeart) syncSaddleHeart(saddleHeart, saddleHeart.dataset.id);
+  const cardBtn = document.getElementById('favCardBtn');
+  if (!cardBtn.hidden && cardBtn.dataset.id === id) syncFavBtn(cardBtn, id); // открыта карточка
   else renderCatalog();
 }
 
@@ -80,10 +80,11 @@ function renderHeaderFav() {
   badge.hidden = favorites.size === 0;
 }
 
-function syncSaddleHeart(btn, id) {
+function syncFavBtn(btn, id) {
   const on = favorites.has(id);
   btn.setAttribute('aria-pressed', on ? 'true' : 'false');
   btn.setAttribute('aria-label', on ? 'Убрать из избранного' : 'Добавить в избранное');
+  btn.classList.toggle('is-on', on);
 }
 
 /* ---------- Фильтры ---------- */
@@ -551,7 +552,9 @@ function cardHtml(s) {
 function renderCatalog() {
   releaseTelegramButtons();
   stopGalleryTracking();
-  document.getElementById('favToggle').hidden = false; // глобальное сердце - только в каталоге
+  document.getElementById('favToggle').hidden = false;
+  document.getElementById('favCardBtn').hidden = true;
+  document.getElementById('favBack').hidden = !favoritesMode; // «Каталог» для выхода из избранного
   const grid = document.getElementById('grid');
   grid.classList.remove('saddle-open');
   document.querySelector('.toolbar').style.display = '';
@@ -595,17 +598,15 @@ function saddleHtml(s) {
     : reserved ? '<span class="sold-tag sold-tag-big reserved-tag">Забронировано</span>' : '';
   return (
     '<div class="saddle-view' + (sold ? ' sold' : '') + (reserved ? ' reserved' : '') + '">' +
-      '<div class="s-head">' +
-        (isTelegram ? '<span></span>' :
-          '<button type="button" class="back-btn" id="backBtn">' +
-            '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>' +
-            'Каталог' +
-          '</button>') +
-        '<button type="button" class="fav-btn fav-btn-page" id="saddleFavBtn" data-id="' + esc(s.id) + '" aria-label="' +
-          (favorites.has(s.id) ? 'Убрать из избранного' : 'Добавить в избранное') + '" aria-pressed="' + (favorites.has(s.id) ? 'true' : 'false') + '">' +
-          HEART_SVG +
-        '</button>' +
-      '</div>' +
+      // сердце седла - в шапке приложения (итерация 16); строка «назад» нужна только в браузере
+      (!isTelegram
+        ? '<div class="s-head">' +
+            '<button type="button" class="back-btn" id="backBtn">' +
+              '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>' +
+              'Каталог' +
+            '</button>' +
+          '</div>'
+        : '') +
       '<div class="gallery">' +
         '<div class="g-track" id="gTrack">' + slides + '</div>' +
         statusTag +
@@ -731,7 +732,12 @@ function openSaddle(id, pushHistory = true) {
   if (!s) return;
   closeSheets();
   document.querySelector('.toolbar').style.display = 'none';
-  document.getElementById('favToggle').hidden = true; // остаётся только сердце самого седла
+  document.getElementById('favToggle').hidden = true;
+  document.getElementById('favBack').hidden = true;
+  const favCard = document.getElementById('favCardBtn');
+  favCard.dataset.id = id;
+  syncFavBtn(favCard, id);
+  favCard.hidden = false; // сердце седла - в шапке, на месте глобального
   const grid = document.getElementById('grid');
   grid.classList.add('saddle-open');
   grid.innerHTML = saddleHtml(s);
@@ -743,9 +749,6 @@ function openSaddle(id, pushHistory = true) {
   }
   const back = document.getElementById('backBtn');
   if (back) back.addEventListener('click', backToCatalog);
-  document.getElementById('saddleFavBtn').addEventListener('click', (e) => {
-    toggleFavorite(e.currentTarget.dataset.id);
-  });
   wireCopyArticle();
   wireGallery(s);
   setupTelegramButtons();
@@ -771,7 +774,19 @@ window.addEventListener('popstate', () => {
 async function init() {
   if (TG) {
     TG.ready();
-    TG.expand(); // мини-апп раскрывается на весь экран сам (баг iOS «пол-экрана»)
+    TG.expand();
+    // Полноэкранный режим (Bot API 8.0): прячет шапку Телеграма с крестиком и точками,
+    // как в топовых мини-аппах. Отступ под статус-бар - из contentSafeAreaInset.
+    if (TG.requestFullscreen && TG.contentSafeAreaInset) {
+      try {
+        const applySafeTop = () => document.documentElement.style
+          .setProperty('--safe-top', (TG.contentSafeAreaInset.top || 0) + 'px');
+        TG.requestFullscreen();
+        applySafeTop();
+        TG.onEvent('fullscreenChanged', applySafeTop);
+        TG.onEvent('viewportChanged', applySafeTop);
+      } catch (e) { console.warn('Полноэкранный режим недоступен', e); }
+    }
   }
   const grid = document.getElementById('grid');
   try {
@@ -799,6 +814,17 @@ async function init() {
 
     document.getElementById('favToggle').addEventListener('click', () => {
       favoritesMode = !favoritesMode; // пустое избранное тоже открывается - с подсказкой
+      renderHeaderFav();
+      renderCatalog();
+    });
+
+    document.getElementById('favCardBtn').addEventListener('click', (e) => {
+      const id = e.currentTarget.dataset.id;
+      if (id) toggleFavorite(id);
+    });
+
+    document.getElementById('favBackBtn').addEventListener('click', () => {
+      favoritesMode = false;
       renderHeaderFav();
       renderCatalog();
     });

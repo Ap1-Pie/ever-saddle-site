@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Ever saddle</title>
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="styles.css?v=21">
+  <link rel="stylesheet" href="styles.css?v=22">
 </head>
 <body>
   <div class="app">
@@ -16,7 +16,18 @@
         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
         <span class="fav-badge" id="favBadge" hidden>0</span>
       </button>
+      <!-- Сердце открытого седла занимает место глобального в шапке (итерация 15) -->
+      <button type="button" class="fav-toggle" id="favCardBtn" hidden aria-label="Добавить в избранное" aria-pressed="false">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      </button>
     </header>
+    <!-- Возврат в каталог из раздела избранного (итерация 16) -->
+    <div id="favBack" hidden>
+      <button type="button" class="back-btn" id="favBackBtn">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+        Каталог
+      </button>
+    </div>
     <div class="toolbar">
       <!-- Итерация 3: шторка фильтров -->
       <button type="button" class="pill" id="filterBtn">
@@ -52,7 +63,7 @@
     <div class="photo-viewer" id="photoViewer" aria-label="Просмотр фото"></div>
   </div>
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
-  <script>window.ASSETS_V = '?v=21';</script>
-  <script src="app.js?v=21"></script>
+  <script>window.ASSETS_V = '?v=22';</script>
+  <script src="app.js?v=22"></script>
 </body>
 </html>
