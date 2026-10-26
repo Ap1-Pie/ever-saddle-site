@@ -47,6 +47,7 @@ body {
   display: flex; align-items: center; justify-content: center;
 }
 .fav-badge[hidden] { display: none; }
+.fav-toggle[hidden] { display: none; } /* глобальное сердце скрыто, пока открыта карточка (решение Павла, 26.10) */
 
 .toolbar { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; }
 .pill {

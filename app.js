@@ -551,6 +551,7 @@ function cardHtml(s) {
 function renderCatalog() {
   releaseTelegramButtons();
   stopGalleryTracking();
+  document.getElementById('favToggle').hidden = false; // глобальное сердце - только в каталоге
   const grid = document.getElementById('grid');
   grid.classList.remove('saddle-open');
   document.querySelector('.toolbar').style.display = '';
@@ -730,6 +731,7 @@ function openSaddle(id, pushHistory = true) {
   if (!s) return;
   closeSheets();
   document.querySelector('.toolbar').style.display = 'none';
+  document.getElementById('favToggle').hidden = true; // остаётся только сердце самого седла
   const grid = document.getElementById('grid');
   grid.classList.add('saddle-open');
   grid.innerHTML = saddleHtml(s);
