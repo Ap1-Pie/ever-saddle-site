@@ -94,13 +94,13 @@ body {
 .fav-btn[aria-pressed="true"] svg { fill: var(--brass); }
 .fav-btn:active { transform: scale(.92); }
 
-/* Шапка карточки сёдла: назад слева, избранное справа */
+/* Шапка карточки сёдла: назад слева, только сердечко справа (решение Павла, 24.10) */
 .s-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
 .fav-btn-page {
-  position: static; width: auto; height: 34px; padding: 0 13px;
+  position: static; width: 34px; height: 34px; padding: 0;
   border-radius: 999px; background: var(--surface); border: 1px solid var(--line);
-  display: inline-flex; align-items: center; gap: 7px;
-  font-family: inherit; font-size: 13px; font-weight: 500; color: var(--text);
+  display: inline-flex; align-items: center; justify-content: center;
+  color: var(--text);
 }
 .fav-btn-page svg { width: 16px; height: 16px; }
 .fav-btn-page[aria-pressed="true"] { border-color: var(--brass); }

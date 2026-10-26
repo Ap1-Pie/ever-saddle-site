@@ -59,7 +59,6 @@ const storage = {
 function toggleFavorite(id) {
   if (favorites.has(id)) favorites.delete(id);
   else favorites.add(id);
-  if (favoritesMode && favorites.size === 0) favoritesMode = false; // пустое избранное закрывает режим
   storage.save();
   haptic();
   renderHeaderFav();
@@ -85,8 +84,6 @@ function syncSaddleHeart(btn, id) {
   const on = favorites.has(id);
   btn.setAttribute('aria-pressed', on ? 'true' : 'false');
   btn.setAttribute('aria-label', on ? 'Убрать из избранного' : 'Добавить в избранное');
-  const label = btn.querySelector('.fav-btn-text');
-  if (label) label.textContent = on ? 'В избранном' : 'В избранное';
 }
 
 /* ---------- Фильтры ---------- */
@@ -274,14 +271,20 @@ const SORTS = [
 let sortMode = 'new';
 
 function soldLast(a, b) {
-  return (a.status === 'sold') - (b.status === 'sold'); // проданные - в конец при любом порядке
+  // проданные - всегда в конце, между собой только от новых к старым (решение Павла, 26.10);
+  // активная сортировка применяется только к непроданным
+  const aSold = a.status === 'sold', bSold = b.status === 'sold';
+  if (aSold && bSold) return b.post - a.post;
+  if (aSold) return 1;
+  if (bSold) return -1;
+  return 0;
 }
 
 const SORT_COMPARE = {
   new: (a, b) => soldLast(a, b) || b.post - a.post,
   old: (a, b) => soldLast(a, b) || a.post - b.post,
-  // седла без цены (сегодня это все проданные) уходят в конец ценового порядка;
-  // пост - запасной критерий, если цены равны или их нет у обоих
+  // без цены (среди непроданных) - в конец ценового порядка;
+  // пост - запасной критерий при равных ценах
   priceAsc: (a, b) => soldLast(a, b) || (a.price ?? Infinity) - (b.price ?? Infinity) || b.post - a.post,
   priceDesc: (a, b) => soldLast(a, b) || (b.price ?? -Infinity) - (a.price ?? -Infinity) || b.post - a.post
 };
@@ -597,8 +600,9 @@ function saddleHtml(s) {
             '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>' +
             'Каталог' +
           '</button>') +
-        '<button type="button" class="fav-btn fav-btn-page" id="saddleFavBtn" data-id="' + esc(s.id) + '" aria-label="В избранное" aria-pressed="' + (favorites.has(s.id) ? 'true' : 'false') + '">' +
-          HEART_SVG + '<span class="fav-btn-text">' + (favorites.has(s.id) ? 'В избранном' : 'В избранное') + '</span>' +
+        '<button type="button" class="fav-btn fav-btn-page" id="saddleFavBtn" data-id="' + esc(s.id) + '" aria-label="' +
+          (favorites.has(s.id) ? 'Убрать из избранного' : 'Добавить в избранное') + '" aria-pressed="' + (favorites.has(s.id) ? 'true' : 'false') + '">' +
+          HEART_SVG +
         '</button>' +
       '</div>' +
       '<div class="gallery">' +
@@ -763,7 +767,10 @@ window.addEventListener('popstate', () => {
 /* ---------- Старт ---------- */
 
 async function init() {
-  if (TG) TG.ready();
+  if (TG) {
+    TG.ready();
+    TG.expand(); // мини-апп раскрывается на весь экран сам (баг iOS «пол-экрана»)
+  }
   const grid = document.getElementById('grid');
   try {
     try { favorites = new Set(await storage.load()); }
@@ -789,7 +796,7 @@ async function init() {
     });
 
     document.getElementById('favToggle').addEventListener('click', () => {
-      favoritesMode = !favoritesMode && favorites.size > 0;
+      favoritesMode = !favoritesMode; // пустое избранное тоже открывается - с подсказкой
       renderHeaderFav();
       renderCatalog();
     });
