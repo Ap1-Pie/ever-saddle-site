@@ -25,10 +25,10 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Верхний отступ: в полноэкранном режиме Телеграм отдает свой инсет CSS-переменной,
-   --safe-top дублирует ее из JS на случай, если переменная не проставилась */
+/* Верхний отступ: системный инсет iOS + инсет Телеграма (CSS-переменная и JS)
+   + фиксированный запас --fs-top под плавающие «Закрыть»/«...» в полноэкранном режиме */
 .app { max-width: 560px; margin: 0 auto;
-  padding: calc(20px + max(var(--tg-content-safe-area-inset-top, 0px), var(--safe-top, 0px))) 16px 32px; }
+  padding: calc(20px + max(env(safe-area-inset-top, 0px), var(--tg-content-safe-area-inset-top, 0px), var(--safe-top, 0px), var(--fs-top, 0px))) 16px 32px; }
 
 .head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
 .logo { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; font-size: 22px; letter-spacing: .02em; }

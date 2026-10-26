@@ -776,12 +776,16 @@ async function init() {
     TG.ready();
     TG.expand();
     // Полноэкранный режим (Bot API 8.0): прячет шапку Телеграма с крестиком и точками,
-    // как в топовых мини-аппах. Отступ под статус-бар и плавающие кнопки - из contentSafeAreaInset;
-    // значение приходит по событию contentSafeAreaChanged, при старте оно еще нулевое.
+    // как в топовых мини-аппах. Отступ контента сверху считает CSS в .app из четырех
+    // источников (env, переменная Телеграма, --safe-top, --fs-top): часть клиентов
+    // в fullscreen отдает нулевой contentSafeAreaInset, поэтому держим и фикс-запас.
     if (TG.requestFullscreen && TG.contentSafeAreaInset) {
       try {
-        const applySafeTop = () => document.documentElement.style
-          .setProperty('--safe-top', (TG.contentSafeAreaInset.top || 0) + 'px');
+        const applySafeTop = () => {
+          const root = document.documentElement.style;
+          root.setProperty('--safe-top', (TG.contentSafeAreaInset.top || 0) + 'px');
+          root.setProperty('--fs-top', TG.isFullscreen ? '52px' : '0px');
+        };
         TG.requestFullscreen();
         applySafeTop();
         TG.onEvent('fullscreenChanged', applySafeTop);
