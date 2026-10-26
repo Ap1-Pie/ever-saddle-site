@@ -393,11 +393,8 @@ function openPhotoViewer(s, startIdx) {
   updateViewerCounter();
   document.getElementById('pClose').addEventListener('click', closeViewer);
   wireViewerTrack(track);
-  releaseTelegramButtons(); // нативная MainButton не должна висеть поверх фото
-  if (isTelegram) {
-    TG.BackButton.onClick(backToCatalog);
-    TG.BackButton.show();
-  }
+  releaseTelegramButtons(); // нативные кнопки не должны висеть поверх фото
+  showBackButton(backToCatalog); // первый «назад» закрывает просмотр
   haptic();
 }
 
@@ -515,7 +512,6 @@ function closeViewer() {
   document.body.classList.remove('no-scroll');
   if (document.querySelector('.saddle-view')) setupTelegramButtons(); // карточка под вьювером
 }
-
 /* ---------- Каталог ---------- */
 
 const EMPTY_SEARCH_SVG = '<svg viewBox="0 0 24 24" width="44" height="44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>';
@@ -554,7 +550,8 @@ function renderCatalog() {
   stopGalleryTracking();
   document.getElementById('favToggle').hidden = false;
   document.getElementById('favCardBtn').hidden = true;
-  document.getElementById('favBack').hidden = !favoritesMode; // «Каталог» для выхода из избранного
+  // В Телеграме из избранного ведет нативная «Назад», строка «Каталог» - только в браузере
+  document.getElementById('favBack').hidden = !favoritesMode || isTelegram;
   const grid = document.getElementById('grid');
   grid.classList.remove('saddle-open');
   document.querySelector('.toolbar').style.display = '';
@@ -575,6 +572,7 @@ function renderCatalog() {
   const badge = document.getElementById('filterBadge');
   badge.textContent = n;
   badge.hidden = n === 0;
+  if (favoritesMode) showBackButton(exitFavorites); // «Назад» вместо «Закрыть» в fullscreen
 }
 
 /* ---------- Карточка седла ---------- */
@@ -713,16 +711,37 @@ function wireGallery(s) {
 
 function setupTelegramButtons() {
   if (!isTelegram) return;
-  TG.BackButton.onClick(backToCatalog);
-  TG.BackButton.show();
+  showBackButton(backToCatalog);
   TG.MainButton.hide();
 }
 
 function releaseTelegramButtons() {
   if (!isTelegram) return;
   TG.MainButton.hide();
+  hideBackButton();
+}
+
+// Нативная кнопка «Назад» (в fullscreen - верхняя левая вместо «Закрыть»):
+// один обработчик за раз, у Телеграма onClick копится
+function showBackButton(handler) {
+  if (!isTelegram) return;
   TG.BackButton.offClick(backToCatalog);
+  TG.BackButton.offClick(exitFavorites);
+  TG.BackButton.onClick(handler);
+  TG.BackButton.show();
+}
+
+function hideBackButton() {
+  if (!isTelegram) return;
+  TG.BackButton.offClick(backToCatalog);
+  TG.BackButton.offClick(exitFavorites);
   TG.BackButton.hide();
+}
+
+function exitFavorites() {
+  favoritesMode = false;
+  renderHeaderFav();
+  renderCatalog();
 }
 
 /* ---------- Переходы ---------- */
@@ -828,11 +847,7 @@ async function init() {
       if (id) toggleFavorite(id);
     });
 
-    document.getElementById('favBackBtn').addEventListener('click', () => {
-      favoritesMode = false;
-      renderHeaderFav();
-      renderCatalog();
-    });
+    document.getElementById('favBackBtn').addEventListener('click', exitFavorites); // браузер
 
     buildSheet();
     buildSortSheet();
