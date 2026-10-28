@@ -26,9 +26,11 @@ body {
 }
 
 /* Верхний отступ: системный инсет iOS + инсет Телеграма (CSS-переменная и JS)
-   + фиксированный запас --fs-top под плавающие «Закрыть»/«...» в полноэкранном режиме */
+   + запас --fs-top под плавающие «Закрыть»/«...» в полноэкранном режиме.
+   Кнопки Телеграма висят НИЖЕ статус-бара, поэтому берем сумму, а не максимум;
+   потолок 150px страхует от двойного учета, если инсет Телеграма уже все включает */
 .app { max-width: 560px; margin: 0 auto;
-  padding: calc(20px + max(env(safe-area-inset-top, 0px), var(--tg-content-safe-area-inset-top, 0px), var(--safe-top, 0px), var(--fs-top, 0px))) 16px 32px; }
+  padding: min(150px, calc(20px + env(safe-area-inset-top, 0px) + max(var(--tg-content-safe-area-inset-top, 0px), var(--safe-top, 0px), var(--fs-top, 0px)))) 16px 32px; }
 
 .head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
 .logo { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; font-size: 22px; letter-spacing: .02em; }
@@ -249,7 +251,8 @@ body.no-scroll { overflow: hidden; }
 .p-top {
   position: absolute; top: 0; left: 0; right: 0; z-index: 2;
   display: flex; justify-content: space-between; align-items: center;
-  padding: calc(10px + env(safe-area-inset-top)) 12px 10px;
+  /* тот же стек отступа, что у .app: в fullscreen «Назад»/«...» висят поверх фото */
+  padding: min(140px, calc(10px + env(safe-area-inset-top, 0px) + max(var(--tg-content-safe-area-inset-top, 0px), var(--safe-top, 0px), var(--fs-top, 0px)))) 12px 10px;
 }
 .p-counter { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; letter-spacing: .04em; }
 .p-close {

@@ -508,9 +508,9 @@
  },
  {
   "id": "426",
-  "title": "Выездковое седло Kentaur Vien",
+  "title": "Выездковое седло Kieffer Vien",
   "type": "выездковое",
-  "brand": "Kentaur",
+  "brand": "Kieffer",
   "model": "Vien",
   "sizeHorse": "32-33",
   "condition": "хорошее",
@@ -526,7 +526,7 @@
   "status": "available",
   "article": "EVER0081",
   "publishedAt": "21.10.2026",
-  "description": "Выезковое седло kentaur vien\n\nСостояние: хорошее\nЦвет: черный\nВсаднику: 17\nПо лошади: 32-33",
+  "description": "Выезковое седло kieffer vien\n\nСостояние: хорошее\nЦвет: черный\nВсаднику: 17\nПо лошади: 32-33",
   "post": 426,
   "photos": [
    "assets/photos/426/1.jpg",
@@ -552,7 +552,7 @@
    17.5
   ],
   "price": 130000,
-  "status": "available",
+  "status": "sold",
   "article": "EVER0080",
   "publishedAt": "08.10.2026",
   "description": "Конкурное седло kentaur appolon\n\n2 по лошади\n17,5 всадник",
@@ -617,7 +617,7 @@
   "status": "sold",
   "article": "EVER0078",
   "publishedAt": "18.09.2026",
-  "description": "Восхитительное выездковое седло\nBliss of London\n\n17/33\n\nВ шикарном состоянии\n\nПродано",
+  "description": "Восхитительное выездковое седло\nBliss of London\n\n17/33\n\nВ шикарном состоянии",
   "post": 404,
   "photos": [
    "assets/photos/404/1.jpg",
@@ -741,7 +741,7 @@
   "status": "sold",
   "article": "EVER0074",
   "publishedAt": "20.08.2026",
-  "description": "Выездковое седло\nГермида Пиаффе\n\nСостояние практически нового\n\n17,5/32-33\n\nПродано",
+  "description": "Выездковое седло\nГермида Пиаффе\n\nСостояние практически нового\n\n17,5/32-33",
   "post": 386,
   "photos": [
    "assets/photos/386/1.jpg",
@@ -799,7 +799,7 @@
   "status": "sold",
   "article": "EVER0072",
   "publishedAt": "20.08.2026",
-  "description": "Седло выездковое\nAlbion SLK\n\n17,5/34\n\nПродано",
+  "description": "Седло выездковое\nAlbion SLK\n\n17,5/34",
   "post": 379,
   "photos": [
    "assets/photos/379/1.jpg",
@@ -887,10 +887,10 @@
    17.5
   ],
   "price": 260000,
-  "status": "available",
+  "status": "sold",
   "article": "EVER0069",
   "publishedAt": "02.08.2026",
-  "description": "Конеурное седло meyer act1\n\n17,5 всадник\n34 лошадь\n\n260 000р",
+  "description": "Конеурное седло meyer act1\n\n17,5 всадник\n34 лошадь",
   "post": 365,
   "photos": [
    "assets/photos/365/1.jpg",
@@ -919,7 +919,7 @@
   "status": "sold",
   "article": "EVER0068",
   "publishedAt": "02.08.2026",
-  "description": "Шикарное выездковое седло\nVoltaire Adelaide\n\n17,5 всадник\n34+ лошадь\n\nПродано",
+  "description": "Шикарное выездковое седло\nVoltaire Adelaide\n\n17,5 всадник\n34+ лошадь",
   "post": 361,
   "photos": [
    "assets/photos/361/1.jpg",
@@ -978,7 +978,7 @@
   "status": "sold",
   "article": "EVER0066",
   "publishedAt": "23.07.2026",
-  "description": "Выездковое седло kentaur medea\n\n2 по лошади\n17,5 всадник\n\nПродано",
+  "description": "Выездковое седло kentaur medea\n\n2 по лошади\n17,5 всадник",
   "post": 353,
   "photos": [
    "assets/photos/353/1.jpg",
@@ -1008,7 +1008,7 @@
   "article": "EVER0065",
   "publishedAt": "19.07.2026",
   "comment": "очень широкий канал",
-  "description": "Выездковое седло kentaur penelope\n\n17,5 всадник\n3 лошадь\nОчень широкий канал\n\nПродано",
+  "description": "Выездковое седло kentaur penelope\n\n17,5 всадник\n3 лошадь\nОчень широкий канал",
   "post": 349,
   "photos": [
    "assets/photos/349/1.jpg",
@@ -1037,7 +1037,7 @@
   "status": "sold",
   "article": "EVER0064",
   "publishedAt": "19.07.2026",
-  "description": "Выездковое седло prestige x-doge\n\n17 всадник\n32 лошадь\n\nПродано",
+  "description": "Выездковое седло prestige x-doge\n\n17 всадник\n32 лошадь",
   "post": 345,
   "photos": [
    "assets/photos/345/1.jpg",
@@ -1097,7 +1097,7 @@
   "article": "EVER0062",
   "publishedAt": "19.07.2026",
   "comment": "на высоченную холку-гребень",
-  "description": "Конкурное седло kieffer norbert koof\n\n17,5 всадник\n32-33 лошадь\nНа высоченную холку-гребень\n\nПродано",
+  "description": "Конкурное седло kieffer norbert koof\n\n17,5 всадник\n32-33 лошадь\nНа высоченную холку-гребень",
   "post": 338,
   "photos": [
    "assets/photos/338/1.jpg",
@@ -1125,7 +1125,7 @@
   "status": "sold",
   "article": "EVER0061",
   "publishedAt": "19.07.2026",
-  "description": "Конкурное седло antares\n\n33-34 лошадь\n17,5 всадник\n\nПродано",
+  "description": "Конкурное седло antares\n\n33-34 лошадь\n17,5 всадник",
   "post": 334,
   "photos": [
    "assets/photos/334/1.jpg",
@@ -1154,7 +1154,7 @@
   "article": "EVER0060",
   "publishedAt": "15.07.2026",
   "comment": "шоколадный цвет",
-  "description": "Конкурное седло luc childeric🔝\nВ красивейшем шоколадном цвете\n\n17,5 всадник\nНа среде-широкую спину\n\nПродано",
+  "description": "Конкурное седло luc childeric🔝\nВ красивейшем шоколадном цвете\n\n17,5 всадник\nНа среде-широкую спину",
   "post": 329,
   "photos": [
    "assets/photos/329/1.jpg",
@@ -1185,7 +1185,7 @@
   "article": "EVER0059",
   "publishedAt": "13.07.2026",
   "comment": "дочерняя компания Meyer",
-  "description": "Седло конкурное gbs (дочерняя компания meyer)\n\n17-17,5 всадник\n34 лошадь\n\nПродано",
+  "description": "Седло конкурное gbs (дочерняя компания meyer)\n\n17-17,5 всадник\n34 лошадь",
   "post": 325,
   "photos": [
    "assets/photos/325/1.jpg",
@@ -1307,7 +1307,7 @@
   "article": "EVER0055",
   "publishedAt": "26.06.2026",
   "comment": "детское",
-  "description": "Детский конкур\nPrestige joy jumper\n\n16/33\n\nПродано",
+  "description": "Детский конкур\nPrestige joy jumper\n\n16/33",
   "post": 303,
   "photos": [
    "assets/photos/303/1.jpg",
@@ -1337,7 +1337,7 @@
   "article": "EVER0054",
   "publishedAt": "26.06.2026",
   "comment": "детское",
-  "description": "Шикарная детская выездка\nPrestige lucky idol\n16/32\n\nПродано",
+  "description": "Шикарная детская выездка\nPrestige lucky idol\n16/32",
   "post": 299,
   "photos": [
    "assets/photos/299/1.jpg",
@@ -1395,7 +1395,7 @@
   "status": "sold",
   "article": "EVER0052",
   "publishedAt": "03.06.2026",
-  "description": "Выездковое седло butet🔝\n\n16,5 всадник\nНа среднюю спину, средне-высокую холку\n\nПродано",
+  "description": "Выездковое седло butet🔝\n\n16,5 всадник\nНа среднюю спину, средне-высокую холку",
   "post": 282,
   "photos": [
    "assets/photos/282/1.jpg",
@@ -1424,7 +1424,7 @@
   "article": "EVER0051",
   "publishedAt": "03.06.2026",
   "comment": "17 - сидит маленьким",
-  "description": "Выездковое седло maxflex\n17(маленькое) по всаднику\nMW по лошади\n\nПродано",
+  "description": "Выездковое седло maxflex\n17(маленькое) по всаднику\nMW по лошади",
   "post": 278,
   "photos": [
    "assets/photos/278/1.jpg",
@@ -1482,7 +1482,7 @@
   "status": "sold",
   "article": "EVER0049",
   "publishedAt": "17.05.2026",
-  "description": "Конкурное седло\nPrestige silver star\n\n18/33\n\nПродано",
+  "description": "Конкурное седло\nPrestige silver star\n\n18/33",
   "post": 267,
   "photos": [
    "assets/photos/267/1.jpg",
@@ -1513,7 +1513,7 @@
   "article": "EVER0048",
   "publishedAt": "17.05.2026",
   "comment": "монокрыло; на высокую холку",
-  "description": "Конкурное седло\nAlbion Revelation🔝\nМонокрыло\n\n17,5/33\nПодойдет на высокую холку\n\nПродано",
+  "description": "Конкурное седло\nAlbion Revelation🔝\nМонокрыло\n\n17,5/33\nПодойдет на высокую холку",
   "post": 263,
   "photos": [
    "assets/photos/263/1.jpg",
@@ -1575,7 +1575,7 @@
   "article": "EVER0046",
   "publishedAt": "17.05.2026",
   "comment": "было на примерке",
-  "description": "Конкурное седло\nPrestige Venezia\n\n17,5/34\nПо факту скорее 33\n\nНа примерке\n\nПродано",
+  "description": "Конкурное седло\nPrestige Venezia\n\n17,5/34\nПо факту скорее 33\n\nНа примерке",
   "post": 253,
   "photos": [
    "assets/photos/253/1.jpg",
@@ -1604,7 +1604,7 @@
   "article": "EVER0045",
   "publishedAt": "17.04.2026",
   "comment": "подойдет на пони",
-  "description": "Выездковое седло kieffer\n\n16,5 всадник\n32 лошадь\n\nПодойдет на пони\n\nПродано",
+  "description": "Выездковое седло kieffer\n\n16,5 всадник\n32 лошадь\n\nПодойдет на пони",
   "post": 249,
   "photos": [
    "assets/photos/249/1.jpg",
@@ -1615,9 +1615,10 @@
  },
  {
   "id": "245",
-  "title": "Конкурное седло, новое, сменные ленчики",
+  "title": "Конкурное седло GrandPrizo Аргентина",
   "type": "конкурное",
-  "sizeHorse": "любой",
+  "brand": "GrandPrizo",
+  "sizeHorse": "31-35",
   "material": "кожа",
   "condition": "новое",
   "color": "черное",
@@ -1632,7 +1633,7 @@
   "article": "EVER0044",
   "publishedAt": "17.04.2026",
   "comment": "комплект сменных ленчиков; бренд не указан",
-  "description": "Конкурное седло\nНовое\n\n17,5 всадник\nЛюбой - лошадь\n\nКомплект сменных ленчиков, удобно менять\n\nПродано",
+  "description": "Конкурное седло GrandPrizo Аргентина\n\nСостояние: новое\nЦвет: черный\nВсаднику: 17,5\nПо лошади: 31-35\n\nНовое кожанное седло, производство Аргентина. Подходят ленчики от винтек и дасло. На крупных лошадей с небольшой холкой и прямой спиной.",
   "post": 245,
   "photos": [
    "assets/photos/245/1.jpg",
@@ -1691,7 +1692,7 @@
   "article": "EVER0042",
   "publishedAt": "17.04.2026",
   "comment": "под ребенка; бренд не указан",
-  "description": "Конкурное седло\nНовое\n\n16,5-17 всадник\n32 лошадь, открытые лопатки\n\nИдеальный вариант под ребенка - небольшое, легкое\n\nПродано",
+  "description": "Конкурное седло\nНовое\n\n16,5-17 всадник\n32 лошадь, открытые лопатки\n\nИдеальный вариант под ребенка - небольшое, легкое",
   "post": 238,
   "photos": [
    "assets/photos/238/1.jpg",
@@ -1720,7 +1721,7 @@
   "article": "EVER0041",
   "publishedAt": "17.04.2026",
   "comment": "18 - скорее 17,5",
-  "description": "Prestige x-Helen\n\n18 всадник (скорее 17,5)\n33 лошадь\n\nПродано",
+  "description": "Prestige x-Helen\n\n18 всадник (скорее 17,5)\n33 лошадь",
   "post": 232,
   "photos": [
    "assets/photos/232/1.jpg",
@@ -1748,11 +1749,11 @@
    17.5
   ],
   "price": 115000,
-  "status": "available",
+  "status": "sold",
   "article": "EVER0040",
   "publishedAt": "17.04.2026",
   "comment": "статус не указан - проверить (пост апреля)",
-  "description": "Конкурное седло kentaur\n\n17,5 всадник\n33-34 лошадь\n\n115 000р",
+  "description": "Конкурное седло kentaur\n\n17,5 всадник\n33-34 лошадь",
   "post": 227,
   "photos": [
    "assets/photos/227/1.jpg",
@@ -1781,7 +1782,7 @@
   "status": "sold",
   "article": "EVER0039",
   "publishedAt": "16.04.2026",
-  "description": "Седло выездковое equiline\n\n17 всадник\n33 лошадь\n\nПродано",
+  "description": "Седло выездковое equiline\n\n17 всадник\n33 лошадь",
   "post": 221,
   "photos": [
    "assets/photos/221/1.jpg",
@@ -1811,7 +1812,7 @@
   "status": "sold",
   "article": "EVER0038",
   "publishedAt": "16.04.2026",
-  "description": "Выездковое седло luc childeric🔝\n\n17,5 всадник\n33,5 лошадь\n\nПродано",
+  "description": "Выездковое седло luc childeric🔝\n\n17,5 всадник\n33,5 лошадь",
   "post": 216,
   "photos": [
    "assets/photos/216/1.jpg",
@@ -1842,7 +1843,7 @@
   "article": "EVER0037",
   "publishedAt": "16.04.2026",
   "comment": "выделка под крокодиловую кожу, лакированный задник",
-  "description": "Выездковое седло sommer spezial\n\nВыделка под крокодиловую кожу\nЛакированный задник\nОчень красивое седло\n\n16,5 всадник\n32 лошадь\n\nПродано",
+  "description": "Выездковое седло sommer spezial\n\nВыделка под крокодиловую кожу\nЛакированный задник\nОчень красивое седло\n\n16,5 всадник\n32 лошадь",
   "post": 211,
   "photos": [
    "assets/photos/211/1.jpg",
@@ -1935,7 +1936,7 @@
   "article": "EVER0034",
   "publishedAt": "13.04.2026",
   "comment": "седло 2024 года; широкий канал",
-  "description": "Custom icon flight\nTop🔝\nСостояние нового\nСедло 24го года\nКуплено в прошлом году в технологии спорта\nБыло на одной лошади, не долго\n\n17 по всаднику\n33 по лошади\nШирокий канал\n\nПродано",
+  "description": "Custom icon flight\nTop🔝\nСостояние нового\nСедло 24го года\nКуплено в прошлом году в технологии спорта\nБыло на одной лошади, не долго\n\n17 по всаднику\n33 по лошади\nШирокий канал",
   "post": 198,
   "photos": [
    "assets/photos/198/1.jpg",
@@ -1965,7 +1966,7 @@
   "article": "EVER0033",
   "publishedAt": "07.04.2026",
   "comment": "для всадника ростом до 165 см",
-  "description": "Kentaur afrodite soft\nСостояние нового седла\n\nПо лошади 3 (переобжато сегодня на размер шире - с 2 на 3)\n16,5 по всаднику - идеально для всадника ростом 165см и ниже\n\nПродано",
+  "description": "Kentaur afrodite soft\nСостояние нового седла\n\nПо лошади 3 (переобжато сегодня на размер шире - с 2 на 3)\n16,5 по всаднику - идеально для всадника ростом 165см и ниже",
   "post": 194,
   "photos": [
    "assets/photos/194/1.jpg",
@@ -1994,7 +1995,7 @@
   "status": "sold",
   "article": "EVER0032",
   "publishedAt": "07.04.2026",
-  "description": "Гермида пегас моно про\n\nПрактически новое седло\nВ эксплуатации несколько раз\n\n17 всадник\n33,5 лошадь\n\nПродано",
+  "description": "Гермида пегас моно про\n\nПрактически новое седло\nВ эксплуатации несколько раз\n\n17 всадник\n33,5 лошадь",
   "post": 190,
   "photos": [
    "assets/photos/190/1.jpg",
@@ -2024,7 +2025,7 @@
   "article": "EVER0031",
   "publishedAt": "07.04.2026",
   "comment": "гибкий ленчик, размер регулируется",
-  "description": "Срочно!\n\nMaxflex valentin\n\nЕдинственное в продаже на данный момент в РФ конкурное седло с гибким ленчиком\n\nРазмер регулируется\n\n17 всадник\n33 лошадь\n\nПродано",
+  "description": "Срочно!\n\nMaxflex valentin\n\nЕдинственное в продаже на данный момент в РФ конкурное седло с гибким ленчиком\n\nРазмер регулируется\n\n17 всадник\n33 лошадь",
   "post": 182,
   "photos": [
    "assets/photos/182/1.jpg",
@@ -2114,7 +2115,7 @@
   "status": "sold",
   "article": "EVER0028",
   "publishedAt": "07.04.2026",
-  "description": "Cwd SE 02\n17,5 всадник\n~32,5 лошадь\n\nПродано",
+  "description": "Cwd SE 02\n17,5 всадник\n~32,5 лошадь",
   "post": 166,
   "photos": [
    "assets/photos/166/1.jpg",
@@ -2144,7 +2145,7 @@
   "status": "sold",
   "article": "EVER0027",
   "publishedAt": "11.03.2026",
-  "description": "Роскошный equiline\n17/33\nСостояние идеальное\n\nПродано",
+  "description": "Роскошный equiline\n17/33\nСостояние идеальное",
   "post": 160,
   "photos": [
    "assets/photos/160/1.jpg",
@@ -2171,7 +2172,7 @@
   "status": "sold",
   "article": "EVER0026",
   "publishedAt": "22.02.2026",
-  "description": "Выездковое седло erreplus vittoria\n\n17 всадник\n33 лошадь\n\nПродано",
+  "description": "Выездковое седло erreplus vittoria\n\n17 всадник\n33 лошадь",
   "post": 157,
   "photos": [
    "assets/photos/157/1.jpg",
@@ -2198,7 +2199,7 @@
   "status": "sold",
   "article": "EVER0025",
   "publishedAt": "22.02.2026",
-  "description": "Седло конкурное prestige roma jump\n\n17/33\n\nПродано",
+  "description": "Седло конкурное prestige roma jump\n\n17/33",
   "post": 148,
   "photos": [
    "assets/photos/148/1.jpg",
@@ -2231,7 +2232,7 @@
   "status": "sold",
   "article": "EVER0024",
   "publishedAt": "18.02.2026",
-  "description": "Конкурное седло stubben\n\nПо лошади 32 по штюббену! (Широкая спина)\nПо всаднику 17,5\n\nПродано",
+  "description": "Конкурное седло stubben\n\nПо лошади 32 по штюббену! (Широкая спина)\nПо всаднику 17,5",
   "post": 141,
   "photos": [
    "assets/photos/141/1.jpg",
@@ -2263,7 +2264,7 @@
   "status": "sold",
   "article": "EVER0023",
   "publishedAt": "14.02.2026",
-  "description": "Конкурное седло sommer opus\n\n17 всадник\n33 лошадь\n\nПродано",
+  "description": "Конкурное седло sommer opus\n\n17 всадник\n33 лошадь",
   "post": 132,
   "photos": [
    "assets/photos/132/1.jpg",
@@ -2292,7 +2293,7 @@
   "status": "sold",
   "article": "EVER0022",
   "publishedAt": "14.02.2026",
-  "description": "Выездковое седло county epiphany\n\nСостояние нового\n\n17 всадник\nМ лошадь\n\nПродано!!!",
+  "description": "Выездковое седло county epiphany\n\nСостояние нового\n\n17 всадник\nМ лошадь",
   "post": 127,
   "photos": [
    "assets/photos/127/1.jpg",
@@ -2322,7 +2323,7 @@
   "status": "sold",
   "article": "EVER0021",
   "publishedAt": "06.02.2026",
-  "description": "Седло erreplus adelinde\nТакое же как у меня😌\n\nРазмер по всаднику 17\nПо лошади 33 (33,5)\n\nПродано",
+  "description": "Седло erreplus adelinde\nТакое же как у меня😌\n\nРазмер по всаднику 17\nПо лошади 33 (33,5)",
   "post": 113,
   "photos": [
    "assets/photos/113/1.jpg",
@@ -2444,7 +2445,7 @@
   "status": "sold",
   "article": "EVER0017",
   "publishedAt": "03.02.2026",
-  "description": "Седло конкурное sommer\n\n31,5 по лошади (по соммеру) 33-34 престиж\n17,5 по всаднику\n\nСостояние нового седла\n\nПродано",
+  "description": "Седло конкурное sommer\n\n31,5 по лошади (по соммеру) 33-34 престиж\n17,5 по всаднику\n\nСостояние нового седла",
   "post": 87,
   "photos": [
    "assets/photos/87/1.jpg",
@@ -2474,7 +2475,7 @@
   "status": "sold",
   "article": "EVER0016",
   "publishedAt": "03.02.2026",
-  "description": "Выездковое седло cwd se08\n\nПо лошади 34\nПо всаднику 17,5\n\nПродано",
+  "description": "Выездковое седло cwd se08\n\nПо лошади 34\nПо всаднику 17,5",
   "post": 81,
   "photos": [
    "assets/photos/81/1.jpg",
@@ -2505,7 +2506,7 @@
   "status": "sold",
   "article": "EVER0015",
   "publishedAt": "03.02.2026",
-  "description": "Конкурное седло prestige arezzo\n\n33 лошадь (маркировка 34)\n18 всадник\n\nПродано\n\n#конкур",
+  "description": "Конкурное седло prestige arezzo\n\n33 лошадь (маркировка 34)\n18 всадник\n\n#конкур",
   "post": 77,
   "photos": [
    "assets/photos/77/1.jpg",
@@ -2534,7 +2535,7 @@
   "article": "EVER0014",
   "publishedAt": "03.02.2026",
   "comment": "маркировка 18 - французская маломерка",
-  "description": "Конкурное седло devocoux\n\nПо лошади 33-34\nПо всаднику 17,5 (маркировка 18 - француз маломерка)\n\nПродано\n\n#конкур",
+  "description": "Конкурное седло devocoux\n\nПо лошади 33-34\nПо всаднику 17,5 (маркировка 18 - француз маломерка)\n\n#конкур",
   "post": 72,
   "photos": [
    "assets/photos/72/1.jpg",
@@ -2596,7 +2597,7 @@
   "status": "sold",
   "article": "EVER0012",
   "publishedAt": "03.02.2026",
-  "description": "Выездковое седло kentaur kalipso\n\n2 размер по лошади по кентавру\n(~32,5 по престижу)\n17-17,5 по всаднику\n\nПродано❗️",
+  "description": "Выездковое седло kentaur kalipso\n\n2 размер по лошади по кентавру\n(~32,5 по престижу)\n17-17,5 по всаднику",
   "post": 61,
   "photos": [
    "assets/photos/61/1.jpg",
@@ -2656,7 +2657,7 @@
   "status": "sold",
   "article": "EVER0010",
   "publishedAt": "02.02.2026",
-  "description": "Конкурное седло Prestige como\n32 по лошади (маркировка 33)\n17 по всаднику\n\nПродано",
+  "description": "Конкурное седло Prestige como\n32 по лошади (маркировка 33)\n17 по всаднику",
   "post": 46,
   "photos": [
    "assets/photos/46/1.jpg",
@@ -2685,7 +2686,7 @@
   "status": "sold",
   "article": "EVER0009",
   "publishedAt": "02.02.2026",
-  "description": "Выездковое седло euroriding diamant\n34 по лошади\n17 по всаднику\n\nПродано\n\n#бюджетные\n#выездка",
+  "description": "Выездковое седло euroriding diamant\n34 по лошади\n17 по всаднику\n\n#бюджетные\n#выездка",
   "post": 41,
   "photos": [
    "assets/photos/41/1.jpg",
@@ -2745,7 +2746,7 @@
   "article": "EVER0007",
   "publishedAt": "28.01.2026",
   "comment": "короткая ОП",
-  "description": "Выезковое седло devocoux\nКороткая ОП!\n\nПо лошади 32-33\nПо всаднику 17\n\nПродано!\n\n#выездка",
+  "description": "Выезковое седло devocoux\nКороткая ОП!\n\nПо лошади 32-33\nПо всаднику 17\n\n#выездка",
   "post": 29,
   "photos": [
    "assets/photos/29/1.jpg",
@@ -2775,7 +2776,7 @@
   "status": "sold",
   "article": "EVER0006",
   "publishedAt": "28.01.2026",
-  "description": "Конкурное седло prestige como\nПо всаднику 17\nПо лошади 32 (маркировка 33)\n\nПродано",
+  "description": "Конкурное седло prestige como\nПо всаднику 17\nПо лошади 32 (маркировка 33)",
   "post": 24,
   "photos": [
    "assets/photos/24/1.jpg",
@@ -2866,7 +2867,7 @@
   "status": "available",
   "article": "EVER0003",
   "publishedAt": "28.01.2026",
-  "description": "Конкурное седло kieffer arezzo\n\nПо всаднику 17-17,5\nПо лошади 33-34\n\nПродано❗️\n\n#конкур",
+  "description": "Конкурное седло kieffer arezzo\n\nПо всаднику 17-17,5\nПо лошади 33-34\n\n#конкур",
   "post": 9,
   "photos": [
    "assets/photos/9/1.jpg",

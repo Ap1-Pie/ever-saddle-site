@@ -809,6 +809,7 @@ async function init() {
         applySafeTop();
         TG.onEvent('fullscreenChanged', applySafeTop);
         TG.onEvent('contentSafeAreaChanged', applySafeTop);
+        setTimeout(applySafeTop, 500); // страховка: если fullscreenChanged не пришел, --fs-top останется 0
       } catch (e) { console.warn('Полноэкранный режим недоступен', e); }
     }
   }
