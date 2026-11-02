@@ -326,7 +326,256 @@ function closeSheets() {
   document.getElementById('sheetOverlay').classList.remove('open');
   document.getElementById('filterSheet').classList.remove('open');
   document.getElementById('sortSheet').classList.remove('open');
+  document.getElementById('requestSheet').classList.remove('open');
 }
+
+/* ---------- Заявки: выездная примерка и приём седла (итерация 22) ---------- */
+
+/* Механизм без бэкенда: форма собирает текст -> t.me/zabudte_menya?text=<текст>,
+   клиент жмет Send, фото пришлет следующим сообщением (в ссылку вложения не положить).
+   Справочники - те же, что в таблице каталога (tools/catalog.py, DICTIONARIES). */
+const REQUEST_DICTIONARIES = {
+  type: ['выездковое', 'конкурное', 'конкурное/троеборное', 'универсальное'],
+  material: ['кожа', 'мягкая кожа', 'кожзам'],
+  color: ['черное', 'коричневое', 'двухцветное'],
+  condition: ['новое', 'состояние нового', 'идеальное', 'отличное', 'хорошее', 'рабочее']
+};
+
+const REQUESTS = {
+  sell: {
+    title: 'Сдать седло на реализацию',
+    sub: 'Заполните форму - заявка уйдет Ане в личные сообщения',
+    photoNote: 'После отправки заявки пришлите, пожалуйста, фото седла в этот же чат - по ним проще оценить седло',
+    submitLabel: 'Отправить заявку',
+    outHeader: 'Заявка на прием седла на реализацию',
+    outPhoto: 'Фото седла пришлю следующим сообщением.',
+    fields: [
+      { key: 'type', type: 'chips', label: 'Тип', out: 'Тип', options: REQUEST_DICTIONARIES.type, required: true },
+      { key: 'brand', type: 'text', label: 'Бренд', out: 'Бренд', placeholder: 'Например, Stuebben или Kentaur', required: true },
+      { key: 'model', type: 'text', label: 'Модель', out: 'Модель', placeholder: 'Если знаете' },
+      { key: 'sizeRider', type: 'text', label: 'Размер всаднику', out: 'Размер всаднику', placeholder: 'Например, 17,5' },
+      { key: 'sizeHorse', type: 'text', label: 'Размер лошади', out: 'Размер лошади', placeholder: 'Если знаете' },
+      { key: 'material', type: 'chips', label: 'Материал', out: 'Материал', options: REQUEST_DICTIONARIES.material },
+      { key: 'color', type: 'chips', label: 'Цвет', out: 'Цвет', options: REQUEST_DICTIONARIES.color },
+      { key: 'condition', type: 'chips', label: 'Состояние', out: 'Состояние', options: REQUEST_DICTIONARIES.condition },
+      { key: 'price', type: 'text', label: 'Желаемая цена, руб', out: 'Желаемая цена', placeholder: 'Например, 50000', inputmode: 'numeric', format: 'price', required: true },
+      { key: 'comment', type: 'textarea', label: 'Комментарий', out: 'Комментарий', placeholder: 'Что еще важно знать о седле' }
+    ]
+  },
+  fitting: {
+    title: 'Заказать выездную примерку',
+    sub: 'Заполните форму - заявка уйдет Ане в личные сообщения, дату и время договоритесь в чате',
+    photoNote: 'Фото спины лошади (сбоку и сверху) пришлите в этот же чат следующим сообщением - по ним подбирают размер седла',
+    submitLabel: 'Отправить заявку',
+    outHeader: 'Заявка на выездную примерку',
+    outPhoto: 'Фото спины лошади пришлю следующим сообщением.',
+    fields: [
+      { key: 'saddles', type: 'textarea', label: 'Интересующие седла', out: 'Интересующие седла', placeholder: 'Артикул или название из каталога, например: EVER0098 - Конкурное седло GrandPrizo', required: true },
+      { key: 'district', type: 'text', label: 'Район или адрес выезда', out: 'Район/адрес', placeholder: 'Москва или МО', required: true },
+      { key: 'stable', type: 'text', label: 'Название конюшни', out: 'Конюшня', placeholder: 'Если знаете' },
+      { key: 'name', type: 'text', label: 'Ваше имя', out: 'Имя', placeholder: 'Как к вам обращаться' },
+      { key: 'phone', type: 'text', label: 'Телефон', out: 'Телефон', placeholder: '+7 999 123-45-67', inputmode: 'tel', required: true },
+      { key: 'horseBreed', type: 'text', label: 'Порода лошади', out: 'Порода лошади', placeholder: 'Если знаете' },
+      { key: 'horseAge', type: 'text', label: 'Возраст лошади', out: 'Возраст лошади', placeholder: 'Например, 8 лет' },
+      { key: 'comment', type: 'textarea', label: 'Комментарий', out: 'Комментарий', placeholder: 'Что важно знать о лошади или примерке' }
+    ]
+  }
+};
+
+function buildRequestSheet() {
+  document.getElementById('requestBtn').addEventListener('click', () => {
+    document.getElementById('sheetOverlay').classList.add('open');
+    document.getElementById('requestSheet').classList.add('open');
+  });
+  document.getElementById('requestOptions').addEventListener('click', (e) => {
+    const row = e.target.closest('.req-row');
+    if (!row) return;
+    haptic();
+    closeSheets();
+    openRequest(row.dataset.request);
+  });
+}
+
+const R_BACK_SVG = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>';
+
+function requestFieldHtml(f, prefill) {
+  const star = f.required ? '<span class="r-star" aria-hidden="true"> *</span>' : '';
+  const err = '<div class="r-err" hidden></div>';
+  if (f.type === 'chips') {
+    return '<div class="r-field" data-key="' + f.key + '">' +
+      '<div class="r-label">' + esc(f.label) + star + '</div>' +
+      '<div class="chips">' + f.options.map(v =>
+        '<button type="button" class="chip" aria-pressed="false" data-value="' + esc(v) + '">' + esc(v) + '</button>'
+      ).join('') + '</div>' + err + '</div>';
+  }
+  const id = 'rf-' + f.key;
+  const val = esc(prefill[f.key] || '');
+  if (f.type === 'textarea') {
+    return '<div class="r-field" data-key="' + f.key + '">' +
+      '<label class="r-label" for="' + id + '">' + esc(f.label) + star + '</label>' +
+      '<textarea id="' + id + '" rows="3" placeholder="' + esc(f.placeholder || '') + '">' + val + '</textarea>' + err + '</div>';
+  }
+  return '<div class="r-field" data-key="' + f.key + '">' +
+    '<label class="r-label" for="' + id + '">' + esc(f.label) + star + '</label>' +
+    '<input id="' + id + '" type="text" inputmode="' + (f.inputmode || 'text') + '" placeholder="' + esc(f.placeholder || '') + '" value="' + val + '">' + err + '</div>';
+}
+
+function requestHtml(cfg, prefill) {
+  return '<div class="r-inner">' +
+    '<div class="r-head">' +
+      (isTelegram ? '' : '<button type="button" class="back-btn" id="rBack">' + R_BACK_SVG + 'Назад</button>') +
+    '</div>' +
+    '<h2 class="r-title">' + esc(cfg.title) + '</h2>' +
+    '<p class="r-sub">' + esc(cfg.sub) + '</p>' +
+    '<p class="r-star-note">* - обязательные поля</p>' +
+    cfg.fields.map(f => requestFieldHtml(f, prefill)).join('') +
+    '<div class="r-photo">' + esc(cfg.photoNote) + '</div>' +
+    '<button type="button" class="r-send" id="rSend">' + esc(cfg.submitLabel) + '</button>' +
+  '</div>';
+}
+
+function clearFieldError(field) {
+  field.classList.remove('r-invalid');
+  const err = field.querySelector('.r-err');
+  if (err) { err.hidden = true; err.textContent = ''; }
+}
+
+function notify(kind) {
+  if (isTelegram && TG.HapticFeedback && TG.HapticFeedback.notificationOccurred) {
+    TG.HapticFeedback.notificationOccurred(kind);
+  }
+}
+
+function collectRequestValues(root, cfg) {
+  const values = {};
+  cfg.fields.forEach(f => {
+    const field = root.querySelector('.r-field[data-key="' + f.key + '"]');
+    if (f.type === 'chips') {
+      const on = field.querySelector('.chip.on');
+      values[f.key] = on ? on.dataset.value : '';
+    } else {
+      values[f.key] = field.querySelector('input, textarea').value.trim();
+    }
+  });
+  return values;
+}
+
+// Возвращает первое невалидное поле (null - все в порядке), ошибки рисует на месте
+function validateRequest(root, cfg, values) {
+  let firstBad = null;
+  cfg.fields.forEach(f => {
+    const field = root.querySelector('.r-field[data-key="' + f.key + '"]');
+    const err = field.querySelector('.r-err');
+    const v = values[f.key];
+    let msg = '';
+    if (f.required && !v) msg = f.type === 'chips' ? 'Выберите значение' : 'Заполните поле';
+    else if (f.key === 'price' && v) {
+      const n = Number(v);
+      if (!n || n <= 0) msg = 'Укажите цену цифрами';
+    } else if (f.key === 'phone' && v) {
+      if (v.replace(/\D/g, '').length < 10) msg = 'Проверьте номер - не хватает цифр';
+    }
+    field.classList.toggle('r-invalid', !!msg);
+    err.hidden = !msg;
+    err.textContent = msg;
+    if (msg && !firstBad) firstBad = field;
+  });
+  return firstBad;
+}
+
+function requestText(cfg, values) {
+  const lines = [cfg.outHeader, ''];
+  cfg.fields.forEach(f => {
+    let v = (values[f.key] || '').trim();
+    if (!v) return; // незаполненное поле в заявку не попадает
+    if (f.format === 'price') v = fmtPrice.format(Number(v)) + ' руб';
+    lines.push(f.out + ': ' + v);
+  });
+  return lines.concat(['', cfg.outPhoto, '', 'Из каталога Ever saddle']).join('\n');
+}
+
+// Общие обработчики контейнера живут один раз: форма переоткрывается через
+// innerHTML, а слушатели на самом контейнере при каждом openRequest копились бы
+// и чип переключался по два раза (вкл и тут же выкл)
+function wireRequestStatics(root) {
+  if (root.dataset.wired) return;
+  root.dataset.wired = '1';
+  // чипы - единичный выбор, повторный тап снимает выбор
+  root.addEventListener('click', (e) => {
+    const chip = e.target.closest('.r-field .chip');
+    if (!chip) return;
+    const field = chip.closest('.r-field');
+    const wasOn = chip.classList.contains('on');
+    field.querySelectorAll('.chip').forEach(c => {
+      c.classList.remove('on');
+      c.setAttribute('aria-pressed', 'false');
+    });
+    if (!wasOn) {
+      chip.classList.add('on');
+      chip.setAttribute('aria-pressed', 'true');
+    }
+    clearFieldError(field);
+    haptic();
+  });
+  root.addEventListener('input', (e) => {
+    const field = e.target.closest('.r-field');
+    if (field) clearFieldError(field);
+    // цена - только цифры, не длиннее 8 (как фильтр цены в шторке)
+    if (field && field.dataset.key === 'price') {
+      e.target.value = e.target.value.replace(/\D/g, '').slice(0, 8);
+    }
+  });
+}
+
+function wireRequest(root, cfg) {
+  wireRequestStatics(root);
+  const back = document.getElementById('rBack');
+  if (back) back.addEventListener('click', closeRequest);
+  document.getElementById('rSend').addEventListener('click', () => {
+    const values = collectRequestValues(root, cfg);
+    const firstBad = validateRequest(root, cfg, values);
+    if (firstBad) {
+      notify('error');
+      firstBad.scrollIntoView({ block: 'center' });
+      return;
+    }
+    const url = DM_URL + '?text=' + encodeURIComponent(requestText(cfg, values));
+    if (isTelegram) TG.openTelegramLink(url);
+    else window.open(url, '_blank', 'noopener');
+    notify('success');
+    closeRequest();
+  });
+}
+
+function isRequestOpen() {
+  return document.getElementById('requestView').classList.contains('open');
+}
+
+function openRequest(kind, prefill) {
+  const cfg = REQUESTS[kind];
+  if (!cfg) return;
+  const root = document.getElementById('requestView');
+  root.innerHTML = requestHtml(cfg, prefill || {});
+  root.scrollTop = 0;
+  root.classList.add('open');
+  document.body.classList.add('no-scroll');
+  wireRequest(root, cfg);
+  showBackButton(closeRequest);
+  haptic();
+}
+
+function closeRequest() {
+  const root = document.getElementById('requestView');
+  root.classList.remove('open');
+  root.innerHTML = '';
+  document.body.classList.remove('no-scroll');
+  if (document.querySelector('.saddle-view')) setupTelegramButtons(); // карточка под формой
+  else hideBackButton();
+}
+
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && isRequestOpen()) closeRequest();
+});
 
 /* ---------- Полноэкранный просмотр фото (идея Ани №6) ---------- */
 
@@ -628,8 +877,13 @@ function saddleHtml(s) {
       (s.description
         ? '<div class="s-desc"><h3>Описание</h3><p>' + esc(s.description).replace(/\n/g, '<br>') + '</p></div>'
         : '') +
-      '<a class="dm-btn" href="' + DM_URL + '"' +
-        (isTelegram ? '' : ' target="_blank" rel="noopener"') + '>Написать</a>' +
+      // «На примерку» - только у доступных седел (итерация 22), предзаполняет форму
+      '<div class="s-actions">' +
+        '<a class="dm-btn" href="' + DM_URL + '"' +
+          (isTelegram ? '' : ' target="_blank" rel="noopener"') + '>Написать</a>' +
+        (sold || reserved ? '' :
+          '<button type="button" class="fit-btn" id="fitBtn">На примерку</button>') +
+      '</div>' +
     '</div>'
   );
 }
@@ -727,6 +981,7 @@ function showBackButton(handler) {
   if (!isTelegram) return;
   TG.BackButton.offClick(backToCatalog);
   TG.BackButton.offClick(exitFavorites);
+  TG.BackButton.offClick(closeRequest);
   TG.BackButton.onClick(handler);
   TG.BackButton.show();
 }
@@ -735,6 +990,7 @@ function hideBackButton() {
   if (!isTelegram) return;
   TG.BackButton.offClick(backToCatalog);
   TG.BackButton.offClick(exitFavorites);
+  TG.BackButton.offClick(closeRequest);
   TG.BackButton.hide();
 }
 
@@ -766,6 +1022,10 @@ function openSaddle(id, pushHistory = true) {
       TG.openTelegramLink(DM_URL);
     });
   }
+  const fitBtn = document.getElementById('fitBtn');
+  if (fitBtn) fitBtn.addEventListener('click', () => {
+    openRequest('fitting', { saddles: (s.article ? s.article + ' - ' : '') + s.title });
+  });
   const back = document.getElementById('backBtn');
   if (back) back.addEventListener('click', backToCatalog);
   wireCopyArticle();
@@ -783,8 +1043,13 @@ function backToCatalog() {
 
 window.addEventListener('popstate', () => {
   if (isViewerOpen()) closeViewer();
-  const id = decodeURIComponent(location.hash.slice(1));
-  if (saddles.some(s => s.id === id)) openSaddle(id, false);
+  if (isRequestOpen()) closeRequest();
+  const hash = decodeURIComponent(location.hash.slice(1));
+  const formMatch = /^form=(sell|fitting)$/.exec(hash);
+  if (formMatch) {
+    renderCatalog();
+    openRequest(formMatch[1]);
+  } else if (saddles.some(s => s.id === hash)) openSaddle(hash, false);
   else renderCatalog();
 });
 
@@ -852,11 +1117,17 @@ async function init() {
 
     buildSheet();
     buildSortSheet();
+    buildRequestSheet();
     wireViewerStatics();
     renderHeaderFav();
     const hash = decodeURIComponent(location.hash.slice(1));
     const fromHash = saddles.find(x => x.id === hash);
-    if (fromHash) openSaddle(fromHash.id, false);
+    // deep link #form=fitting|#sell - для кнопок меню бота и ссылок из канала
+    const formMatch = /^form=(sell|fitting)$/.exec(hash);
+    if (formMatch) {
+      renderCatalog();
+      openRequest(formMatch[1]);
+    } else if (fromHash) openSaddle(fromHash.id, false);
     else renderCatalog();
   } catch (e) {
     grid.innerHTML = '<div class="state">Не удалось загрузить каталог.<br>Обновите страницу.</div>';

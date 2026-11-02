@@ -10,6 +10,7 @@
   --brass: #B08D57;
   --on-brass: #121214;
   --sold: #6E6A63;
+  --danger: #C2705C;
   --radius: 8px;
 }
 
@@ -33,6 +34,7 @@ body {
   padding: min(150px, calc(20px + env(safe-area-inset-top, 0px) + max(var(--tg-content-safe-area-inset-top, 0px), var(--safe-top, 0px), var(--fs-top, 0px)))) 16px 32px; }
 
 .head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.head-actions { display: flex; align-items: center; gap: 8px; }
 .logo { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; font-size: 22px; letter-spacing: .02em; }
 .fav-toggle {
   position: relative;
@@ -280,3 +282,72 @@ body.no-scroll { overflow: hidden; }
 .empty p { font-size: 13px; line-height: 1.45; margin: 0; }
 
 @media (max-width: 340px) { .grid { gap: 8px; } }
+
+/* ---------- Заявки: примерка и приём седла (итерация 22) ---------- */
+
+/* Мини-шторка выбора заявки */
+.req-row {
+  display: flex; flex-direction: column; gap: 3px;
+  width: 100%; padding: 13px 2px; background: none; border: none;
+  border-bottom: 1px solid var(--line);
+  font-family: inherit; text-align: left; color: var(--text); cursor: pointer;
+}
+.req-row:last-child { border-bottom: none; }
+.req-row:active .req-row-main { color: var(--brass); }
+.req-row-main { display: flex; align-items: center; gap: 9px; font-size: 14px; font-weight: 500; }
+.req-row-main svg { color: var(--brass); flex: 0 0 auto; }
+.req-row-sub { font-size: 12px; color: var(--muted); padding-left: 25px; }
+
+/* Полноэкранная форма поверх каталога */
+.request-view {
+  position: fixed; inset: 0; z-index: 55;
+  background: var(--bg);
+  display: none; overflow-y: auto; -webkit-overflow-scrolling: touch;
+}
+.request-view.open { display: block; }
+.r-inner {
+  max-width: 560px; margin: 0 auto;
+  /* тот же стек отступа, что у .app: под статус-бар и кнопки полноэкранного режима */
+  padding: min(150px, calc(20px + env(safe-area-inset-top, 0px) + max(var(--tg-content-safe-area-inset-top, 0px), var(--safe-top, 0px), var(--fs-top, 0px)))) 16px 32px;
+}
+.r-head { min-height: 32px; }
+.r-title { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; font-size: 19px; line-height: 1.3; margin: 6px 0 6px; }
+.r-sub { font-size: 13px; line-height: 1.5; color: var(--muted); }
+.r-star-note { font-size: 12px; color: var(--muted); margin: 2px 0 4px; }
+
+.r-field { margin-top: 14px; }
+.r-label { font-size: 12px; color: var(--muted); margin-bottom: 8px; }
+.r-star { color: var(--brass); }
+.r-field input, .r-field textarea {
+  width: 100%; padding: 10px 12px; border-radius: 8px;
+  border: 1px solid var(--line); background: var(--surface); color: var(--text);
+  font-family: inherit; font-size: 14px;
+}
+.r-field textarea { resize: vertical; min-height: 72px; line-height: 1.45; }
+.r-field input:focus, .r-field textarea:focus { outline: none; border-color: var(--brass); }
+.r-field.r-invalid .r-label { color: var(--danger); }
+.r-field.r-invalid input, .r-field.r-invalid textarea { border-color: var(--danger); }
+.r-err { font-size: 12px; color: var(--danger); margin-top: 6px; }
+
+.r-photo {
+  margin-top: 16px; padding: 10px 12px; border-radius: 8px;
+  background: var(--surface); border: 1px solid var(--line);
+  font-size: 12px; line-height: 1.5; color: var(--muted);
+}
+.r-send {
+  display: block; width: 100%; padding: 13px 0; margin: 14px 0 4px;
+  border: none; border-radius: 10px;
+  background: var(--brass); color: var(--on-brass);
+  font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer;
+}
+.r-send:active { filter: brightness(.92); }
+
+/* Кнопки в карточке седла: «Написать» + «На примерку» рядом */
+.s-actions { display: flex; gap: 10px; margin-top: 14px; }
+.s-actions .dm-btn { margin-top: 0; flex: 1; }
+.fit-btn {
+  flex: 1; padding: 13px 0; border-radius: 10px;
+  border: 1px solid var(--brass); background: transparent; color: var(--brass);
+  font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer;
+}
+.fit-btn:active { filter: brightness(.85); }
