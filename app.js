@@ -344,7 +344,7 @@ const REQUEST_DICTIONARIES = {
 const REQUESTS = {
   sell: {
     title: 'Сдать седло на реализацию',
-    sub: 'Заполните форму - заявка уйдет Ане в личные сообщения',
+    sub: 'Заполните форму - заявка уйдет Анне в личные сообщения',
     photoNote: 'После отправки заявки пришлите, пожалуйста, фото седла в этот же чат - по ним проще оценить седло',
     submitLabel: 'Отправить заявку',
     outHeader: 'Заявка на прием седла на реализацию',
@@ -364,7 +364,7 @@ const REQUESTS = {
   },
   fitting: {
     title: 'Заказать выездную примерку',
-    sub: 'Заполните форму - заявка уйдет Ане в личные сообщения, дату и время договоритесь в чате',
+    sub: 'Заполните форму - заявка уйдет Анне в личные сообщения, дату и время договоритесь в чате',
     photoNote: 'Фото спины лошади (сбоку и сверху) пришлите в этот же чат следующим сообщением - по ним подбирают размер седла',
     submitLabel: 'Отправить заявку',
     outHeader: 'Заявка на выездную примерку',
@@ -377,6 +377,8 @@ const REQUESTS = {
       { key: 'phone', type: 'text', label: 'Телефон', out: 'Телефон', placeholder: '+7 999 123-45-67', inputmode: 'tel', required: true },
       { key: 'horseBreed', type: 'text', label: 'Порода лошади', out: 'Порода лошади', placeholder: 'Если знаете' },
       { key: 'horseAge', type: 'text', label: 'Возраст лошади', out: 'Возраст лошади', placeholder: 'Например, 8 лет' },
+      { key: 'riderSize', type: 'text', label: 'Размер по всаднику', out: 'Размер по всаднику', placeholder: 'Например, 17,5' },
+      { key: 'riderHeight', type: 'text', label: 'Рост всадника', out: 'Рост всадника', placeholder: 'Например, 170 см' },
       { key: 'comment', type: 'textarea', label: 'Комментарий', out: 'Комментарий', placeholder: 'Что важно знать о лошади или примерке' }
     ]
   }
@@ -523,6 +525,11 @@ function wireRequestStatics(root) {
     // цена - только цифры, не длиннее 8 (как фильтр цены в шторке)
     if (field && field.dataset.key === 'price') {
       e.target.value = e.target.value.replace(/\D/g, '').slice(0, 8);
+    }
+    // телефон: первая «9» получает «+7» - привычное автодополнение
+    // («8...» и «+...» не трогаем, валидатор их и так принимает)
+    if (field && field.dataset.key === 'phone' && e.target.value.startsWith('9')) {
+      e.target.value = '+7' + e.target.value;
     }
   });
 }
