@@ -351,3 +351,26 @@ body.no-scroll { overflow: hidden; }
   font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer;
 }
 .fit-btn:active { filter: brightness(.85); }
+
+/* Похожие сёдла - горизонтальная лента в конце карточки (инсайт 16) */
+.s-similar { margin-top: 22px; }
+.s-similar h3 { font-size: 12px; font-weight: 500; color: var(--muted); margin-bottom: 8px; }
+.sim-list {
+  display: flex; gap: 10px; overflow-x: auto;
+  margin: 0 -16px; padding: 0 16px 4px; /* лента до краев экрана, как галерея */
+  scrollbar-width: none;
+}
+.sim-list::-webkit-scrollbar { display: none; }
+.sim-card {
+  flex: 0 0 130px; display: flex; flex-direction: column; gap: 6px; text-align: left;
+  background: none; border: none; padding: 0; cursor: pointer;
+  font-family: inherit; color: inherit;
+}
+.sim-card:active .sim-photo { opacity: .8; }
+.sim-photo { aspect-ratio: 4 / 3; border-radius: var(--radius); overflow: hidden; background: var(--surface); }
+.sim-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.sim-name {
+  font-size: 12px; line-height: 1.3;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.sim-meta { font-size: 12px; font-weight: 600; color: var(--brass); font-variant-numeric: tabular-nums; }
