@@ -782,50 +782,6 @@ function priceHtml(s, cls) {
   return s.status === 'sold' ? '' : '<div class="' + cls + '">Цена по запросу</div>';
 }
 
-/* Похожие сёдла (инсайт 16): кандидаты - только в наличии, тот же тип обязателен
-   (размер по лошаде не сравниваем - шкалы производителей несравнимы, инсайт 12).
-   Ранжирование: размер по всаднику +3, цвет +1, материал +1, цена в пределах 30% +1;
-   при равенстве баллов новее (по посту) выше */
-function similarSaddles(s, limit = 4) {
-  const rider = new Set(s.sizeRiderValues || []);
-  return saddles
-    .filter(x => x.status === 'available' && x.id !== s.id && x.type === s.type)
-    .map(x => {
-      let score = 0;
-      if ((x.sizeRiderValues || []).some(v => rider.has(v))) score += 3;
-      if (x.color === s.color) score += 1;
-      if (x.material === s.material) score += 1;
-      if (x.price && s.price && Math.abs(x.price - s.price) / Math.max(x.price, s.price) < .3) score += 1;
-      return [score, x];
-    })
-    .sort((a, b) => b[0] - a[0] || b[1].post - a[1].post)
-    .slice(0, limit)
-    .map(p => p[1]);
-}
-
-function simCardHtml(s) {
-  return (
-    '<button type="button" class="sim-card" data-id="' + esc(s.id) + '">' +
-      '<span class="sim-photo"><img src="' + esc(s.photos[0]) + '" alt="' + esc(s.title) + '" loading="lazy"></span>' +
-      '<span class="sim-name">' + esc(s.title) + '</span>' +
-      '<span class="sim-meta">' +
-        (typeof s.sizeRider === 'number' ? 'Всаднику ' + String(s.sizeRider).replace('.', ',') + ' - ' : '') +
-        (s.price !== undefined ? fmtPrice.format(s.price) + ' руб' : 'цена по запросу') +
-      '</span>' +
-    '</button>'
-  );
-}
-
-function similarHtml(s) {
-  const list = similarSaddles(s);
-  if (list.length < 2) return '';
-  return (
-    '<section class="s-similar"><h3>Похожие в наличии</h3><div class="sim-list">' +
-      list.map(simCardHtml).join('') +
-    '</div></section>'
-  );
-}
-
 function cardHtml(s) {
   const sold = s.status === 'sold';
   const reserved = s.status === 'reserved';
@@ -935,7 +891,6 @@ function saddleHtml(s) {
         (sold || reserved ? '' :
           '<button type="button" class="fit-btn" id="fitBtn">На примерку</button>') +
       '</div>' +
-      similarHtml(s) +
     '</div>'
   );
 }
@@ -1148,11 +1103,6 @@ async function init() {
       if (favBtn && favBtn.dataset.fav) {
         e.stopPropagation();
         toggleFavorite(favBtn.dataset.fav);
-        return;
-      }
-      const sim = e.target.closest('.sim-card');
-      if (sim && sim.dataset.id) {
-        openSaddle(sim.dataset.id);
         return;
       }
       const card = e.target.closest('.card');
