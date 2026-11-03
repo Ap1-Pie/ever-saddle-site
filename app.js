@@ -61,6 +61,7 @@ function toggleFavorite(id) {
   else favorites.add(id);
   storage.save();
   haptic();
+  toast(favorites.has(id) ? 'Добавлено в избранное' : 'Убрано из избранного');
   renderHeaderFav();
   const cardBtn = document.getElementById('favCardBtn');
   if (!cardBtn.hidden && cardBtn.dataset.id === id) syncFavBtn(cardBtn, id); // открыта карточка
@@ -69,6 +70,22 @@ function toggleFavorite(id) {
 
 function haptic() {
   if (isTelegram && TG.HapticFeedback) TG.HapticFeedback.selectionChanged();
+}
+
+/* Toast (итерация 25): короткое подтверждение внизу экрана, исчезает само */
+let toastTimer = null;
+function toast(text) {
+  let el = document.getElementById('toast');
+  if (!el) {
+    el = document.createElement('div');
+    el.id = 'toast';
+    el.className = 'toast';
+    document.body.appendChild(el);
+  }
+  el.textContent = text;
+  el.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => el.classList.remove('show'), 1800);
 }
 
 function renderHeaderFav() {
@@ -1117,6 +1134,94 @@ window.addEventListener('popstate', () => {
 
 /* ---------- Старт ---------- */
 
+/* Скелетон каталога (итерация 25): тот же разметке, что в index.html до загрузки данных */
+function skeletonHtml() {
+  let html = '';
+  for (let i = 0; i < 6; i++) {
+    html += '<div class="card skel"><div class="photo"></div><div class="skel-line w80"></div><div class="skel-line w50"></div></div>';
+  }
+  return html;
+}
+
+/* Слушатели навешиваются один раз; загрузка каталога - отдельно, чтобы «Нет сети»
+   могло повторить ее без перезапуска аппа (итерация 25) */
+function wireApp() {
+  const grid = document.getElementById('grid');
+  grid.addEventListener('click', (e) => {
+    const favBtn = e.target.closest('.fav-btn');
+    if (favBtn && favBtn.dataset.fav) {
+      e.stopPropagation();
+      toggleFavorite(favBtn.dataset.fav);
+      return;
+    }
+    const sim = e.target.closest('.sim-card');
+    if (sim && sim.dataset.id) {
+      openSaddle(sim.dataset.id);
+      return;
+    }
+    const card = e.target.closest('.card');
+    if (card) openSaddle(card.dataset.id);
+  });
+
+  document.getElementById('favToggle').addEventListener('click', () => {
+    favoritesMode = !favoritesMode; // пустое избранное тоже открывается - с подсказкой
+    renderHeaderFav();
+    renderCatalog();
+  });
+
+  document.getElementById('favCardBtn').addEventListener('click', (e) => {
+    const id = e.currentTarget.dataset.id;
+    if (id) toggleFavorite(id);
+  });
+
+  document.getElementById('favBackBtn').addEventListener('click', exitFavorites); // браузер
+
+  buildSheet();
+  buildSortSheet();
+  buildRequestSheet();
+  // кнопка в мини-гайде размеров -> форма примерки (инсайт 16, п.1)
+  document.getElementById('guideFitBtn').addEventListener('click', () => {
+    closeSheets();
+    openRequest('fitting');
+  });
+  wireViewerStatics();
+}
+
+async function loadCatalog() {
+  const res = await fetch('data/saddles.json' + (window.ASSETS_V || ''));
+  if (!res.ok) throw new Error('HTTP ' + res.status);
+  saddles = await res.json();
+  saddles.sort((a, b) => b.post - a.post); // новые сверху
+  const validIds = new Set(saddles.map(s => s.id));
+  const stale = favorites.size;
+  favorites = new Set([...favorites].filter(id => validIds.has(id))); // лайки исчезнувших сёдел
+  if (favorites.size !== stale) storage.save();
+  renderHeaderFav();
+  const hash = decodeURIComponent(location.hash.slice(1));
+  const fromHash = saddles.find(x => x.id === hash);
+  // deep link #form=fitting|#sell - для кнопок меню бота и ссылок из канала
+  const formMatch = /^form=(sell|fitting)$/.exec(hash);
+  if (formMatch) {
+    renderCatalog();
+    openRequest(formMatch[1]);
+  } else if (fromHash) openSaddle(fromHash.id, false);
+  else renderCatalog();
+}
+
+function showLoadError() {
+  // Экран «Нет сети» (итерация 25): кнопка повторяет загрузку, не перезагружая апп
+  const grid = document.getElementById('grid');
+  grid.innerHTML = '<div class="state">' +
+    '<p class="state-title">Нет сети</p>' +
+    '<p class="state-sub">Каталог не загрузился. Проверьте подключение и попробуйте еще раз.</p>' +
+    '<button type="button" class="retry-btn" id="retryBtn">Попробовать еще раз</button></div>';
+  document.getElementById('retryBtn').addEventListener('click', async () => {
+    grid.innerHTML = skeletonHtml();
+    try { await loadCatalog(); }
+    catch (e) { console.error(e); showLoadError(); }
+  });
+}
+
 async function init() {
   if (TG) {
     TG.ready();
@@ -1140,70 +1245,14 @@ async function init() {
       } catch (e) { console.warn('Полноэкранный режим недоступен', e); }
     }
   }
-  const grid = document.getElementById('grid');
+  try { favorites = new Set(await storage.load()); }
+  catch (e) { console.warn('Избранное не загружено', e); }
+  wireApp();
   try {
-    try { favorites = new Set(await storage.load()); }
-    catch (e) { console.warn('Избранное не загружено', e); }
-    const res = await fetch('data/saddles.json' + (window.ASSETS_V || ''));
-    if (!res.ok) throw new Error('HTTP ' + res.status);
-    saddles = await res.json();
-    saddles.sort((a, b) => b.post - a.post); // новые сверху
-    const validIds = new Set(saddles.map(s => s.id));
-    const stale = favorites.size;
-    favorites = new Set([...favorites].filter(id => validIds.has(id))); // лайки исчезнувших сёдел
-    if (favorites.size !== stale) storage.save();
-
-    grid.addEventListener('click', (e) => {
-      const favBtn = e.target.closest('.fav-btn');
-      if (favBtn && favBtn.dataset.fav) {
-        e.stopPropagation();
-        toggleFavorite(favBtn.dataset.fav);
-        return;
-      }
-      const sim = e.target.closest('.sim-card');
-      if (sim && sim.dataset.id) {
-        openSaddle(sim.dataset.id);
-        return;
-      }
-      const card = e.target.closest('.card');
-      if (card) openSaddle(card.dataset.id);
-    });
-
-    document.getElementById('favToggle').addEventListener('click', () => {
-      favoritesMode = !favoritesMode; // пустое избранное тоже открывается - с подсказкой
-      renderHeaderFav();
-      renderCatalog();
-    });
-
-    document.getElementById('favCardBtn').addEventListener('click', (e) => {
-      const id = e.currentTarget.dataset.id;
-      if (id) toggleFavorite(id);
-    });
-
-    document.getElementById('favBackBtn').addEventListener('click', exitFavorites); // браузер
-
-    buildSheet();
-    buildSortSheet();
-    buildRequestSheet();
-    // кнопка в мини-гайде размеров -> форма примерки (инсайт 16, п.1)
-    document.getElementById('guideFitBtn').addEventListener('click', () => {
-      closeSheets();
-      openRequest('fitting');
-    });
-    wireViewerStatics();
-    renderHeaderFav();
-    const hash = decodeURIComponent(location.hash.slice(1));
-    const fromHash = saddles.find(x => x.id === hash);
-    // deep link #form=fitting|#sell - для кнопок меню бота и ссылок из канала
-    const formMatch = /^form=(sell|fitting)$/.exec(hash);
-    if (formMatch) {
-      renderCatalog();
-      openRequest(formMatch[1]);
-    } else if (fromHash) openSaddle(fromHash.id, false);
-    else renderCatalog();
+    await loadCatalog();
   } catch (e) {
-    grid.innerHTML = '<div class="state">Не удалось загрузить каталог.<br>Обновите страницу.</div>';
     console.error(e);
+    showLoadError();
   }
 }
 

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Ever saddle</title>
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="styles.css?v=31">
+  <link rel="stylesheet" href="styles.css?v=32">
 </head>
 <body>
   <div class="app">
@@ -48,7 +48,15 @@
         <span id="sortLabel">Новые</span>
       </button>
     </div>
-    <main class="grid" id="grid"></main>
+    <main class="grid" id="grid">
+      <!-- Скелетон каталога на время загрузки данных (итерация 25); первый рендер заменяет его -->
+      <div class="card skel"><div class="photo"></div><div class="skel-line w80"></div><div class="skel-line w50"></div></div>
+      <div class="card skel"><div class="photo"></div><div class="skel-line w80"></div><div class="skel-line w50"></div></div>
+      <div class="card skel"><div class="photo"></div><div class="skel-line w80"></div><div class="skel-line w50"></div></div>
+      <div class="card skel"><div class="photo"></div><div class="skel-line w80"></div><div class="skel-line w50"></div></div>
+      <div class="card skel"><div class="photo"></div><div class="skel-line w80"></div><div class="skel-line w50"></div></div>
+      <div class="card skel"><div class="photo"></div><div class="skel-line w80"></div><div class="skel-line w50"></div></div>
+    </main>
 
     <!-- Шторка фильтров -->
     <div class="sheet-overlay" id="sheetOverlay"></div>
@@ -124,7 +132,7 @@
     <div class="request-view" id="requestView" aria-label="Форма заявки"></div>
   </div>
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
-  <script>window.ASSETS_V = '?v=31';</script>
-  <script src="app.js?v=31"></script>
+  <script>window.ASSETS_V = '?v=32';</script>
+  <script src="app.js?v=32"></script>
 </body>
 </html>
