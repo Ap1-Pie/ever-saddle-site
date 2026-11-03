@@ -185,6 +185,9 @@ function groupOptions(field) {
   return keys;
 }
 
+/* buildSheet вызывается после загрузки каталога (чипы строятся из данных) и может
+   повториться при «Попробовать еще раз» - слушатели статичных элементов вешаем один раз */
+let sheetWired = false;
 function buildSheet() {
   const root = document.getElementById('filterGroups');
   let html = '';
@@ -218,14 +221,29 @@ function buildSheet() {
     '</div>';
   root.innerHTML = html;
 
-  root.addEventListener('click', (e) => {
-    const chip = e.target.closest('.chip');
-    if (!chip) return;
-    const set = filters[chip.dataset.group];
-    const v = chip.dataset.value;
-    if (set.has(v)) set.delete(v); else set.add(v);
-    refreshAfterFilterChange();
-  });
+  if (!sheetWired) {
+    sheetWired = true;
+    root.addEventListener('click', (e) => {
+      const chip = e.target.closest('.chip');
+      if (!chip) return;
+      const set = filters[chip.dataset.group];
+      const v = chip.dataset.value;
+      if (set.has(v)) set.delete(v); else set.add(v);
+      refreshAfterFilterChange();
+    });
+    document.getElementById('applyBtn').addEventListener('click', closeSheets);
+    document.getElementById('resetBtn').addEventListener('click', () => {
+      GROUPS.forEach(g => filters[g.key].clear());
+      filters.priceFrom = filters.priceTo = null;
+      filters.inStock = false;
+      document.getElementById('priceFrom').value = '';
+      document.getElementById('priceTo').value = '';
+      document.getElementById('inStock').checked = false;
+      refreshAfterFilterChange();
+    });
+    document.getElementById('filterBtn').addEventListener('click', openSheet);
+    document.getElementById('sheetOverlay').addEventListener('click', closeSheets);
+  }
   // Общий обработчик полей цены: обрезаем ввод длиннее 7 цифр (maxlength на type=number не работает)
   const onPriceInput = (e) => {
     if (e.target.value.length > 7) e.target.value = e.target.value.slice(0, 7);
@@ -233,29 +251,20 @@ function buildSheet() {
       e.target.value === '' ? null : Number(e.target.value);
     refreshAfterFilterChange();
   };
+  // эти элементы пересоздаются вместе с innerHTML - слушатели нужны при каждой сборке
   document.getElementById('priceFrom').addEventListener('input', onPriceInput);
   document.getElementById('priceTo').addEventListener('input', onPriceInput);
   document.getElementById('inStock').addEventListener('change', (e) => {
     filters.inStock = e.target.checked;
     refreshAfterFilterChange();
   });
-  document.getElementById('applyBtn').addEventListener('click', closeSheets);
-  document.getElementById('resetBtn').addEventListener('click', () => {
-    GROUPS.forEach(g => filters[g.key].clear());
-    filters.priceFrom = filters.priceTo = null;
-    filters.inStock = false;
-    document.getElementById('priceFrom').value = '';
-    document.getElementById('priceTo').value = '';
-    document.getElementById('inStock').checked = false;
-    refreshAfterFilterChange();
-  });
-  document.getElementById('filterBtn').addEventListener('click', openSheet);
-  document.getElementById('guideBtn').addEventListener('click', () => {
+  // кнопки может не быть: при пустом каталоге группа «Размер всаднику» не собирается
+  const guideBtn = document.getElementById('guideBtn');
+  if (guideBtn) guideBtn.addEventListener('click', () => {
     closeSheets();
     document.getElementById('sheetOverlay').classList.add('open');
     document.getElementById('guideSheet').classList.add('open');
   });
-  document.getElementById('sheetOverlay').addEventListener('click', closeSheets);
 }
 
 function updateSheet() {
@@ -1176,7 +1185,6 @@ function wireApp() {
 
   document.getElementById('favBackBtn').addEventListener('click', exitFavorites); // браузер
 
-  buildSheet();
   buildSortSheet();
   buildRequestSheet();
   // кнопка в мини-гайде размеров -> форма примерки (инсайт 16, п.1)
@@ -1196,6 +1204,7 @@ async function loadCatalog() {
   const stale = favorites.size;
   favorites = new Set([...favorites].filter(id => validIds.has(id))); // лайки исчезнувших сёдел
   if (favorites.size !== stale) storage.save();
+  buildSheet(); // чипы фильтров строятся из данных каталога (после загрузки, не до)
   renderHeaderFav();
   const hash = decodeURIComponent(location.hash.slice(1));
   const fromHash = saddles.find(x => x.id === hash);
