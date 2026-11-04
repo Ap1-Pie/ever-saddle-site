@@ -436,7 +436,7 @@
    17
   ],
   "price": 100000,
-  "status": "available",
+  "status": "sold",
   "article": "EVER0084",
   "publishedAt": "21.10.2026",
   "comment": "2 по маркировке, было перенабито - набивка плотная",
@@ -646,7 +646,7 @@
    17
   ],
   "price": 380000,
-  "status": "available",
+  "status": "sold",
   "article": "EVER0077",
   "publishedAt": "18.09.2026",
   "description": "Custom icon coda🔝\nНевероятно удобный\n17/33",
@@ -709,7 +709,7 @@
    17
   ],
   "price": 145000,
-  "status": "available",
+  "status": "sold",
   "article": "EVER0075",
   "publishedAt": "20.08.2026",
   "description": "Конкурное седло\nПрестиж венеция\n\n17/32",
@@ -1212,7 +1212,7 @@
    17
   ],
   "price": 370000,
-  "status": "available",
+  "status": "sold",
   "article": "EVER0058",
   "publishedAt": "03.07.2026",
   "comment": "небольшие косметические дефекты; проверить актуальность (пост июля)",
@@ -1363,11 +1363,11 @@
    16.5
   ],
   "price": 120000,
-  "status": "reserved",
+  "status": "sold",
   "article": "EVER0053",
   "publishedAt": "19.06.2026",
   "comment": "на высокую холку; статус не указан - проверить (пост июня)",
-  "description": "Срочно!\nВыездковое седло county\n\n16,5 всадник\nMW лошадь\n\nПодойдет на высокую холку\n\n120 000р",
+  "description": "Срочно!\nВыездковое седло county\n\n16,5 всадник\nMW лошадь\n\nПодойдет на высокую холку",
   "post": 292,
   "photos": [
    "assets/photos/292/1.jpg",
