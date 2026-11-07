@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Ever saddle</title>
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="styles.css?v=30">
+  <link rel="stylesheet" href="styles.css?v=34">
 </head>
 <body>
   <div class="app">
@@ -48,7 +48,15 @@
         <span id="sortLabel">Новые</span>
       </button>
     </div>
-    <main class="grid" id="grid"></main>
+    <main class="grid" id="grid">
+      <!-- Скелетон каталога на время загрузки данных (итерация 25); первый рендер заменяет его -->
+      <div class="card skel"><div class="photo"></div><div class="skel-line w80"></div><div class="skel-line w50"></div></div>
+      <div class="card skel"><div class="photo"></div><div class="skel-line w80"></div><div class="skel-line w50"></div></div>
+      <div class="card skel"><div class="photo"></div><div class="skel-line w80"></div><div class="skel-line w50"></div></div>
+      <div class="card skel"><div class="photo"></div><div class="skel-line w80"></div><div class="skel-line w50"></div></div>
+      <div class="card skel"><div class="photo"></div><div class="skel-line w80"></div><div class="skel-line w50"></div></div>
+      <div class="card skel"><div class="photo"></div><div class="skel-line w80"></div><div class="skel-line w50"></div></div>
+    </main>
 
     <!-- Шторка фильтров -->
     <div class="sheet-overlay" id="sheetOverlay"></div>
@@ -64,6 +72,39 @@
     <section class="sheet" id="sortSheet" aria-label="Сортировка каталога">
       <h2 class="sheet-title">Сортировка</h2>
       <div id="sortOptions"></div>
+    </section>
+    <!-- Мини-шторка «Как понять свой размер» (инсайт 16, п.1): черновик, факты проверяет Анна -->
+    <section class="sheet" id="guideSheet" aria-label="Как понять свой размер">
+      <h2 class="sheet-title">Как понять свой размер</h2>
+      <div class="guide">
+        <div>
+          <h3>Как читать размер</h3>
+          Размер седла записывается парой чисел, например <b>17/33</b>: первое число - размер
+          по всаднику, второе - по лошади. В постах канала это пишут как «17 всаднику, 33 лошади».
+        </div>
+        <div>
+          <h3>По всаднику (дюймы)</h3>
+          Подбирается по длине бедра - от колена до тазобедренного сустава: чем длиннее бедро,
+          тем больше седло.
+          <ul>
+            <li><b>16 - 16,5</b> - подросткам и невысоким всадникам</li>
+            <li><b>17 - 17,5</b> - большинству взрослых</li>
+            <li><b>18</b> - высоким всадникам с длинным бедром</li>
+          </ul>
+        </div>
+        <div>
+          <h3>По лошади (ширина ленчика, см)</h3>
+          Второе число - ширина ленчика. Она должна соответствовать строению спины и холки
+          вашей лошади: слишком узкий ленчик давит на холку, слишком широкий не дает седлу
+          лежать ровно.
+        </div>
+        <div>
+          <h3>Самый верный способ - примерка</h3>
+          Посадка всадника и строение лошади индивидуальны. Анна привезет подходящие сёдла
+          на конюшню и подберет седло по вам и по лошади.
+        </div>
+        <button type="button" class="fit-btn" id="guideFitBtn">Заказать выездную примерку</button>
+      </div>
     </section>
     <!-- Мини-шторка заявок (итерация 22): примерка чаще, поэтому первой -->
     <section class="sheet" id="requestSheet" aria-label="Заявки">
@@ -91,7 +132,7 @@
     <div class="request-view" id="requestView" aria-label="Форма заявки"></div>
   </div>
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
-  <script>window.ASSETS_V = '?v=30';</script>
-  <script src="app.js?v=30"></script>
+  <script>window.ASSETS_V = '?v=34';</script>
+  <script src="app.js?v=34"></script>
 </body>
 </html>

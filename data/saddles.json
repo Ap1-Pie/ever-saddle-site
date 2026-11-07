@@ -1,5 +1,65 @@
 [
  {
+  "id": "519",
+  "title": "Конкурное седло Prestige MichelRobert",
+  "type": "конкурное",
+  "brand": "Prestige",
+  "model": "MichelRobert",
+  "sizeHorse": "33",
+  "material": "кожа",
+  "condition": "хорошее",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
+  "sizeRider": 17,
+  "sizeRiderValues": [
+   17
+  ],
+  "price": 145000,
+  "status": "available",
+  "article": "EVER0100",
+  "publishedAt": "05.11.2026",
+  "description": "Конкурное седло Prestige MichelRobert\n\nСостояние: хорошее\nЦвет: черный\nВсаднику: 17\nПо лошади: 33\n\nЕсть дефект по канту",
+  "post": 519,
+  "photos": [
+   "assets/photos/519/1.jpg",
+   "assets/photos/519/2.jpg",
+   "assets/photos/519/3.jpg",
+   "assets/photos/519/4.jpg"
+  ]
+ },
+ {
+  "id": "515",
+  "title": "Конкурное седло Prestige Sydney",
+  "type": "конкурное",
+  "brand": "Prestige",
+  "model": "Sydney",
+  "sizeHorse": "33",
+  "material": "кожа",
+  "condition": "хорошее",
+  "color": "коричневое",
+  "colorValues": [
+   "коричневое"
+  ],
+  "sizeRider": 17.5,
+  "sizeRiderValues": [
+   17.5
+  ],
+  "price": 135000,
+  "status": "available",
+  "article": "EVER0099",
+  "publishedAt": "05.11.2026",
+  "description": "Конкурное седло Prestige Sydney\n\nСостояние: хорошее\nЦвет: коричневый\nВсаднику: 17,5\nПо лошади: 33\n\nВ очень красивом красно-коричневом, редком цвете",
+  "post": 515,
+  "photos": [
+   "assets/photos/515/1.jpg",
+   "assets/photos/515/2.jpg",
+   "assets/photos/515/3.jpg",
+   "assets/photos/515/4.jpg"
+  ]
+ },
+ {
   "id": "511",
   "title": "Конкурное седло GrandPrizo Аргентина",
   "type": "конкурное",
@@ -1367,7 +1427,7 @@
   "article": "EVER0053",
   "publishedAt": "19.06.2026",
   "comment": "на высокую холку; статус не указан - проверить (пост июня)",
-  "description": "Срочно!\nВыездковое седло county\n\n16,5 всадник\nMW лошадь\n\nПодойдет на высокую холку",
+  "description": "Срочно!\nВыездковое седло county\n\n16,5 всадник\nMW лошадь\n\nПодойдет на высокую холку\n\n120 000р",
   "post": 292,
   "photos": [
    "assets/photos/292/1.jpg",

@@ -61,6 +61,7 @@ function toggleFavorite(id) {
   else favorites.add(id);
   storage.save();
   haptic();
+  toast(favorites.has(id) ? 'Добавлено в избранное' : 'Убрано из избранного');
   renderHeaderFav();
   const cardBtn = document.getElementById('favCardBtn');
   if (!cardBtn.hidden && cardBtn.dataset.id === id) syncFavBtn(cardBtn, id); // открыта карточка
@@ -69,6 +70,22 @@ function toggleFavorite(id) {
 
 function haptic() {
   if (isTelegram && TG.HapticFeedback) TG.HapticFeedback.selectionChanged();
+}
+
+/* Toast (итерация 25): короткое подтверждение внизу экрана, исчезает само */
+let toastTimer = null;
+function toast(text) {
+  let el = document.getElementById('toast');
+  if (!el) {
+    el = document.createElement('div');
+    el.id = 'toast';
+    el.className = 'toast';
+    document.body.appendChild(el);
+  }
+  el.textContent = text;
+  el.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => el.classList.remove('show'), 1800);
 }
 
 function renderHeaderFav() {
@@ -168,6 +185,9 @@ function groupOptions(field) {
   return keys;
 }
 
+/* buildSheet вызывается после загрузки каталога (чипы строятся из данных) и может
+   повториться при «Попробовать еще раз» - слушатели статичных элементов вешаем один раз */
+let sheetWired = false;
 function buildSheet() {
   const root = document.getElementById('filterGroups');
   let html = '';
@@ -180,6 +200,10 @@ function buildSheet() {
         esc(displayKey(v, g.field)) + ' <small></small></button>';
     }
     html += '</div>';
+    // вход в мини-гайд - рядом с выбором своего размера (инсайт 16, п.1)
+    if (g.key === 'sizeRider') {
+      html += '<button type="button" class="guide-link" id="guideBtn">Как понять свой размер?</button>';
+    }
   }
   html +=
     '<div class="group-label">Цена, руб</div>' +
@@ -197,14 +221,29 @@ function buildSheet() {
     '</div>';
   root.innerHTML = html;
 
-  root.addEventListener('click', (e) => {
-    const chip = e.target.closest('.chip');
-    if (!chip) return;
-    const set = filters[chip.dataset.group];
-    const v = chip.dataset.value;
-    if (set.has(v)) set.delete(v); else set.add(v);
-    refreshAfterFilterChange();
-  });
+  if (!sheetWired) {
+    sheetWired = true;
+    root.addEventListener('click', (e) => {
+      const chip = e.target.closest('.chip');
+      if (!chip) return;
+      const set = filters[chip.dataset.group];
+      const v = chip.dataset.value;
+      if (set.has(v)) set.delete(v); else set.add(v);
+      refreshAfterFilterChange();
+    });
+    document.getElementById('applyBtn').addEventListener('click', closeSheets);
+    document.getElementById('resetBtn').addEventListener('click', () => {
+      GROUPS.forEach(g => filters[g.key].clear());
+      filters.priceFrom = filters.priceTo = null;
+      filters.inStock = false;
+      document.getElementById('priceFrom').value = '';
+      document.getElementById('priceTo').value = '';
+      document.getElementById('inStock').checked = false;
+      refreshAfterFilterChange();
+    });
+    document.getElementById('filterBtn').addEventListener('click', openSheet);
+    document.getElementById('sheetOverlay').addEventListener('click', closeSheets);
+  }
   // Общий обработчик полей цены: обрезаем ввод длиннее 7 цифр (maxlength на type=number не работает)
   const onPriceInput = (e) => {
     if (e.target.value.length > 7) e.target.value = e.target.value.slice(0, 7);
@@ -212,24 +251,20 @@ function buildSheet() {
       e.target.value === '' ? null : Number(e.target.value);
     refreshAfterFilterChange();
   };
+  // эти элементы пересоздаются вместе с innerHTML - слушатели нужны при каждой сборке
   document.getElementById('priceFrom').addEventListener('input', onPriceInput);
   document.getElementById('priceTo').addEventListener('input', onPriceInput);
   document.getElementById('inStock').addEventListener('change', (e) => {
     filters.inStock = e.target.checked;
     refreshAfterFilterChange();
   });
-  document.getElementById('applyBtn').addEventListener('click', closeSheets);
-  document.getElementById('resetBtn').addEventListener('click', () => {
-    GROUPS.forEach(g => filters[g.key].clear());
-    filters.priceFrom = filters.priceTo = null;
-    filters.inStock = false;
-    document.getElementById('priceFrom').value = '';
-    document.getElementById('priceTo').value = '';
-    document.getElementById('inStock').checked = false;
-    refreshAfterFilterChange();
+  // кнопки может не быть: при пустом каталоге группа «Размер всаднику» не собирается
+  const guideBtn = document.getElementById('guideBtn');
+  if (guideBtn) guideBtn.addEventListener('click', () => {
+    closeSheets();
+    document.getElementById('sheetOverlay').classList.add('open');
+    document.getElementById('guideSheet').classList.add('open');
   });
-  document.getElementById('filterBtn').addEventListener('click', openSheet);
-  document.getElementById('sheetOverlay').addEventListener('click', closeSheets);
 }
 
 function updateSheet() {
@@ -327,6 +362,7 @@ function closeSheets() {
   document.getElementById('filterSheet').classList.remove('open');
   document.getElementById('sortSheet').classList.remove('open');
   document.getElementById('requestSheet').classList.remove('open');
+  document.getElementById('guideSheet').classList.remove('open');
 }
 
 /* ---------- Заявки: выездная примерка и приём седла (итерация 22) ---------- */
@@ -782,6 +818,50 @@ function priceHtml(s, cls) {
   return s.status === 'sold' ? '' : '<div class="' + cls + '">Цена по запросу</div>';
 }
 
+/* Похожие сёдла (инсайт 16): кандидаты - только в наличии, тот же тип обязателен
+   (размер по лошаде не сравниваем - шкалы производителей несравнимы, инсайт 12).
+   Ранжирование: размер по всаднику +3, цвет +1, материал +1, цена в пределах 30% +1;
+   при равенстве баллов новее (по посту) выше */
+function similarSaddles(s, limit = 4) {
+  const rider = new Set(s.sizeRiderValues || []);
+  return saddles
+    .filter(x => x.status === 'available' && x.id !== s.id && x.type === s.type)
+    .map(x => {
+      let score = 0;
+      if ((x.sizeRiderValues || []).some(v => rider.has(v))) score += 3;
+      if (x.color === s.color) score += 1;
+      if (x.material === s.material) score += 1;
+      if (x.price && s.price && Math.abs(x.price - s.price) / Math.max(x.price, s.price) < .3) score += 1;
+      return [score, x];
+    })
+    .sort((a, b) => b[0] - a[0] || b[1].post - a[1].post)
+    .slice(0, limit)
+    .map(p => p[1]);
+}
+
+function simCardHtml(s) {
+  return (
+    '<button type="button" class="sim-card" data-id="' + esc(s.id) + '">' +
+      '<span class="sim-photo"><img src="' + esc(s.photos[0]) + '" alt="' + esc(s.title) + '" loading="lazy"></span>' +
+      '<span class="sim-name">' + esc(s.title) + '</span>' +
+      '<span class="sim-meta">' +
+        (typeof s.sizeRider === 'number' ? 'Всаднику ' + String(s.sizeRider).replace('.', ',') + ' - ' : '') +
+        (s.price !== undefined ? fmtPrice.format(s.price) + ' руб' : 'цена по запросу') +
+      '</span>' +
+    '</button>'
+  );
+}
+
+function similarHtml(s) {
+  const list = similarSaddles(s);
+  if (list.length < 2) return '';
+  return (
+    '<section class="s-similar"><h3>Похожие в наличии</h3><div class="sim-list">' +
+      list.map(simCardHtml).join('') +
+    '</div></section>'
+  );
+}
+
 function cardHtml(s) {
   const sold = s.status === 'sold';
   const reserved = s.status === 'reserved';
@@ -891,6 +971,7 @@ function saddleHtml(s) {
         (sold || reserved ? '' :
           '<button type="button" class="fit-btn" id="fitBtn">На примерку</button>') +
       '</div>' +
+      similarHtml(s) +
     '</div>'
   );
 }
@@ -1062,6 +1143,94 @@ window.addEventListener('popstate', () => {
 
 /* ---------- Старт ---------- */
 
+/* Скелетон каталога (итерация 25): тот же разметке, что в index.html до загрузки данных */
+function skeletonHtml() {
+  let html = '';
+  for (let i = 0; i < 6; i++) {
+    html += '<div class="card skel"><div class="photo"></div><div class="skel-line w80"></div><div class="skel-line w50"></div></div>';
+  }
+  return html;
+}
+
+/* Слушатели навешиваются один раз; загрузка каталога - отдельно, чтобы «Нет сети»
+   могло повторить ее без перезапуска аппа (итерация 25) */
+function wireApp() {
+  const grid = document.getElementById('grid');
+  grid.addEventListener('click', (e) => {
+    const favBtn = e.target.closest('.fav-btn');
+    if (favBtn && favBtn.dataset.fav) {
+      e.stopPropagation();
+      toggleFavorite(favBtn.dataset.fav);
+      return;
+    }
+    const sim = e.target.closest('.sim-card');
+    if (sim && sim.dataset.id) {
+      openSaddle(sim.dataset.id);
+      return;
+    }
+    const card = e.target.closest('.card');
+    if (card) openSaddle(card.dataset.id);
+  });
+
+  document.getElementById('favToggle').addEventListener('click', () => {
+    favoritesMode = !favoritesMode; // пустое избранное тоже открывается - с подсказкой
+    renderHeaderFav();
+    renderCatalog();
+  });
+
+  document.getElementById('favCardBtn').addEventListener('click', (e) => {
+    const id = e.currentTarget.dataset.id;
+    if (id) toggleFavorite(id);
+  });
+
+  document.getElementById('favBackBtn').addEventListener('click', exitFavorites); // браузер
+
+  buildSortSheet();
+  buildRequestSheet();
+  // кнопка в мини-гайде размеров -> форма примерки (инсайт 16, п.1)
+  document.getElementById('guideFitBtn').addEventListener('click', () => {
+    closeSheets();
+    openRequest('fitting');
+  });
+  wireViewerStatics();
+}
+
+async function loadCatalog() {
+  const res = await fetch('data/saddles.json' + (window.ASSETS_V || ''));
+  if (!res.ok) throw new Error('HTTP ' + res.status);
+  saddles = await res.json();
+  saddles.sort((a, b) => b.post - a.post); // новые сверху
+  const validIds = new Set(saddles.map(s => s.id));
+  const stale = favorites.size;
+  favorites = new Set([...favorites].filter(id => validIds.has(id))); // лайки исчезнувших сёдел
+  if (favorites.size !== stale) storage.save();
+  buildSheet(); // чипы фильтров строятся из данных каталога (после загрузки, не до)
+  renderHeaderFav();
+  const hash = decodeURIComponent(location.hash.slice(1));
+  const fromHash = saddles.find(x => x.id === hash);
+  // deep link #form=fitting|#sell - для кнопок меню бота и ссылок из канала
+  const formMatch = /^form=(sell|fitting)$/.exec(hash);
+  if (formMatch) {
+    renderCatalog();
+    openRequest(formMatch[1]);
+  } else if (fromHash) openSaddle(fromHash.id, false);
+  else renderCatalog();
+}
+
+function showLoadError() {
+  // Экран «Нет сети» (итерация 25): кнопка повторяет загрузку, не перезагружая апп
+  const grid = document.getElementById('grid');
+  grid.innerHTML = '<div class="state">' +
+    '<p class="state-title">Нет сети</p>' +
+    '<p class="state-sub">Каталог не загрузился. Проверьте подключение и попробуйте еще раз.</p>' +
+    '<button type="button" class="retry-btn" id="retryBtn">Попробовать еще раз</button></div>';
+  document.getElementById('retryBtn').addEventListener('click', async () => {
+    grid.innerHTML = skeletonHtml();
+    try { await loadCatalog(); }
+    catch (e) { console.error(e); showLoadError(); }
+  });
+}
+
 async function init() {
   if (TG) {
     TG.ready();
@@ -1085,60 +1254,14 @@ async function init() {
       } catch (e) { console.warn('Полноэкранный режим недоступен', e); }
     }
   }
-  const grid = document.getElementById('grid');
+  try { favorites = new Set(await storage.load()); }
+  catch (e) { console.warn('Избранное не загружено', e); }
+  wireApp();
   try {
-    try { favorites = new Set(await storage.load()); }
-    catch (e) { console.warn('Избранное не загружено', e); }
-    const res = await fetch('data/saddles.json' + (window.ASSETS_V || ''));
-    if (!res.ok) throw new Error('HTTP ' + res.status);
-    saddles = await res.json();
-    saddles.sort((a, b) => b.post - a.post); // новые сверху
-    const validIds = new Set(saddles.map(s => s.id));
-    const stale = favorites.size;
-    favorites = new Set([...favorites].filter(id => validIds.has(id))); // лайки исчезнувших сёдел
-    if (favorites.size !== stale) storage.save();
-
-    grid.addEventListener('click', (e) => {
-      const favBtn = e.target.closest('.fav-btn');
-      if (favBtn && favBtn.dataset.fav) {
-        e.stopPropagation();
-        toggleFavorite(favBtn.dataset.fav);
-        return;
-      }
-      const card = e.target.closest('.card');
-      if (card) openSaddle(card.dataset.id);
-    });
-
-    document.getElementById('favToggle').addEventListener('click', () => {
-      favoritesMode = !favoritesMode; // пустое избранное тоже открывается - с подсказкой
-      renderHeaderFav();
-      renderCatalog();
-    });
-
-    document.getElementById('favCardBtn').addEventListener('click', (e) => {
-      const id = e.currentTarget.dataset.id;
-      if (id) toggleFavorite(id);
-    });
-
-    document.getElementById('favBackBtn').addEventListener('click', exitFavorites); // браузер
-
-    buildSheet();
-    buildSortSheet();
-    buildRequestSheet();
-    wireViewerStatics();
-    renderHeaderFav();
-    const hash = decodeURIComponent(location.hash.slice(1));
-    const fromHash = saddles.find(x => x.id === hash);
-    // deep link #form=fitting|#sell - для кнопок меню бота и ссылок из канала
-    const formMatch = /^form=(sell|fitting)$/.exec(hash);
-    if (formMatch) {
-      renderCatalog();
-      openRequest(formMatch[1]);
-    } else if (fromHash) openSaddle(fromHash.id, false);
-    else renderCatalog();
+    await loadCatalog();
   } catch (e) {
-    grid.innerHTML = '<div class="state">Не удалось загрузить каталог.<br>Обновите страницу.</div>';
     console.error(e);
+    showLoadError();
   }
 }
 
