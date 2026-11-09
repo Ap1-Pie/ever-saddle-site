@@ -109,17 +109,16 @@ function syncFavBtn(btn, id) {
 const filters = {
   type: new Set(),
   sizeRider: new Set(),
-  material: new Set(),
   color: new Set(),
   priceFrom: null,
   priceTo: null,
   inStock: false
 };
 
+// Материал убран по просьбе Анны (05.11): почти все сёдла кожаные, покупателю не важно
 const GROUPS = [
   { key: 'type', label: 'Тип', field: 'type' },
   { key: 'sizeRider', label: 'Размер всаднику', field: 'sizeRider' },
-  { key: 'material', label: 'Материал', field: 'material' },
   { key: 'color', label: 'Цвет', field: 'color' }
 ];
 
@@ -820,8 +819,9 @@ function priceHtml(s, cls) {
 
 /* Похожие сёдла (инсайт 16): кандидаты - только в наличии, тот же тип обязателен
    (размер по лошаде не сравниваем - шкалы производителей несравнимы, инсайт 12).
-   Ранжирование: размер по всаднику +3, цвет +1, материал +1, цена в пределах 30% +1;
-   при равенстве баллов новее (по посту) выше */
+   Ранжирование: размер по всаднику +3, цвет +1, цена в пределах 30% +1;
+   при равенстве баллов новее (по посту) выше. Материал не сравниваем - убран
+   из каталога по просьбе Анны (05.11) */
 function similarSaddles(s, limit = 4) {
   const rider = new Set(s.sizeRiderValues || []);
   return saddles
@@ -830,7 +830,6 @@ function similarSaddles(s, limit = 4) {
       let score = 0;
       if ((x.sizeRiderValues || []).some(v => rider.has(v))) score += 3;
       if (x.color === s.color) score += 1;
-      if (x.material === s.material) score += 1;
       if (x.price && s.price && Math.abs(x.price - s.price) / Math.max(x.price, s.price) < .3) score += 1;
       return [score, x];
     })
@@ -957,7 +956,6 @@ function saddleHtml(s) {
         fieldRow('Бренд и модель', brandModel) +
         fieldRow('Размер всаднику', typeof s.sizeRider === 'number' ? String(s.sizeRider).replace('.', ',') : s.sizeRider) +
         fieldRow('Размер лошади', s.sizeHorse) +
-        fieldRow('Материал', s.material) +
         fieldRow('Цвет', s.color) +
         fieldRow('Состояние', s.condition) +
       '</dl>' +

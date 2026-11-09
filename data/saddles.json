@@ -1,5 +1,92 @@
 [
  {
+  "id": "531",
+  "title": "Выездковое седло County Perfection",
+  "type": "выездковое",
+  "brand": "County",
+  "model": "Perfection",
+  "sizeHorse": "M",
+  "condition": "хорошее",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
+  "sizeRider": 17,
+  "sizeRiderValues": [
+   17
+  ],
+  "price": 170000,
+  "status": "available",
+  "article": "EVER0103",
+  "publishedAt": "08.11.2026",
+  "description": "Выездковое седло County Perfection\n\nСостояние: хорошее\nЦвет: черный\nВсаднику: 17\nПо лошади: M",
+  "post": 531,
+  "photos": [
+   "assets/photos/531/1.jpg",
+   "assets/photos/531/2.jpg",
+   "assets/photos/531/3.jpg",
+   "assets/photos/531/4.jpg"
+  ]
+ },
+ {
+  "id": "527",
+  "title": "Выездковое седло LucChilderic DHE",
+  "type": "выездковое",
+  "brand": "LucChilderic",
+  "model": "DHE",
+  "sizeHorse": "33",
+  "condition": "хорошее",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
+  "sizeRider": 17,
+  "sizeRiderValues": [
+   17
+  ],
+  "price": 280000,
+  "status": "available",
+  "article": "EVER0102",
+  "publishedAt": "08.11.2026",
+  "description": "Выездковое седло LucChilderic DHE\n\nСостояние: хорошее\nЦвет: черный\nВсаднику: 17\nПо лошади: 33",
+  "post": 527,
+  "photos": [
+   "assets/photos/527/1.jpg",
+   "assets/photos/527/2.jpg",
+   "assets/photos/527/3.jpg",
+   "assets/photos/527/4.jpg"
+  ]
+ },
+ {
+  "id": "523",
+  "title": "Конкурное седло CWD SE01",
+  "type": "конкурное",
+  "brand": "CWD",
+  "model": "SE01",
+  "sizeHorse": "32-33",
+  "condition": "хорошее",
+  "color": "коричневое",
+  "colorValues": [
+   "коричневое"
+  ],
+  "sizeRider": 17.5,
+  "sizeRiderValues": [
+   17.5
+  ],
+  "price": 210000,
+  "status": "available",
+  "article": "EVER0101",
+  "publishedAt": "08.11.2026",
+  "description": "Конкурное седло CWD SE01\n\nСостояние: хорошее\nЦвет: коричневый\nВсаднику: 17,5\nПо лошади: 32-33\n\nОчень удобное, классическое седло cwd, имеет задний баланс.",
+  "post": 523,
+  "photos": [
+   "assets/photos/523/1.jpg",
+   "assets/photos/523/2.jpg",
+   "assets/photos/523/3.jpg",
+   "assets/photos/523/4.jpg"
+  ]
+ },
+ {
   "id": "519",
   "title": "Конкурное седло Prestige MichelRobert",
   "type": "конкурное",
@@ -318,7 +405,7 @@
    17.5
   ],
   "price": 260000,
-  "status": "available",
+  "status": "sold",
   "article": "EVER0090",
   "publishedAt": "21.10.2026",
   "description": "Выезковое седло Erreplus AJ\n\nСостояние: хорошее\nЦвет: черный\nВсаднику: 17-17,5\nПо лошади: 33-34",
