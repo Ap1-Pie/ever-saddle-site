@@ -1233,6 +1233,11 @@ async function init() {
   if (TG) {
     TG.ready();
     TG.expand();
+    // Светлая тема (брейншторм 04.11): шапка и фон клиента Телеграма - под цвет аппа
+    try {
+      if (TG.setHeaderColor) TG.setHeaderColor('#F3F4F6');
+      if (TG.setBackgroundColor) TG.setBackgroundColor('#F3F4F6');
+    } catch (e) { /* старые клиенты без этих методов */ }
     // Полноэкранный режим (Bot API 8.0): прячет шапку Телеграма с крестиком и точками,
     // как в топовых мини-аппах. Отступ контента сверху считает CSS в .app из четырех
     // источников (env, переменная Телеграма, --safe-top, --fs-top): часть клиентов
