@@ -1,5 +1,92 @@
 [
  {
+  "id": "544",
+  "title": "Выездковое седло Prestige Doge",
+  "type": "выездковое",
+  "brand": "Prestige",
+  "model": "Doge",
+  "sizeHorse": "32",
+  "condition": "отличное",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
+  "sizeRider": 17,
+  "sizeRiderValues": [
+   17
+  ],
+  "price": 180000,
+  "status": "available",
+  "article": "EVER0106",
+  "publishedAt": "22.11.2026",
+  "description": "Выездковое седло Prestige Doge\n\nСостояние: отличное\nЦвет: черный\nВсаднику: 17\nПо лошади: 32\n\nВыездковое седло, с супер цепкой липкой кожей, имеет задний баланс.",
+  "post": 544,
+  "photos": [
+   "assets/photos/544/1.jpg",
+   "assets/photos/544/2.jpg",
+   "assets/photos/544/3.jpg",
+   "assets/photos/544/4.jpg"
+  ]
+ },
+ {
+  "id": "540",
+  "title": "Конкурное седло kentaur sharon",
+  "type": "конкурное",
+  "brand": "Kentaur",
+  "model": "sharon",
+  "sizeHorse": "2",
+  "condition": "отличное",
+  "color": "черное",
+  "colorValues": [
+   "черное"
+  ],
+  "sizeRider": 17,
+  "sizeRiderValues": [
+   17
+  ],
+  "price": 135000,
+  "status": "available",
+  "article": "EVER0105",
+  "publishedAt": "21.11.2026",
+  "description": "Конкурное седло kentaur sharon\n\nСостояние: отличное\nЦвет: черный\nВсаднику: 17\nПо лошади: 2\n\nОчень удобное, прекрасное состояние.",
+  "post": 540,
+  "photos": [
+   "assets/photos/540/1.jpg",
+   "assets/photos/540/2.jpg",
+   "assets/photos/540/3.jpg",
+   "assets/photos/540/4.jpg"
+  ]
+ },
+ {
+  "id": "536",
+  "title": "Конкурное седло luc childeric",
+  "type": "конкурное",
+  "brand": "Luc Childeric",
+  "sizeHorse": "33",
+  "condition": "отличное",
+  "color": "коричневое",
+  "colorValues": [
+   "коричневое"
+  ],
+  "sizeRider": "16,5-17",
+  "sizeRiderValues": [
+   16.5,
+   17
+  ],
+  "price": 220000,
+  "status": "available",
+  "article": "EVER0104",
+  "publishedAt": "20.11.2026",
+  "description": "Конкурное седло luc childeric\n\nСостояние: отличное\nЦвет: коричневый\nВсаднику: 16,5-17\nПо лошади: 33\n\nОчень удобное, классическое седло, в красивейшем цвете. Подойдет для невысокого всадника.",
+  "post": 536,
+  "photos": [
+   "assets/photos/536/1.jpg",
+   "assets/photos/536/2.jpg",
+   "assets/photos/536/3.jpg",
+   "assets/photos/536/4.jpg"
+  ]
+ },
+ {
   "id": "531",
   "title": "Выездковое седло County Perfection",
   "type": "выездковое",
