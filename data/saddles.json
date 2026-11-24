@@ -180,7 +180,6 @@
   "brand": "Prestige",
   "model": "MichelRobert",
   "sizeHorse": "33",
-  "material": "кожа",
   "condition": "хорошее",
   "color": "черное",
   "colorValues": [
@@ -210,7 +209,6 @@
   "brand": "Prestige",
   "model": "Sydney",
   "sizeHorse": "33",
-  "material": "кожа",
   "condition": "хорошее",
   "color": "коричневое",
   "colorValues": [
@@ -239,7 +237,6 @@
   "type": "конкурное",
   "brand": "GrandPrizo",
   "sizeHorse": "31-35",
-  "material": "кожа",
   "condition": "новое",
   "color": "черное",
   "colorValues": [
@@ -775,7 +772,6 @@
   "brand": "Kentaur",
   "model": "Appolon",
   "sizeHorse": "2",
-  "material": "кожа",
   "condition": "хорошее",
   "color": "черное",
   "colorValues": [
@@ -805,7 +801,6 @@
   "type": "конкурное",
   "brand": "Adam Ellis",
   "sizeHorse": "MW",
-  "material": "кожа",
   "condition": "новое",
   "color": "коричневое",
   "colorValues": [
@@ -838,7 +833,6 @@
   "type": "выездковое",
   "brand": "Bliss of London",
   "sizeHorse": "33",
-  "material": "мягкая кожа",
   "condition": "идеальное",
   "color": "черное",
   "colorValues": [
@@ -869,7 +863,6 @@
   "brand": "Custom Icon",
   "model": "Coda",
   "sizeHorse": "33",
-  "material": "кожа",
   "condition": "хорошее",
   "color": "черное",
   "colorValues": [
@@ -899,7 +892,6 @@
   "brand": "CWD",
   "model": "SE37",
   "sizeHorse": "33-34",
-  "material": "кожа",
   "condition": "идеальное",
   "color": "черное",
   "colorValues": [
@@ -932,7 +924,6 @@
   "brand": "Prestige",
   "model": "Venezia",
   "sizeHorse": "32",
-  "material": "кожа",
   "condition": "хорошее",
   "color": "черное",
   "colorValues": [
@@ -962,7 +953,6 @@
   "brand": "Гермида",
   "model": "Пиаффе",
   "sizeHorse": "32-33",
-  "material": "кожа",
   "condition": "состояние нового",
   "color": "черное",
   "colorValues": [
@@ -991,7 +981,6 @@
   "brand": "Albion",
   "model": "Ultima",
   "sizeHorse": "33",
-  "material": "кожа",
   "condition": "есть косметические дефекты",
   "color": "черное",
   "colorValues": [
@@ -1020,7 +1009,6 @@
   "brand": "Albion",
   "model": "SLK",
   "sizeHorse": "34",
-  "material": "кожа",
   "condition": "хорошее",
   "color": "черное",
   "colorValues": [
@@ -1048,7 +1036,6 @@
   "brand": "Euroriding",
   "model": "Luxor",
   "sizeHorse": "32",
-  "material": "кожа",
   "condition": "рабочее",
   "color": "черное",
   "colorValues": [
@@ -1077,7 +1064,6 @@
   "brand": "Prestige",
   "model": "Renaissance",
   "sizeHorse": "32,5-33",
-  "material": "кожа",
   "condition": "хорошее",
   "color": "коричневое",
   "colorValues": [
@@ -1110,7 +1096,6 @@
   "brand": "Meyer",
   "model": "Act 1",
   "sizeHorse": "34",
-  "material": "мягкая кожа",
   "condition": "рабочее",
   "color": "коричневое",
   "colorValues": [
@@ -1140,7 +1125,6 @@
   "brand": "Voltaire",
   "model": "Adelaide",
   "sizeHorse": "34+",
-  "material": "кожа",
   "condition": "отличное",
   "color": "коричневое",
   "colorValues": [
@@ -1169,7 +1153,6 @@
   "brand": "Prestige",
   "model": "K-Dence",
   "sizeHorse": "33",
-  "material": "кожа",
   "condition": "идеальное",
   "color": "черное",
   "colorValues": [
@@ -1199,7 +1182,6 @@
   "brand": "Kentaur",
   "model": "Medea",
   "sizeHorse": "2",
-  "material": "кожа",
   "condition": "хорошее",
   "color": "черное",
   "colorValues": [
@@ -1228,7 +1210,6 @@
   "brand": "Kentaur",
   "model": "Penelope",
   "sizeHorse": "3",
-  "material": "кожа",
   "condition": "хорошее",
   "color": "черное",
   "colorValues": [
@@ -1258,7 +1239,6 @@
   "brand": "Prestige",
   "model": "X-Doge",
   "sizeHorse": "32",
-  "material": "кожа",
   "condition": "отличное",
   "color": "черное",
   "colorValues": [
@@ -1287,7 +1267,6 @@
   "brand": "Prestige",
   "model": "Versailles",
   "sizeHorse": "33-34 (маркировка 34)",
-  "material": "кожа",
   "condition": "хорошее",
   "color": "коричневое",
   "colorValues": [
@@ -1317,7 +1296,6 @@
   "brand": "Kieffer",
   "model": "Norbert Koof",
   "sizeHorse": "32-33",
-  "material": "кожа",
   "condition": "рабочее",
   "color": "черное",
   "colorValues": [
@@ -1346,7 +1324,6 @@
   "type": "конкурное",
   "brand": "Antares",
   "sizeHorse": "33-34",
-  "material": "кожа",
   "condition": "отличное",
   "color": "коричневое",
   "colorValues": [
@@ -1374,7 +1351,6 @@
   "type": "конкурное",
   "brand": "Luc Childeric",
   "sizeHorse": "на средне-широкую спину",
-  "material": "кожа",
   "condition": "отличное",
   "color": "коричневое",
   "colorValues": [
@@ -1404,7 +1380,6 @@
   "type": "конкурное",
   "brand": "GBS (Meyer)",
   "sizeHorse": "34",
-  "material": "кожа",
   "condition": "отличное",
   "color": "коричневое",
   "colorValues": [
@@ -1435,7 +1410,6 @@
   "brand": "Custom Icon",
   "model": "Flight",
   "sizeHorse": "33-33,5",
-  "material": "кожа",
   "condition": "рабочее",
   "color": "черное",
   "colorValues": [
@@ -1467,7 +1441,6 @@
   "brand": "Prestige",
   "model": "Black Star",
   "sizeHorse": "33",
-  "material": "кожа",
   "condition": "хорошее",
   "color": "черное",
   "colorValues": [
@@ -1498,7 +1471,6 @@
   "brand": "Euroriding",
   "model": "Luxor",
   "sizeHorse": "33",
-  "material": "кожа",
   "condition": "рабочее",
   "color": "коричневое",
   "colorValues": [
@@ -1527,7 +1499,6 @@
   "brand": "Prestige",
   "model": "Joy Jumper",
   "sizeHorse": "33",
-  "material": "кожа",
   "condition": "хорошее",
   "color": "черное",
   "colorValues": [
@@ -1557,7 +1528,6 @@
   "brand": "Prestige",
   "model": "Lucky Idol",
   "sizeHorse": "32",
-  "material": "кожа",
   "condition": "новое",
   "color": "черное",
   "colorValues": [
@@ -1586,7 +1556,6 @@
   "type": "выездковое",
   "brand": "County",
   "sizeHorse": "MW",
-  "material": "кожа",
   "condition": "рабочее",
   "color": "черное",
   "colorValues": [
@@ -1616,7 +1585,6 @@
   "type": "выездковое",
   "brand": "Butet",
   "sizeHorse": "на среднюю спину, средне-высокую холку",
-  "material": "мягкая кожа",
   "condition": "хорошее",
   "color": "коричневое",
   "colorValues": [
@@ -1644,7 +1612,6 @@
   "type": "выездковое",
   "brand": "Maxflex",
   "sizeHorse": "MW",
-  "material": "кожа",
   "condition": "рабочее",
   "color": "черное",
   "colorValues": [
@@ -1674,7 +1641,6 @@
   "brand": "Prestige",
   "model": "Roma Jump",
   "sizeHorse": "32",
-  "material": "кожа",
   "condition": "рабочее",
   "color": "коричневое",
   "colorValues": [
@@ -1703,7 +1669,6 @@
   "brand": "Prestige",
   "model": "Silver Star",
   "sizeHorse": "33",
-  "material": "кожа",
   "condition": "рабочее",
   "color": "черное",
   "colorValues": [
@@ -1733,7 +1698,6 @@
   "brand": "Albion",
   "model": "Revelation",
   "sizeHorse": "33",
-  "material": "кожа",
   "condition": "хорошее",
   "color": "черное",
   "colorValues": [
@@ -1762,7 +1726,6 @@
   "type": "выездковое",
   "brand": "Jeremy Rudge",
   "sizeHorse": "33,5",
-  "material": "кожа",
   "condition": "отличное",
   "color": "черное",
   "colorValues": [
@@ -1795,7 +1758,6 @@
   "brand": "Prestige",
   "model": "Venezia",
   "sizeHorse": "34 (по факту скорее 33)",
-  "material": "кожа",
   "condition": "рабочее",
   "color": "черное",
   "colorValues": [
@@ -1824,7 +1786,6 @@
   "type": "выездковое",
   "brand": "Kieffer",
   "sizeHorse": "32",
-  "material": "кожа",
   "condition": "отличное",
   "color": "черное",
   "colorValues": [
@@ -1853,7 +1814,6 @@
   "type": "конкурное",
   "brand": "GrandPrizo",
   "sizeHorse": "31-35",
-  "material": "кожа",
   "condition": "новое",
   "color": "черное",
   "colorValues": [
@@ -1881,7 +1841,6 @@
   "title": "Конкурное седло, бренд не указан",
   "type": "конкурное",
   "sizeHorse": "33",
-  "material": "кожзам",
   "condition": "новое",
   "color": "коричневое",
   "colorValues": [
@@ -1911,7 +1870,6 @@
   "title": "Конкурное седло, новое",
   "type": "конкурное",
   "sizeHorse": "32, открытые лопатки",
-  "material": "кожа",
   "condition": "новое",
   "color": "коричневое",
   "colorValues": [
@@ -1941,7 +1899,6 @@
   "brand": "Prestige",
   "model": "X-Helen",
   "sizeHorse": "33",
-  "material": "кожа",
   "condition": "хорошее",
   "color": "черное",
   "colorValues": [
@@ -1972,7 +1929,6 @@
   "type": "конкурное",
   "brand": "Kentaur",
   "sizeHorse": "33-34",
-  "material": "кожа",
   "condition": "рабочее",
   "color": "черное",
   "colorValues": [
@@ -2003,7 +1959,6 @@
   "type": "выездковое",
   "brand": "Equiline",
   "sizeHorse": "33",
-  "material": "кожа",
   "condition": "хорошее",
   "color": "черное",
   "colorValues": [
@@ -2033,7 +1988,6 @@
   "type": "выездковое",
   "brand": "Luc Childeric",
   "sizeHorse": "33,5",
-  "material": "мягкая кожа",
   "condition": "хорошее",
   "color": "черное",
   "colorValues": [
@@ -2063,7 +2017,6 @@
   "brand": "Sommer",
   "model": "Spezial",
   "sizeHorse": "32",
-  "material": "кожа",
   "condition": "хорошее",
   "color": "черное",
   "colorValues": [
@@ -2094,7 +2047,6 @@
   "brand": "Acavallo",
   "model": "Modigliani",
   "sizeHorse": "широкое",
-  "material": "кожа",
   "condition": "хорошее",
   "color": "черное",
   "colorValues": [
@@ -2124,7 +2076,6 @@
   "type": "конкурное",
   "brand": "Bruno Delgrande",
   "sizeHorse": "34",
-  "material": "кожа",
   "condition": "хорошее",
   "color": "коричневое",
   "colorValues": [
@@ -2156,7 +2107,6 @@
   "brand": "Custom Icon",
   "model": "Flight",
   "sizeHorse": "33",
-  "material": "кожа",
   "condition": "состояние нового",
   "color": "черное",
   "colorValues": [
@@ -2186,7 +2136,6 @@
   "brand": "Kentaur",
   "model": "Afrodite Soft",
   "sizeHorse": "3 (переобжато с 2)",
-  "material": "кожа",
   "condition": "состояние нового",
   "color": "черное",
   "colorValues": [
@@ -2216,7 +2165,6 @@
   "brand": "Гермида",
   "model": "Пегас Моно Про",
   "sizeHorse": "33,5",
-  "material": "кожа",
   "condition": "состояние нового",
   "color": "черное",
   "colorValues": [
@@ -2245,7 +2193,6 @@
   "brand": "Maxflex",
   "model": "Valentin",
   "sizeHorse": "33",
-  "material": "кожа",
   "condition": "хорошее",
   "color": "черное",
   "colorValues": [
@@ -2275,7 +2222,6 @@
   "brand": "County",
   "model": "Connection",
   "sizeHorse": "MW (маркировка W)",
-  "material": "кожа",
   "condition": "хорошее",
   "color": "черное",
   "colorValues": [
@@ -2305,7 +2251,6 @@
   "brand": "Erreplus",
   "model": "Adelinde",
   "sizeHorse": "33,5",
-  "material": "кожа",
   "condition": "идеальное",
   "color": "черное",
   "colorValues": [
@@ -2336,7 +2281,6 @@
   "brand": "CWD",
   "model": "SE 02",
   "sizeHorse": "~32,5",
-  "material": "кожа",
   "condition": "хорошее",
   "color": "коричневое",
   "colorValues": [
@@ -2366,7 +2310,6 @@
   "type": "конкурное",
   "brand": "Equiline",
   "sizeHorse": "33",
-  "material": "кожа",
   "condition": "идеальное",
   "color": "коричневое",
   "colorValues": [
@@ -2393,7 +2336,6 @@
   "brand": "Erreplus",
   "model": "Vittoria",
   "sizeHorse": "33",
-  "material": "кожа",
   "condition": "хорошее",
   "color": "коричневое",
   "colorValues": [
@@ -2420,7 +2362,6 @@
   "brand": "Prestige",
   "model": "Roma Jump",
   "sizeHorse": "33",
-  "material": "кожа",
   "condition": "отличное",
   "color": "черное",
   "colorValues": [
@@ -2453,7 +2394,6 @@
   "type": "конкурное",
   "brand": "Stübben",
   "sizeHorse": "32 по штюббену (широкая спина)",
-  "material": "кожа",
   "condition": "рабочее",
   "color": "коричневое",
   "colorValues": [
@@ -2485,7 +2425,6 @@
   "brand": "Sommer",
   "model": "Opus",
   "sizeHorse": "33",
-  "material": "кожа",
   "condition": "идеальное",
   "color": "черное",
   "colorValues": [
@@ -2514,7 +2453,6 @@
   "brand": "County",
   "model": "Epiphany",
   "sizeHorse": "M",
-  "material": "кожа",
   "condition": "идеальное",
   "color": "черное",
   "colorValues": [
@@ -2544,7 +2482,6 @@
   "brand": "Erreplus",
   "model": "Adelinde",
   "sizeHorse": "33 (33,5)",
-  "material": "кожа",
   "condition": "идеальное",
   "color": "черное",
   "colorValues": [
@@ -2579,7 +2516,6 @@
   "brand": "Prestige",
   "model": "Hippos",
   "sizeHorse": "31",
-  "material": "кожа",
   "condition": "хорошее",
   "color": "черное",
   "colorValues": [
@@ -2607,7 +2543,6 @@
   "brand": "Amerigo",
   "model": "Vega",
   "sizeHorse": "ближе к 34",
-  "material": "мягкая кожа",
   "condition": "отличное",
   "color": "черное",
   "colorValues": [
@@ -2638,7 +2573,6 @@
   "type": "конкурное",
   "brand": "Henri de Rivel",
   "sizeHorse": "34",
-  "material": "кожа",
   "condition": "хорошее",
   "color": "черное",
   "colorValues": [
@@ -2666,7 +2600,6 @@
   "type": "конкурное",
   "brand": "Sommer",
   "sizeHorse": "31,5 по соммеру (33-34 по престижу)",
-  "material": "кожа",
   "condition": "состояние нового",
   "color": "черное",
   "colorValues": [
@@ -2696,7 +2629,6 @@
   "brand": "CWD",
   "model": "SE08",
   "sizeHorse": "34",
-  "material": "кожа",
   "condition": "состояние нового",
   "color": "черное",
   "colorValues": [
@@ -2727,7 +2659,6 @@
   "brand": "Prestige",
   "model": "Arezzo",
   "sizeHorse": "33 (маркировка 34)",
-  "material": "кожа",
   "condition": "хорошее",
   "color": "коричневое",
   "colorValues": [
@@ -2755,7 +2686,6 @@
   "type": "конкурное",
   "brand": "Devoucoux",
   "sizeHorse": "33-34",
-  "material": "кожа",
   "condition": "отличное",
   "color": "коричневое",
   "colorValues": [
@@ -2785,7 +2715,6 @@
   "brand": "Kieffer",
   "model": "Lech Profi",
   "sizeHorse": "~32",
-  "material": "кожа",
   "condition": "хорошее",
   "color": "черное",
   "colorValues": [
@@ -2817,7 +2746,6 @@
   "brand": "Kentaur",
   "model": "Kalipso",
   "sizeHorse": "2 по кентавру (~32,5 по престижу)",
-  "material": "кожа",
   "condition": "хорошее",
   "color": "черное",
   "colorValues": [
@@ -2847,7 +2775,6 @@
   "brand": "Kieffer",
   "model": "Europe",
   "sizeHorse": "33",
-  "material": "кожа",
   "condition": "хорошее",
   "color": "черное",
   "colorValues": [
@@ -2878,7 +2805,6 @@
   "brand": "Prestige",
   "model": "Como",
   "sizeHorse": "32 (маркировка 33)",
-  "material": "кожа",
   "condition": "рабочее",
   "color": "коричневое",
   "colorValues": [
@@ -2907,7 +2833,6 @@
   "brand": "Euroriding",
   "model": "Diamant",
   "sizeHorse": "34",
-  "material": "кожа",
   "condition": "рабочее",
   "color": "черное",
   "colorValues": [
@@ -2937,7 +2862,6 @@
   "brand": "Kieffer",
   "model": "Brugge",
   "sizeHorse": "34",
-  "material": "кожа",
   "condition": "отличное",
   "color": "черное",
   "colorValues": [
@@ -2966,7 +2890,6 @@
   "type": "выездковое",
   "brand": "Devoucoux",
   "sizeHorse": "32-33",
-  "material": "кожа",
   "condition": "отличное",
   "color": "коричневое",
   "colorValues": [
@@ -2997,7 +2920,6 @@
   "brand": "Prestige",
   "model": "Como",
   "sizeHorse": "32 (маркировка 33)",
-  "material": "кожа",
   "condition": "хорошее",
   "color": "коричневое",
   "colorValues": [
@@ -3027,7 +2949,6 @@
   "brand": "Harry Dabbs",
   "model": "Jaguar",
   "sizeHorse": "32-33",
-  "material": "кожа",
   "condition": "отличное",
   "color": "черное",
   "colorValues": [
@@ -3056,7 +2977,6 @@
   "brand": "Kieffer",
   "model": "Aachen AT",
   "sizeHorse": "32-33",
-  "material": "кожа",
   "condition": "рабочее",
   "color": "черное",
   "colorValues": [
@@ -3086,7 +3006,6 @@
   "brand": "Kieffer",
   "model": "Arezzo",
   "sizeHorse": "34",
-  "material": "кожа",
   "condition": "хорошее",
   "color": "черное",
   "colorValues": [
@@ -3122,7 +3041,6 @@
   "type": "выездковое",
   "brand": "Equiline",
   "sizeHorse": "32",
-  "material": "кожа",
   "condition": "хорошее",
   "color": "черное",
   "colorValues": [
@@ -3150,7 +3068,6 @@
   "type": "выездковое",
   "brand": "Trainers",
   "sizeHorse": "32-33",
-  "material": "кожа",
   "condition": "рабочее",
   "color": "черное",
   "colorValues": [

@@ -371,7 +371,6 @@ function closeSheets() {
    Справочники - те же, что в таблице каталога (tools/catalog.py, DICTIONARIES). */
 const REQUEST_DICTIONARIES = {
   type: ['выездковое', 'конкурное', 'конкурное/троеборное', 'универсальное'],
-  material: ['кожа', 'мягкая кожа', 'кожзам'],
   color: ['черное', 'коричневое', 'двухцветное'],
   condition: ['новое', 'состояние нового', 'идеальное', 'отличное', 'хорошее', 'рабочее']
 };
@@ -390,7 +389,6 @@ const REQUESTS = {
       { key: 'model', type: 'text', label: 'Модель', out: 'Модель', placeholder: 'Если знаете' },
       { key: 'sizeRider', type: 'text', label: 'Размер всаднику', out: 'Размер всаднику', placeholder: 'Например, 17,5' },
       { key: 'sizeHorse', type: 'text', label: 'Размер лошади', out: 'Размер лошади', placeholder: 'Если знаете' },
-      { key: 'material', type: 'chips', label: 'Материал', out: 'Материал', options: REQUEST_DICTIONARIES.material },
       { key: 'color', type: 'chips', label: 'Цвет', out: 'Цвет', options: REQUEST_DICTIONARIES.color },
       { key: 'condition', type: 'chips', label: 'Состояние', out: 'Состояние', options: REQUEST_DICTIONARIES.condition },
       { key: 'price', type: 'text', label: 'Желаемая цена, руб', out: 'Желаемая цена', placeholder: 'Например, 50000', inputmode: 'numeric', format: 'price', required: true },
